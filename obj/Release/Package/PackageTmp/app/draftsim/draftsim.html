@@ -1,0 +1,102 @@
+﻿<section class="mainbar" data-ng-controller="draftsim as vm">
+    <section class="matter">
+        <div class="container-fluid">
+
+            <div class="row-fluid hidden-phone">
+                <div class="span12" style="text-align:center;">
+                    <div class="input-prepend">
+                        <span class="add-on">Number of Born of the Gods Boosters: </span>
+                        <input type="text" ng-model="vm.boosters_to_open_bng" />
+                    </div>
+                </div>
+                <div class="span12" style="text-align:center;">
+                    <div class="input-prepend">
+                        <span class="add-on">Number of Theros Boosters: </span>
+                        <input type="text" ng-model="vm.boosters_to_open_ths" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid visible-phone">
+                <div class="span12" style="text-align:center">
+                    <span class="add-on">Number of Born of the Gods Boosters: </span>
+                </div>
+                <div class="span12" style="text-align:center">
+                    <input type="text" ng-model="vm.boosters_to_open" />
+                </div>
+                <div class="span12" style="text-align:center">
+                    <span class="add-on">Number of Theros Boosters: </span>
+                </div>
+                <div class="span12" style="text-align:center">
+                    <input type="text" ng-model="vm.boosters_to_open_ths" />
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <button ng-click="vm.startDraft()" class="span-12 btn btn-primary chris-btn">
+                    <span ng-if="!vm.draftStarted">Start Draft</span>
+                    <span ng-if="vm.draftStarted">Restart Draft</span>
+                </button>
+            </div>
+
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="Deck Cards"
+                             subtitle="{{vm.boosterCards.length}}"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.boosterCards track by $index">
+                                    <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                            <button ng-if="vm.draftStarted && vm.boosterCards.length == 0 && !vm.draftFinished"
+                                    class="btn btn-primary chris-btn" style="width:100%;" ng-click="vm.openNextPack()">
+                                Next Pack
+                            </button>
+                            <p ng-if="vm.boosterCards.length == 0 && vm.draftFinished">
+                                The draft is complete.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="Selected Cards"
+                             subtitle="{{vm.selectedCards.length}}"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.selectedCards track by $index">
+                                    <img ng-click="" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row-fluid" ng-if="vm.boosterCards.length == 0 && vm.draftFinished" data-ng-repeat="ai in vm.AIs" ng-show="!$first">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="AI {{ai.name}} Choices" allow-collapse="true">
+                        </div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in ai.cards track by $index">
+                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,303 @@
+﻿<section class="mainbar" data-ng-controller="multiplayerdraft as vm">
+    <section class="matter">
+        <div id="mainContainer" class="container-fluid" ng-disabled="vm.loading">
+            <div data-cc-spinner="vm.spinnerOptions" ng-if="vm.loading" id="overlay_center" class="overlay_center"></div>
+
+
+
+            <!-- When the game has actually started -->
+            <div ng-if="vm.gameState == vm.gameStartedState">
+                <!--Cards in the players booster-->
+
+                <div class="row-fluid">
+                    <div class="span12" style="text-align:center">
+                        <span>Remaining Time: {{vm.timeRemaining}}</span>
+                        <br />
+                        <span ng-if="vm.gameData.Player.HadTurn">
+                            Waiting for other players..
+                        </span>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Booster Cards"
+                                     subtitle="{{vm.gameData.Player.Booster.Cards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.gameData.Player.Booster.Cards track by $index">
+                                            <img ng-class="{true:'chris-disabled', false:''}[vm.gameData.Player.HadTurn]" ng-disabled="vm.gameData.Player.HadTurn"
+                                                 ng-click="vm.addCard(card.Number)" src="{{card.Image}}"
+                                                 class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Cards in the players booster-->
+                    <!--Cards the players has picked-->
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Selected Cards"
+                                     subtitle="{{vm.gameData.Player.Cards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.gameData.Player.Cards track by $index">
+                                            <img ng-click="" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Cards the players has picked-->
+                    <div ng-if="vm.gameState != vm.notJoinedGameState" class="row-fluid" style="margin-top:30px;">
+                        <button ng-click="vm.leaveGame()" class="span-12 btn btn-primary chris-btn">
+                            Leave Game
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End When the game has actually started -->
+
+
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <div class="span8" ng-if="vm.gameState == vm.notJoinedGameState">
+                        <!-- Before the player has joined a game -->
+                        <div class="row-fluid">
+                            <div class="span12" style="text-align:right;">
+                                <button ng-click=vm.getGamesList()>
+                                    <i class="icon-refresh"></i> Refresh
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="widget wmtg">
+                            <div data-cc-widget-header title="Games List"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Game Name</th>
+                                            <th>Number of Players</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-ng-repeat="game in vm.avaliableGames">
+                                            <td>{{game.Name}}</td>
+                                            <td>{{game.NumberOfPlayers}}</td>
+                                            <td>
+                                                <button class="btn btn btn-default span12"
+                                                        ng-click="vm.joinGame(game.GameID)">
+                                                    Join Game
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="widget-foot">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div ng-if="vm.gameState == vm.notJoinedGameState" class="row-fluid">
+                            <button class="btn btn-primary chris-btn span12" ng-click="vm.createGame()">Create Game</button>
+                        </div>
+
+                        <!-- End Before the player has joined a game -->
+                    </div>
+
+                        <!-- When the player has joined a game -->
+                    <div class="span8" ng-if="vm.gameState == vm.joinedGameState || vm.gameState == vm.createdGameState">
+
+                            <div class="row-fluid hidden-phone">
+                                <div class="span12" style="text-align:center;">
+                                    <div class="input-prepend">
+                                        <span class="add-on">Number of Born of the Gods Boosters: </span>
+                                        <input ng-disabled="vm.gameState == vm.joinedGameState" type="number" ng-model="vm.boosters_to_open[1]" />
+                                    </div>
+                                </div>
+                                <div class="span12" style="text-align:center;">
+                                    <div class="input-prepend">
+                                        <span class="add-on">Number of Theros Boosters: </span>
+                                        <input ng-disabled="vm.gameState == vm.joinedGameState" type="number" ng-model="vm.boosters_to_open[0]" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-fluid visible-phone">
+                                <div class="span12" style="text-align:center">
+                                    <span class="add-on">Number of Born of the Gods Boosters: </span>
+                                </div>
+                                <div class="span12" style="text-align:center">
+                                    <input ng-disabled="vm.gameState == vm.joinedGameState" type="number" ng-model="vm.boosters_to_open[1]" />
+                                </div>
+                                <div class="span12" style="text-align:center">
+                                    <span class="add-on">Number of Theros Boosters: </span>
+                                </div>
+                                <div class="span12" style="text-align:center">
+                                    <input ng-disabled="vm.gameState == vm.joinedGameState" type="number" ng-model="vm.boosters_to_open[0]" />
+                                </div>
+                            </div>
+
+                            <div class="row-fluid">
+                                <div class="span2 offset10" style="text-align:right;">
+                                    <button ng-click=vm.refreshGameInfo()>
+                                        <i class="icon-refresh"></i> Refresh
+                                    </button>
+                                </div>
+                            </div>
+
+                        <!-- End When the player has joined a game -->
+
+                        <div class="row-fluid" ng-if="vm.gameState != vm.notJoinedGameState">
+                            <div class="span12">
+                                <div class="widget wmtg">
+                                    <div data-cc-widget-header title="Players"
+                                         allow-collapse="true"></div>
+                                    <div class="widget-content text-center text-info">
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player ID</th>
+                                                    <th>Type</th>
+                                                    <th ng-if="vm.gameState == vm.createdGameState"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-ng-repeat="player in vm.gameData.Players">
+                                                    <td>{{player.Name}}</td>
+                                                    <td>{{player.TypeName}}</td>
+                                                    <td ng-if="vm.gameState == vm.createdGameState">
+                                                        <button class="btn btn-default" ng-click="vm.removePlayer($index)">Remove Player</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="widget-foot">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Creating a game menu -->
+                        <div class="row-fluid" ng-if="vm.gameState == vm.createdGameState">
+                            <button ng-click="vm.startDraft()" class="span-12 btn btn-primary chris-btn">
+                                <span ng-if="!vm.draftStarted">Start Draft</span> <br />
+                                <span style="font-size:small;">
+                                    (The draft will automatically filled
+                                    with AIs if it isn't full when you begin)
+                                </span>
+                            </button>
+                        </div>
+                        <!-- End Creating a game menu -->
+
+                        <div ng-if="vm.gameState != vm.notJoinedGameState" class="row-fluid" style="margin-top:30px;">
+                            <button ng-click="vm.leaveGame()" class="span-12 btn btn-primary chris-btn">
+                                Leave Game
+                            </button>
+                        </div>
+                    </div>
+
+                        <!--Chat window-->
+                        <div class="span4" ng-if="vm.gameState != vm.gameStartedState">
+
+                            <div class="row-fluid" ng-if="vm.name == null" style="margin-bottom:10px;">
+                                <div class="span12" style="text-align:center;">
+                                    <div class="input-prepend">
+                                        <span class="add-on">Enter a name: </span>
+                                        <input onkeydown="if (event.keyCode == 13) document.getElementById('enterNameBtn').click();"
+                                               ng-maxlength=" 25" type="text" ng-model="vm.unsetName" />
+                                        <button id="enterNameBtn" class="btn btn-default" ng-click="vm.setName();">Set Name</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row-fluid">
+                                <h3>MTG Chat</h3>
+                            </div>
+
+                            <div class="row-fluid">
+                                <textarea style="height:300px;" class="span12" readonly ng-model="vm.chatbox"></textarea>
+                            </div>
+
+                            <div class="row-fluid">
+                                <input onkeydown="if (event.keyCode == 13) {
+                                                document.getElementById('sendMessageBtn').click();
+                                                var that = this;
+                                                setTimeout(function () { that.focus(); }, 0)
+                                                };"
+                                       type="text" class="span12" ng-maxlength="100"
+                                       ng-model="vm.chatMessage" style="margin-bottom:0px;" />
+                            </div>
+
+                            <div class="row-fluid">
+                                <button id="sendMessageBtn" class="btn btn-default span12" ng-click="vm.postMessage()" style="margin-bottom:20px;">
+                                    Send
+                                </button>
+                            </div>
+
+                        </div>
+                        <!--End Chat window-->
+
+
+                    </div>
+            </div>
+
+            <!--All players cards displayed when the game has ended-->
+            <div class="row-fluid" ng-if="vm.gameState == vm.postGameState" data-ng-repeat="player in vm.gameData.Players">
+                
+                <button ng-click="vm.leaveGame()" class="span12 btn btn-primary chris-btn">
+                    Leave Game
+                </button>
+
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="{{player.Name}}'s picks" allow-collapse="true">
+                        </div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in player.Cards track by $index">
+                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End All players cards displayed when the game has ended-->
+
+            <!-- List of all cards. Mostly to aid with loading.-->
+            <div class="row-fluid" ng-if="vm.gameState != vm.gameStartedState && vm.gameState != vm.postGameState" style="margin-top:200px;">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="All Avaliable Cards"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.allCards track by $index">
+                                    <img ng-click="" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!-- End List of all cards. Mostly to aid with loading.-->
+
+
+        </div>
+    </section>
+</section>

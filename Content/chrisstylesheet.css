@@ -1,0 +1,94 @@
+﻿.image_width
+{
+    width:260px;
+}
+
+.christopbar > li.nlightblue > a:hover,
+    .christopbar > li.open.nlightblue > a,
+    .christopbar > li.current.nlightblue > a {
+        background: #52b9e9 !important;
+        -webkit-transition: background 0.5s ease;
+        -moz-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+        transition: background 0.5s ease;
+    }
+
+.chris-btn
+{
+    height:70px;
+    background-color: #52b9e9;
+}
+
+.chris-p
+{
+    border-bottom:1px solid #808080;
+}
+
+.chris-front_menu_btn
+{
+    margin:10px;
+}
+
+.chris-button_text
+{
+    display:table-cell;
+    vertical-align:central;
+}
+
+.chris-side_bar {
+}
+
+.chris-main_col {
+    background:#fff;
+}
+
+img.chris-disabled {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(/Conten/grayscale.svg); /* Firefox 4+ */
+    filter: gray; /* IE 6-9 */
+}
+
+.textcenter {
+    text-align:center;
+}
+
+.overlay_center {
+    opacity: 1;
+    position: fixed;
+    left:50%;
+    top:50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+}
+
+.chris-timer_block_green {
+    background:#b6ff00;
+}
+.chris-timer_block_yellow {
+    background:#ff6a00;
+}
+.chris-timer_block_red {
+    background:#ff0000;
+}
+.chris-timer_block {
+    display:inline-block;
+    min-width:100px;
+    min-height:20px;
+}
+.chris-warning_text{
+    color:red;
+}
+
+.chris-btn-thin {
+    margin:10px;
+    padding:2px;
+}
+
+.chris-btn-save {
+    height:60px;
+}

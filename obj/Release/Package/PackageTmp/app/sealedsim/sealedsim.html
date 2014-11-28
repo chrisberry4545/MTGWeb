@@ -1,0 +1,73 @@
+﻿<section class="mainbar" data-ng-controller="sealedsim as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid hidden-phone">
+                <div class="span12" style="text-align:center">
+                    <div class="input-prepend">
+                        <span class="add-on">Number of Born of the Gods Boosters: </span>
+                        <input type="text" ng-model="vm.boosters_to_open" />
+                    </div>
+                </div>
+                <div class="span12" style="text-align:center">
+                    <div class="input-prepend">
+                        <span class="add-on">Number of Theros Boosters: </span>
+                        <input type="text" ng-model="vm.boosters_to_open_ths" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid visible-phone">
+                <div class="span12" style="text-align:center">
+                    <span class="add-on">Number of Born of the Gods Boosters: </span>
+                </div>
+                <div class="span12" style="text-align:center">
+                    <input type="text" ng-model="vm.boosters_to_open" />
+                </div>
+                <div class="span12" style="text-align:center">
+                    <span class="add-on">Number of Theros Boosters: </span>
+                </div>
+                <div class="span12" style="text-align:center">
+                    <input type="text" ng-model="vm.boosters_to_open_ths" />
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <button ng-click="vm.openBoosters()" class="btn btn-primary chris-btn span12">Open Boosters</button>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="Cards from packs"
+                             subtitle="{{vm.boosterCards.length}}"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.boosterCards track by $index">
+                                    <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="Selected Cards"
+                             subtitle="{{vm.selectedCards.length}}"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.selectedCards track by $index">
+                                    <img ng-click="vm.removeFromDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>

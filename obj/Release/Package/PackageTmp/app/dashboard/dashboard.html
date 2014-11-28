@@ -1,0 +1,292 @@
+﻿<section id="dashboard-view" class="mainbar" data-ng-controller="dashboard as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3 hidden-tablet chris-side_bar" ></div>
+                <div class="span6 chris-main_col">
+                    <div class="chris-p">
+                        <h1 style="text-align:center;">MTG Mirror - Magic the Gathering Drafts and Boosters</h1>
+                        <h3 style="text-align:center;">BNG - Born of the Gods</h3>
+                    </div>
+                    <div class="chris-p">
+                        <p>
+                            Welcome to MTG Mirror!
+                        </p>
+                        <p>
+                            This web application provides you with all you need for the newest MTG
+                            expansion, Born of the Gods! Look out for the Journey to the Nyx updates 
+                            being applied over the next week.
+                        </p>
+                        <p>
+                            The Beta Version of the Multiplayer draft is now avaliable! This took me way longer 
+                            than I thought it would, hence the lack of other updates. If you get the opportunity 
+                            please tell your friends and have a go. Report any problems you find to <a href="mailto:chrisberry45@googlemail.com">chrisberry45@googlemail.com</a>. 
+                            It would be great to have a very stable finished
+                            by the time Journey to the Nyx is fully spoiled.
+                        </p>
+                        <div class="chris-p">
+                            <div class="row-fluid" style="text-align:center;">
+                                <button ng-click="vm.goToMultiplayerDraftSim()" class="btn btn-primary chris-btn chris-front_menu_btn">Multiplayer Draft Simulator</button>
+                            </div>
+                        </div>
+                        <p>
+                            On that note the new cards from JOU will be uploaded shortly. On Friday 18th I intend 
+                            to have the full set uploaded and be avaliable for Multiplayer Draft as well as all of the 
+                            other formats.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <div class="row-fluid" style="text-align:center;">
+                            <button ng-click="vm.goToDraftSim()" class="btn btn-primary chris-btn chris-front_menu_btn">Draft Simulator</button>
+                            <button ng-click="vm.goToBoosterSim()" class="btn btn-primary chris-btn chris-front_menu_btn">Booster Simulator</button>
+                            <button ng-click="vm.goToBrowseCards()" class="btn btn-primary chris-btn chris-front_menu_btn">Browse Cards</button>
+                            <button ng-click="vm.goToSealedSim()" class="btn btn-primary chris-btn chris-front_menu_btn">Sealed Simulator</button>
+                        </div>
+                    </div>
+                    <div class="chris-p">
+                        <h3>10/02/2014</h3>
+                        <p>
+                            You may have noticed the site was down for a bit this weekend. This was due to the site changing hosting. 
+                            This is complete now and there shouldn't be any significant downtime for the foreseeable future! :)
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>06/02/2014</h3>
+                        <p>
+                            Todays changes involve changing the booster inputs to function better on smaller devices rather than
+                            going off the edge of the screen as they have previously.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>03/02/2014</h3>
+                        <p>
+                            I've updated the AIs ratings of the BNG cards to follow those published at Channel Fireball. This
+                            should make the AI more realistic. Channel Fireball's ratings can be found here:
+                            <a href="http://channelfireball.com/index.php?s=born+of+the+gods+limited+review">
+                                http://channelfireball.com/index.php?s=born+of+the+gods+limited+review
+                            </a>
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>02/02/2014</h3>
+                        <p>
+                            The site has now been updated to include Theros Cards. This means the Sealed simulator has been
+                            updated so you can play with 3 Theros boosters and 3 Born of the Gods boosters, as in real sealed games.
+                        </p>
+                        <p>
+                            As the Theros cards are now added I've taken the opportunity to add them to a number of other places.
+                            The draft simulator now includes the Theros cards aswell and gives the option of making drafts with
+                            a mixture of Theros and Born of the Gods boosters. The ratings used by the draft AIs are Channel Fireballs ratings
+                            which can be found here:
+                            <a href="http://www.channelfireball.com/tag/theros-set-review/">http://www.channelfireball.com/tag/theros-set-review/</a>.
+                            I will be updated the BNG cards with channel fireballs ratings soon.
+                        </p>
+                        <p>
+                            Theros cards are now browsable in the Card Browser, with a simple button letting you switch between Theros
+                            and Born of the Gods cards.
+                        </p>
+                        <p>
+                            The cards have also been added to the Booster Simulator, so you can play with Theros Cards, BNG Cards or a
+                            mixture of the two.
+                        </p>
+                        <p>
+                            Beyond the Theros additions I've updated this page to include buttons taking you to the various pages. This
+                            should make navigation easier on smaller devices.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>29/01/2014</h3>
+                        <p>
+                            I've applied a small update to the layout today. Hopefully this will make the text easier
+                            on the eye on larger screens.
+                        </p>
+                        <p>
+                            I've also added a fix to the simulators so the same card cannot appear twice in a booster pack.
+                            I still need to add foil cards but these should come soon.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>28/01/2014</h3>
+                        <p>
+                            I've applied a small update today. Images should now begin to load when you reach the
+                            website. This should mean the images in the various sections should load faster.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>25/01/2014</h3>
+                        <p>
+                            I've added additional sorting to the draft, booster and sealed simulators. Now the
+                            cards are sorted by rarity and then by color, giving you a clearer view of what you've
+                            opened.
+                        </p>
+                        <p>
+                            The AI in the drafts were also not working as planned but this has now been rectified.
+                            AI's now properly make decisions about what colors they are going to use in a draft.
+                        </p>
+                        <p>
+                            I've also put some effort into optimising the application. It should now load much faster.
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>24/01/2014</h3>
+                        <p>
+                            The full set has now been unveiled! I've uploaded all the cards to the website so the
+                            drafts and booster simulator should be fully functional!
+                        </p>
+                    </div>
+                    <div class="chris-p">
+                        <h3>23/01/2014</h3>
+                        <p>
+                            Due to Wizard's accidentally uploading the FAQs for the new website we've seen a huge amount of
+                            cards today. The full FAQs can be found here:
+                            <a href="http://www.wizards.com/magic/magazine/article.aspx?x=mtg/faq/bng">
+                                http://www.wizards.com/magic/magazine/article.aspx?x=mtg/faq/bng
+                            </a>.
+                        </p>
+                        <p>
+                            I'm loving some of the new blue cards such as the Vortex Elemental and the Perplexing Chimera.
+                            The first threatens to take something down with it, an excellent deterant in multiplayer games.
+                            If you get the Chimera out you can force your opponent into some difficult decisions. As I read
+                            it the steal ability will include all spells including creatures which makes playing a more powerful
+                            creature a risky move. It could also be heaps of fun in multiplayer with the Chimera getting passed
+                            all over the table.
+                        </p>
+                        <p>
+                            All rare and mythic cards have now been revealed which leaves only 18 uncommons and 37 common cards
+                            left to see!
+                        </p>
+                    </div>
+
+                    <div class="chris-p">
+                        <h3>22/01/2014</h3>
+                        <p>
+                            Today we get to see a full cycle of commons. The Nyxborn cycle includes a bestow creature
+                            from every color. None of these are particularly exciting however, as other than the bestow
+                            ability they are all vanilla and none of them appear like they'll be particularlly powerful
+                            in any format.
+                        </p>
+                        <p>
+                            Oracle of Bones is the most interesting card revealed today. Its tribute cost involves your
+                            opponent choosing between giving it 2 +1/+1 counters or allowing you to cast a instant or
+                            sorcery from your hand for free. As this guy has haste it forces the opponent into an immediate
+                            and difficult decision. This could potentially be very powerful in a draft and could even be used
+                            in constructed. I love cards that give you the opportunity to bluff and I could see myself holding
+                            onto a land to try and gain a few free counters.
+                            even be useful in constructed.
+                        </p>
+                        <p>
+                            There has also been a few website updates today. I've fixed the messages so you get useful messages
+                            when your adding cards to your pool in a draft or in the sealed simulator. There are also messages
+                            alerting you when you've begun a new draft or how many boosters you've opened in the booster simulator.
+                        </p>
+                    </div>
+
+                    <div class="chris-p">
+                        <h3>21/01/2014</h3>
+                        <p>
+                            Wizards revealed 2 new rares, one mythic and 2 uncommon cards today. These included
+                            the card I was most excited about: Phenax. Unfortunetly, Phenax is a mill card. After
+                            attempting to build a mill deck for a while myself I've always found them fairly
+                            underwhelming as a main strategy, not to mention uninteresting as the other players
+                            actions are largely ignored. However, Phenax would go very nicely in a Commander deck
+                            and would work wonders in drafts.
+                        </p>
+                        <p>
+                            Whelming wave was also revealed today. This sends all creatures back to their owners hands
+                            <b>except</b> Krakens, Octopus, Leviathans and Serpants. On the surface this doesn't seem that
+                            interesting but it does suggest there is a potential for more giant sea creature tribal cards
+                            to be release.
+                        </p>
+                    </div>
+
+                    <div class="chris-p">
+                        <h3>20/01/2014</h3>
+                        <p>
+                            Five new cards have been added today. This includes the 5 color bestow beast, Chromanticore. As
+                            you'd expect from a five colored creature, it takes abilities from each of the colors. Although
+                            its a cool card I imagine it'll be very difficult to use in a draft.
+                        </p>
+                        <p>
+                            The most powerful card revealed today is the Spirit of the Labyrinth. A 3/1 for 2 mana provides will
+                            provide a great boost for white weenie decks. The power alone would make the card decent but it also
+                            comes with an ability which prevents players drawing more than 1 card a turn. This has the potential to
+                            cause issues for control decks. Most control decks would have plenty of ways to deal with a 1 toughness
+                            creature so how useful this creature will be remains to be seen.
+                        </p>
+                    </div>
+
+                    <div class="chris-p">
+                        <h3>18/01/2014</h3>
+                        <p>
+                            MTG Mirror is now live! I've got all of the known BNG cards uploaded for you to browse.
+                            Check out more information about me and the website in the
+                            <a href="http://www.mtgmirror.com/#/about">About</a> section.
+                        </p>
+                        <p>
+                            Wizards of the Coast have currently only revealed 54 cards. This means the drafting system
+                            doesn't currently make a lot of sense with only two commons revealed. As Wizards spoil more
+                            cards this facility will continue to improve.
+                        </p>
+                        <p>
+                            The new cards include some new mechanics such as 'Inspired' which triggers when a creature untaps
+                            and the very interesting 'Tribute' where your opponent can put a number of +1/+1 counters on the
+                            creature or the creature performs another action such as fighting players or gaining haste. I'm a big
+                            fan of mechanics that force players to make difficult decisions and I'm excited to see some powerful
+                            creatures with this ability.
+                        </p>
+                        <p>
+                            Theres also been a number of duel coloured Gods revealed including the White/Blue God, the Green/White
+                            God, the Red/Black God and the Red/Green God. We're still waiting for the god of my favourite color
+                            combo, Black/Blue.
+                        </p>
+                    </div>
+                    <h3>Currently included cards</h3>
+                    <p>
+                        Below, is a list of all the Cards currently present on the website. This will be updated
+                        as more cards are revealed.
+                    </p>
+                </div>
+                <div class="span3 hidden-tablet chris-side_bar">
+                </div>
+            </div>
+            <div class="row-fluid hidden-phone">
+                <div class="span3"></div>
+                <div class="span6 " >
+                    <div class="widget wmtg">
+                        <div data-cc-widget-header title="BNG Card List"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <table class="table table-condensed table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Converted Mana Cost</th>
+                                        <th>Color</th>
+                                        <th>Rarity</th>
+                                        <th>Type</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="c in vm.allCards">
+                                        <td><a href="{{c.Image}}">{{c.Name}}</a></td>
+                                        <td>{{c.Cost}}</td>
+                                        <td>{{vm.convertToColor(c.Color)}}</td>
+                                        <td>{{vm.convertToRarity(c.Rarity)}}</td>
+                                        <td>{{vm.convertToType(c.Type)}}</td>
+                                        <td><img style="width:100px;" src="{{c.Image}}" alt="{{c.Name}}" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3"></div>
+            </div>
+
+        </div>
+    </section>
+</section>

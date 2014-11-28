@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none!important;
+        }
+    </style>
+    <title>MTG Mirror - BNG Draft and Sealed Simulator</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="description" content="MTG Draft Simulator">
+    <meta name="keywords" content="MTG, Magic the gathering, BNG, Born of the Gods, draft, booster, simulator">
+    <meta name="author" content="Chris Berry">
+
+    <script>
+        // Must be first. IE10 mobile viewport fix
+        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-47296152-1']);
+        _gaq.push(['_setDomainName', 'mtgmirror.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <link href="content/ie10mobile.css" rel="stylesheet" />
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/toastr.css" rel="stylesheet" />
+    <link href="content/customtheme.css" rel="stylesheet">
+    <link href="content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="content/styles.css" rel="stylesheet" />
+    <link href="Content/chrisstylesheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div data-ng-include="'/app/layout/shell.html'"></div>
+        <div id="splash-page" data-ng-show="false">
+            <div class="page-splash">
+                <div class="page-splash-message">
+                    MTG Mirror - BNG Draft and Sealed Simulator
+                </div>
+                <div class="progress progress-striped active page-progress-bar">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span data-cc-scroll-to-top></span>
+
+    <!-- Vendor Scripts -->
+    <script src="scripts/jquery-2.0.3.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/angular-sanitize.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/toastr.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="scripts/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script src="scripts/spin.min.js"></script>
+
+    <!-- Bootstrapping -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/config.exceptionHandler.js"></script>
+    <script src="app/config.route.js"></script>
+
+    <!-- common Modules -->
+    <script src="app/common/common.js"></script>
+    <script src="app/common/logger.js"></script>
+    <script src="app/common/spinner.js"></script>
+
+    <!-- common.bootstrap Modules -->
+    <script src="app/common/bootstrap/bootstrap.dialog.js"></script>
+
+    <!-- app -->
+    <script src="app/admin/admin.js"></script>
+    <script src="app/dashboard/dashboard.js"></script>
+    <script src="app/layout/shell.js"></script>
+    <script src="app/layout/sidebar.js"></script>
+
+    <!-- app Services -->
+    <script src="app/services/datacontext.js"></script>
+    <script src="app/services/directives.js"></script>
+    <script src="app/services/webapicontext.js"></script>
+
+    <!-- My modules -->
+    <script src="app/boostersim/boostersim.js"></script>
+    <script src="app/browsecards/browsecards.js"></script>
+    <script src="app/sealedsim/sealedsim.js"></script>
+    <script src="app/draftsim/draftsim.js"></script>
+    <script src="app/draftsim/ai.js"></script>
+    <script src="app/about/about.js"></script>
+    <script src="app/carddisplay/carddisplay.js"></script>
+    <script src="app/multiplayerdraft/multiplayerdraft.js"></script>
+    <script src="app/carddata/CardsBNG.js"></script>
+    <script src="app/carddata/CardsTHS.js"></script>
+</body>
+</html>
