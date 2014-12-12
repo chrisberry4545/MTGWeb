@@ -14,6 +14,19 @@
         // 3rd Party Modules
         'ui.bootstrap'      // ui-bootstrap (ex: carousel, pagination, dialog)
     ]);
+
+
+    
+    angular.module('app')
+        .directive('myAdSense', function () {
+        return {
+            restrict: 'A',
+            transclude: true,
+            replace: true,
+            template: '<div ng-transclude></div>',
+            link: function ($scope, element, attrs) { }
+        }
+    })
     
     // Handle routing errors and success events
     app.run(['$route',  function ($route) {
