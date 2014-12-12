@@ -178,6 +178,11 @@
     <Content Include="app\draftsim\draftsim.min.js">
       <DependentUpon>draftsim.js</DependentUpon>
     </Content>
+    <Content Include="app\handmodal\handmodal.html" />
+    <Content Include="app\handmodal\handmodal.js" />
+    <Content Include="app\handmodal\handmodal.min.js">
+      <DependentUpon>handmodal.js</DependentUpon>
+    </Content>
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\shell.js" />
     <Content Include="app\layout\shell.min.js">
@@ -208,6 +213,10 @@
     <Content Include="app\services\datacontext.min.js">
       <DependentUpon>datacontext.js</DependentUpon>
     </Content>
+    <Content Include="app\services\deckFunctions.js" />
+    <Content Include="app\services\deckFunctions.min.js">
+      <DependentUpon>deckFunctions.js</DependentUpon>
+    </Content>
     <Content Include="app\services\directives.js" />
     <Content Include="app\services\directives.min.js">
       <DependentUpon>directives.js</DependentUpon>
@@ -219,6 +228,10 @@
     <Content Include="app\services\graphAnalysis.js" />
     <Content Include="app\services\graphAnalysis.min.js">
       <DependentUpon>graphAnalysis.js</DependentUpon>
+    </Content>
+    <Content Include="app\services\handsimulator.js" />
+    <Content Include="app\services\handsimulator.min.js">
+      <DependentUpon>handsimulator.js</DependentUpon>
     </Content>
     <Content Include="app\services\landcards.js" />
     <Content Include="app\services\landcards.min.js">
@@ -639,6 +652,15 @@
     </Content>
     <Content Include="app\services\landcards.min.js.map">
       <DependentUpon>landcards.min.js</DependentUpon>
+    </Content>
+    <Content Include="app\handmodal\handmodal.min.js.map">
+      <DependentUpon>handmodal.min.js</DependentUpon>
+    </Content>
+    <Content Include="app\services\handsimulator.min.js.map">
+      <DependentUpon>handsimulator.min.js</DependentUpon>
+    </Content>
+    <Content Include="app\services\deckFunctions.min.js.map">
+      <DependentUpon>deckFunctions.min.js</DependentUpon>
     </Content>
     <None Include="My Project\PublishProfiles\chrisbdev.com - Web Deploy %282%29.pubxml" />
     <None Include="My Project\PublishProfiles\chrisbdev.com - Web Deploy.pubxml" />

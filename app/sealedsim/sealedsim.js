@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'sealedsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', sealedsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', sealedsim]);
 
-    function sealedsim(common, datacontext, downloadDataService, graphAnalysis, landcards) {
+    function sealedsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
@@ -80,6 +80,25 @@
             _removeFromArrayAndAddToArray(vm.selectedCards, vm.boosterCards, card);
             graphAnalysis.displayChartsForCards(vm.selectedCards);
         }
+
+
+        vm.openHandSimulator = function () {
+            var allSelectedCards = vm.selectedCards.concat(vm.selectedLandCards);
+            if (allSelectedCards.length > 0) {
+                var modalInstance = $modal.open({
+                    templateUrl: 'handmodal.html',
+                    controller: 'handmodal',
+                    resolve: {
+                        fullDeck: function () {
+                            return allSelectedCards;
+                        }
+                    }
+                });
+            } else {
+                log("Please add some cards to your deck (click on them above).");
+            }
+
+        };
 
         function _removeFromArrayAndAddToArray(arrayToRemoveFrom, arrayToAddTo, card)
         {

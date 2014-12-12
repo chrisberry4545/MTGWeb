@@ -18,6 +18,7 @@ app/sealedsim/sealedsim.html
 app/sealedsim/radioSeededPacks.html
 app/sealedsim/hideShowOlderSetsButton.html
 app/adverts/amazonadverts.html
+app/handmodal/handmodal.html
 content/ie10mobile.min.css
 content/bootstrap.min.css
 content/font-awesome.min.css
@@ -57,6 +58,9 @@ app/services/downloadDataService.min.js
 app/services/localStorageService.min.js
 app/services/graphAnalysis.min.js
 app/services/landcards.min.js
+app/services/handsimulator.min.js
+app/services/deckFunctions.js
+app/handmodal/handmodal.min.js
 app/boostersim/boostersim.min.js
 app/browsecards/browsecards.min.js
 app/sealedsim/sealedsim.min.js

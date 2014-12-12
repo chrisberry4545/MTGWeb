@@ -1,15 +1,19 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'draftsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', draftsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', draftsim]);
 
-    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards) {
+    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
         var logError = common.logger.getLogFn(controllerId, 'error');
 
         var vm = this;
+
+
+
+
         vm.title = 'Sealed Simulator';
         vm.column1Title = "Image";
         vm.column2Title = "Name";
@@ -201,6 +205,26 @@
             //Set player to vm.
             vm.boosterCards = vm.AIs[0].boosterCards;
             log("You've started a new draft");
+        };
+
+
+
+        vm.openHandSimulator = function () {
+            var allSelectedCards = vm.deckCards.concat(vm.selectedLandCards);
+            if (allSelectedCards.length > 0) {
+                var modalInstance = $modal.open({
+                    templateUrl: 'handmodal.html',
+                    controller: 'handmodal',
+                    resolve: {
+                        fullDeck: function () {
+                            return allSelectedCards;
+                        }
+                    }
+                });
+            } else {
+                log("Please add some cards to your deck (click on them below).");
+            }
+
         };
 
         function takeTurn()
