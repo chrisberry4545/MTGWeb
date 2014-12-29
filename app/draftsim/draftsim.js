@@ -21,7 +21,8 @@
 
         vm.boosters_to_open = 1;
 
-        vm.boosters_to_open_ktk = 3;
+        vm.boosters_to_open_frf = 1;
+        vm.boosters_to_open_ktk = 2;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;
@@ -37,6 +38,7 @@
         vm.packsOpened = 0;
         vm.totalPacksToOpen = 3;
 
+        vm.fixedFRFPacks = 0;
         vm.fixedKTKPacks = 0;
         vm.fixedCorePacks = 0;
         vm.fixedJOUpacks = 0;
@@ -171,7 +173,8 @@
                 || vm.boosters_to_open_ths == null
                 || vm.boosters_to_open_bng == null
                 || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null) {
+                || vm.boosters_to_open_ktk == null
+                || vm.boosters_to_open_frf == null) {
                 logError("Please use a number for the amount of boosters.");
                 return false;
             }
@@ -193,12 +196,13 @@
             vm.selectedCards = [];
             vm.deckCards = [];
             vm.selectedLandCards = [];
+            vm.fixedFRFPacks = parseInt(vm.boosters_to_open_frf);
             vm.fixedKTKPacks = parseInt(vm.boosters_to_open_ktk);
             vm.fixedCorePacks = parseInt(vm.boosters_to_open_core);
             vm.fixedBNGpacks = parseInt(vm.boosters_to_open_bng);
             vm.fixedTHSpacks = parseInt(vm.boosters_to_open_ths);
             vm.fixedJOUpacks = parseInt(vm.boosters_to_open_jou);
-            vm.totalPacksToOpen = vm.fixedBNGpacks + vm.fixedTHSpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks;
+            vm.totalPacksToOpen = vm.fixedBNGpacks + vm.fixedTHSpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks + vm.fixedFRFPacks;
             vm.packsOpened = 1;
             //Open the first booster pack.
             setUpAIs();
@@ -260,54 +264,60 @@
 
         function openAIBooster(ai)
         {
-            if (vm.packsOpened <= vm.fixedKTKPacks) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 1).then(function (data) {
-                    ai.boosterCards.push.apply(ai.boosterCards, data.mythicCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.rareCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.uncommonCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.commonCards);
-                    return ai.boosterCards;
+            var totalPacksOpened = vm.fixedFRFPacks;
+            if (vm.packsOpened <= totalPacksOpened) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 1).then(function (data) {
+                    return addAICards(ai, data);
                 });
             }
 
-            if (vm.packsOpened <= vm.fixedCorePacks + vm.fixedKTKPacks)
+            totalPacksOpened += vm.fixedKTKPacks;
+            if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 1, 0).then(function (data) {
-                    ai.boosterCards.push.apply(ai.boosterCards, data.mythicCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.rareCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.uncommonCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.commonCards);
-                    return ai.boosterCards;
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 1, 0).then(function (data) {
+                    return addAICards(ai, data);
                 });
             }
-            if (vm.packsOpened <= vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks)
+
+            totalPacksOpened += vm.fixedCorePacks;
+            if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 1, 0, 0).then(function (data) {
-                    ai.boosterCards.push.apply(ai.boosterCards, data.mythicCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.rareCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.uncommonCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.commonCards);
-                    return ai.boosterCards;
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 1, 0, 0).then(function (data) {
+                    return addAICards(ai, data);
                 });
             }
-            else if (vm.packsOpened <= vm.fixedBNGpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks)
+
+            totalPacksOpened += vm.fixedJOUpacks;
+            if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openSortedBoosters(1).then(function (data) {
-                    ai.boosterCards.push.apply(ai.boosterCards, data.mythicCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.rareCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.uncommonCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.commonCards);
-                    return ai.boosterCards;
-                });
-            } else {
-                return datacontext.openMixtureOfSortedBoosters(1, 0, 0, 0, 0).then(function (data) {
-                    ai.boosterCards.push.apply(ai.boosterCards, data.mythicCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.rareCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.uncommonCards);
-                    ai.boosterCards.push.apply(ai.boosterCards, data.commonCards);
-                    return ai.boosterCards;
+                return datacontext.openMixtureOfSortedBoosters(0,0,1,0,0,0).then(function (data) {
+                    return addAICards(ai, data);
                 });
             }
+
+            totalPacksOpened += vm.fixedBNGpacks;
+            if (vm.packsOpened <= totalPacksOpened)
+            {
+                return datacontext.openMixtureOfSortedBoosters(0, 1, 0, 0, 0, 0).then(function (data) {
+                    return addAICards(ai, data);
+                });
+            }
+
+            totalPacksOpened += vm.fixedTHSpacks;
+            if (vm.packsOpened <= totalPacksOpened)
+            {
+                return datacontext.openMixtureOfSortedBoosters(1, 0, 0, 0, 0, 0).then(function (data) {
+                    return addAICards(ai, data);
+                });
+            }
+        }
+
+        function addAICards(ai, cardData) {
+            ai.boosterCards.push.apply(ai.boosterCards, cardData.mythicCards);
+            ai.boosterCards.push.apply(ai.boosterCards, cardData.rareCards);
+            ai.boosterCards.push.apply(ai.boosterCards, cardData.uncommonCards);
+            ai.boosterCards.push.apply(ai.boosterCards, cardData.commonCards);
+            return ai.boosterCards;
         }
     }
 })();

@@ -17,20 +17,41 @@
 
         vm.showingTHS = false;
         vm.showingBNG = true;
+        vm.DTKCards = [];
+        vm.FRFCards = [];
         vm.KTKCards = [];
+        vm.M15Cards = [];
         vm.THSCards = [];
         vm.BNGCards = [];
         vm.JOUCards = [];
         vm.cards = [];
 
-        vm.selectedSet = "0";
+        vm.selectedSet = "6";
 
         vm.swapCards = function()
         {
             switch(vm.selectedSet)
             {
-                case "0":
-                    if (vm.KTKCards != null) {
+                case "7":
+                    if (vm.DTKCards.commonCards != null) {
+                        vm.cards = vm.DTKCards;
+                    } else {
+                        getAllDTKCards().then(function () {
+                            vm.cards = vm.DTKCards;
+                        });
+                    }
+                    break;
+                case "6":
+                    if (vm.FRFCards.commonCards != null) {
+                        vm.cards = vm.FRFCards;
+                    } else {
+                        getAllFRFCards().then(function () {
+                            vm.cards = vm.FRFCards;
+                        });
+                    }
+                    break;
+                case "5":
+                    if (vm.KTKCards.commonCards != null) {
                         vm.cards = vm.KTKCards;
                     } else {
                         getAllKTKCards().then(function () {
@@ -39,7 +60,7 @@
                     }
                     break;
                 case "1":
-                    if (vm.M15Cards != null) {
+                    if (vm.M15Cards.commonCards != null) {
                         vm.cards = vm.M15Cards;
                     } else {
                         getAllM15Cards().then(function () {
@@ -81,10 +102,22 @@
         activate();
 
         function activate() {
-            common.activateController([getAllKTKCards()], controllerId)
+            common.activateController([getAllFRFCards()], controllerId)
                 .then(function () {
-                    vm.cards = vm.KTKCards;
+                    vm.cards = vm.FRFCards;
                 });
+        }
+
+        function getAllDTKCards() {
+            return datacontext.getAllDTKCardsByRarity().then(function (data) {
+                return vm.DTKCards = data;
+            });
+        }
+
+        function getAllFRFCards() {
+            return datacontext.getAllFRFCardsByRarity().then(function(data) {
+                return vm.FRFCards = data;
+            });
         }
 
         function getAllKTKCards() {

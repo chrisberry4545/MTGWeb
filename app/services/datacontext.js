@@ -22,7 +22,9 @@
             openBoosters: openBoosters,
             getAllCards: getAllCards,
             getAllCardsByRarity: getAllCardsByRarity,
+            getAllFRFCardsByRarity: getAllFRFCardsByRarity,
             getAllKTKCardsByRarity: getAllKTKCardsByRarity,
+            getAllDTKCardsByRarity: getAllDTKCardsByRarity,
             getAllM15CardsByRarity: getAllM15CardsByRarity,
             getAllTHSCardsByRarity: getAllTHSCardsByRarity,
             getAllJOUCardsByRarity: getAllJOUCardsByRarity,
@@ -57,10 +59,10 @@
             return $q.when(openXBNGBoosters(numBoosters));
         }
 
-        function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, seedColor) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters - 1);
+        function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, seedColor) {
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters - 1, numDTKBoosters);
             //Replace core set boosters with seeded boosters.
-            var cards = getAllKTKCardsSortedByRarity();
+            var cards = getAllFRFCardsSortedByRarity();
             var boostersToSeed = openXCardBoostersForColor(1, cards, seedColor);
             //boostersToSeed.rareCards.push(KTK[getSeedCardNumber(seedColor)]);
 
@@ -75,13 +77,13 @@
             return $q.when(boostersToSeed);
         }
 
-        function openMixtureOfSortedBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters);
+        function openMixtureOfSortedBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters) {
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters);
             return $q.when(chosenCards);
 
         }
 
-        function openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters)
+        function openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters)
         {
             var cardsBNG = openXBNGBoosters(numBNGBoosters);
 
@@ -116,6 +118,18 @@
             cardsKTK.uncommonCards.sort(cardSort);
             cardsKTK.commonCards.sort(cardSort);
 
+            var cardsFRF = openXFRFBoosters(numFRFBoosters);
+            cardsFRF.mythicCards.sort(cardSort);
+            cardsFRF.rareCards.sort(cardSort);
+            cardsFRF.uncommonCards.sort(cardSort);
+            cardsFRF.commonCards.sort(cardSort);
+
+            var cardsDTK = openXDTKBoosters(numDTKBoosters);
+            cardsDTK.mythicCards.sort(cardSort);
+            cardsDTK.rareCards.sort(cardSort);
+            cardsDTK.uncommonCards.sort(cardSort);
+            cardsDTK.commonCards.sort(cardSort);
+
 
             cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsTHS.mythicCards);
             cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsTHS.rareCards);
@@ -136,6 +150,11 @@
             cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsKTK.rareCards);
             cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsKTK.uncommonCards);
             cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsKTK.commonCards);
+
+            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsFRF.mythicCards);
+            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsFRF.rareCards);
+            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsFRF.uncommonCards);
+            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsFRF.commonCards);
 
             return cardsBNG;
         }
@@ -176,6 +195,16 @@
 
         function openXKTKBoosters(numBoosters) {
             var cards = getAllKTKCardsSortedByRarity();
+            return openXCardBoosters(numBoosters, cards);
+        }
+
+        function openXFRFBoosters(numBoosters) {
+            var cards = getAllFRFCardsSortedByRarity();
+            return openXCardBoosters(numBoosters, cards);
+        }
+
+        function openXDTKBoosters(numBoosters) {
+            var cards = getAllDTKCardsSortedByRarity();
             return openXCardBoosters(numBoosters, cards);
         }
 
@@ -226,32 +255,36 @@
             {
                 var cardNumberToGet = Math.round(Math.random() * (allCards.commonCards.length - 1));
                 var cardToAdd = allCards.commonCards[cardNumberToGet];
-                var containsCard = false;
-                $.each(cards.commonCards, function (index, value) {
-                    if (value.Number == cardToAdd.Number) {
-                        containsCard = true;
+                if (cardToAdd != null) {
+                    var containsCard = false;
+                    $.each(cards.commonCards, function (index, value) {
+                        if (value.Number == cardToAdd.Number) {
+                            containsCard = true;
+                        }
+                    });
+                    if (containsCard && allCards.commonCards.length > numberOfCommons) {
+                        i--;
+                    } else {
+                        cards.commonCards.push(cardToAdd);
                     }
-                });
-                if (containsCard && allCards.commonCards.length > numberOfCommons) {
-                    i--;
-                } else {
-                    cards.commonCards.push(cardToAdd);
                 }
             }
             for (var i = 0; i < numberOfUncommons; i++)
             {
                 var cardNumberToGet = Math.round(Math.random() * (allCards.uncommonCards.length - 1));
                 var cardToAdd = allCards.uncommonCards[cardNumberToGet];
-                var containsCard = false;
-                $.each(cards.uncommonCards, function (index, value) {
-                    if (value.Number == cardToAdd.Number) {
-                        containsCard = true;
+                if (cardToAdd != null) {
+                    var containsCard = false;
+                    $.each(cards.uncommonCards, function (index, value) {
+                        if (value.Number == cardToAdd.Number) {
+                            containsCard = true;
+                        }
+                    });
+                    if (containsCard) {
+                        numberOfUncommons++;
+                    } else {
+                        cards.uncommonCards.push(cardToAdd);
                     }
-                });
-                if (containsCard) {
-                    numberOfUncommons++;
-                } else {
-                    cards.uncommonCards.push(cardToAdd);
                 }
             }
 
@@ -515,13 +548,12 @@
         //    return $q.when(cards);
         //}
 
-        function getAllKTKCardsByRarity() {
-            return $q.when(getAllKTKCardsSortedByRarity());
+        function getAllDTKCardsByRarity() {
+            return $q.when(getAllDTKCardsSortedByRarity())
         }
-
-        function getAllKTKCardsSortedByRarity() {
+        function getAllDTKCardsSortedByRarity() {
             var cards = new Cards();
-            KTK.forEach(function (card) {
+            DTK.forEach(function (card) {
                 if (card.Rarity == 'C') {
                     cards.commonCards.push(card);
                 }
@@ -536,6 +568,21 @@
                 }
             });
             return cards;
+        }
+
+        function getAllFRFCardsByRarity() {
+            return $q.when(getAllFRFCardsSortedByRarity())
+        }
+        function getAllFRFCardsSortedByRarity() {
+            return sortCardSet(FRF);
+        }
+
+        function getAllKTKCardsByRarity() {
+            return $q.when(getAllKTKCardsSortedByRarity());
+        }
+
+        function getAllKTKCardsSortedByRarity() {
+            return sortCardSet(KTK);
         }
 
         function getAllM15CardsByRarity() {
@@ -544,68 +591,27 @@
 
         function getAllM15CardsSortedByRarity() 
         {
-            var cards = new Cards();
-            M15.forEach(function (card) {
-                if (card.Rarity == 'C') {
-                    cards.commonCards.push(card);
-                }
-                else if (card.Rarity == 'U') {
-                    cards.uncommonCards.push(card);
-                }
-                else if (card.Rarity == 'R') {
-                    cards.rareCards.push(card);
-                }
-                else if (card.Rarity == 'M') {
-                    cards.mythicCards.push(card);
-                }
-            });
-            return cards;
+            return sortCardSet(M15);
         }
 
         function getAllTherosCardsSortedByRarity()
         {
-            var cards = new Cards();
-            THS.forEach(function (card) {
-                if (card.Rarity == 'C') {
-                    cards.commonCards.push(card);
-                }
-                else if (card.Rarity == 'U') {
-                    cards.uncommonCards.push(card);
-                }
-                else if (card.Rarity == 'R') {
-                    cards.rareCards.push(card);
-                }
-                else if (card.Rarity == 'M') {
-                    cards.mythicCards.push(card);
-                }
-            });
-            return cards;
+            return sortCardSet(THS);
         }
 
         function getAllCardsSortedByRarity()
         {
-            var cards = new Cards();
-            BNG.forEach(function (card) {
-                if (card.Rarity == 'C') {
-                    cards.commonCards.push(card);
-                }
-                else if (card.Rarity == 'U') {
-                    cards.uncommonCards.push(card);
-                }
-                else if (card.Rarity == 'R') {
-                    cards.rareCards.push(card);
-                }
-                else if (card.Rarity == 'M') {
-                    cards.mythicCards.push(card);
-                }
-            });
-            return cards;
+            return sortCardSet(BNG);
         }
 
         function getAllJOUCardsSortedByRarity()
         {
+            return sortCardSet(JOU);
+        }
+
+        function sortCardSet(cardSetVar) {
             var cards = new Cards();
-            JOU.forEach(function (card) {
+            cardSetVar.forEach(function (card) {
                 if (card.Rarity == 'C') {
                     cards.commonCards.push(card);
                 }

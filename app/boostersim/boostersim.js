@@ -15,21 +15,23 @@
         vm.column3Title = "Rarity";
 
 
-        vm.boosters_to_open_ktk = 3;
+        vm.boosters_to_open_ktk = localStorageService.getBoosterSim_numBoosters_setOne() || 0;
+        vm.boosters_to_open_frf = localStorageService.getBoosterSim_numBoosters_setTwo() || 3;
+        vm.boosters_to_open_dtk = localStorageService.getBoosterSim_numBoosters_setThree() || 0;
 
         vm.boosters_to_open_core = localStorageService.getBoosterSim_numBoosters_setZero() || 0;
-        vm.boosters_to_open_ths = localStorageService.getBoosterSim_numBoosters_setOne() || 0;
-        vm.boosters_to_open_bng = localStorageService.getBoosterSim_numBoosters_setTwo() || 0;
-        vm.boosters_to_open_jou = localStorageService.getBoosterSim_numBoosters_setThree() || 0;
+        vm.boosters_to_open_ths = 0;
+        vm.boosters_to_open_bng = 0;
+        vm.boosters_to_open_jou = 0;
 
         vm.cards = [];
 
 
         function storeValues() {
             localStorageService.setBoosterSim_numBoosters_setZero(vm.boosters_to_open_core);
-            localStorageService.setBoosterSim_numBoosters_setOne(vm.boosters_to_open_ths);
-            localStorageService.setBoosterSim_numBoosters_setTwo(vm.boosters_to_open_bng);
-            localStorageService.setBoosterSim_numBoosters_setThree(vm.boosters_to_open_jou);
+            localStorageService.setBoosterSim_numBoosters_setOne(vm.boosters_to_open_ktk);
+            localStorageService.setBoosterSim_numBoosters_setTwo(vm.boosters_to_open_frf);
+            localStorageService.setBoosterSim_numBoosters_setThree(vm.boosters_to_open_dtk);
         }
 
         function validateEntries() {
@@ -37,7 +39,9 @@
                 || vm.boosters_to_open_ths == null
                 || vm.boosters_to_open_bng == null
                 || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null) {
+                || vm.boosters_to_open_ktk == null
+                || vm.boosters_to_open_frf == null
+                || vm.boosters_to_open_dtk == null) {
                 logError("Please use a number for the amount of boosters.");
                 return false;
             }
@@ -56,7 +60,9 @@
                 parseInt(vm.boosters_to_open_bng),
                 parseInt(vm.boosters_to_open_jou),
                 parseInt(vm.boosters_to_open_core),
-                parseInt(vm.boosters_to_open_ktk)
+                parseInt(vm.boosters_to_open_ktk),
+                parseInt(vm.boosters_to_open_frf),
+                parseInt(vm.boosters_to_open_dtk)
                 ).then(function (data) {
                     vm.cards = [];
                     log("Opening booster packs...");

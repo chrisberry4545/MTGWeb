@@ -14,7 +14,9 @@
 
         var vm = this;
         vm.title = 'Sealed Simulator';
-        vm.boosters_to_open_ktk = 6;
+        vm.boosters_to_open_dtk = 0;
+        vm.boosters_to_open_frf = 6;
+        vm.boosters_to_open_ktk = 0;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;
@@ -32,7 +34,7 @@
             }
         }
 
-        vm.include_seeded_boosters = "W";
+        vm.include_seeded_boosters = "0";
         vm.include_seeded_boosters_options = [
             { key: "W", value: "Abzan Houses" },
             { key: "U", value: "Jeskai Way" },
@@ -114,7 +116,9 @@
                 || vm.boosters_to_open_ths == null
                 || vm.boosters_to_open_bng == null
                 || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null) {
+                || vm.boosters_to_open_ktk == null
+                || vm.boosters_to_open_frf == null
+                || vm.boosters_to_open_dtk == null) {
                 logError("Please use a number for the amount of boosters.");
                 return false;
             }
@@ -127,7 +131,7 @@
                 return false;
             }
             if (vm.include_seeded_boosters != "0") {
-                if (vm.boosters_to_open_ktk > 0) {
+                if (vm.boosters_to_open_frf > 0) {
 
                     return datacontext.openMixtureOfSeededBoosters(
                         parseInt(vm.boosters_to_open_ths),
@@ -135,6 +139,8 @@
                         parseInt(vm.boosters_to_open_jou),
                         parseInt(vm.boosters_to_open_core),
                         parseInt(vm.boosters_to_open_ktk),
+                        parseInt(vm.boosters_to_open_frf),
+                        parseInt(vm.boosters_to_open_dtk),
                         vm.include_seeded_boosters).then(function (data) {
                             vm.boosterCards = [];
                             vm.selectedCards = [];
@@ -163,7 +169,9 @@
                     parseInt(vm.boosters_to_open_bng),
                     parseInt(vm.boosters_to_open_jou),
                     parseInt(vm.boosters_to_open_core),
-                    parseInt(vm.boosters_to_open_ktk)
+                    parseInt(vm.boosters_to_open_ktk),
+                    parseInt(vm.boosters_to_open_frf),
+                    parseInt(vm.boosters_to_open_dtk)
                     ).then(function (data) {
                         vm.boosterCards = [];
                         vm.selectedCards = [];
