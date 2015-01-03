@@ -38,21 +38,26 @@
                 url: url,
                 contentType: "application/json; charset=utf-8",
                 crossDomain: true,
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function getGameInfo(playerID) {
+        function getGameInfo() {
             var url = hostUrl + gameInfoWebApi;
             return $.ajax({
                 url: url,
                 type: "POST",
-                data: JSON.stringify(playerID),
                 contentType: "application/json; charset=utf-8",
                 crossDomain: true,
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
@@ -70,13 +75,16 @@
                 data: JSON.stringify(dataToSend),
                 contentType: "application/json; charset=utf-8",
                 crossDomain: true,
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function createGame(playerID, boosters, name) {
+        function createGame(name) {
             var url = hostUrl + gameWebApi;
 
             if (name.length > 50)
@@ -85,8 +93,6 @@
             }
 
             var dataToSend = {
-                PlayerID: playerID,
-                BoostersToOpen: boosters,
                 PlayerName: name
             }
             return $.ajax({
@@ -95,30 +101,38 @@
                 data: JSON.stringify(dataToSend),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function startGame(playerID) {
+        function startGame(boosters) {
             var url = hostUrl + startGameWebApi;
+            var dataToSend = {
+                BoostersToOpen: boosters
+            }
             return $.ajax({
                 url: url,
                 type: "POST",
-                data: JSON.stringify(playerID),
+                data: JSON.stringify(dataToSend),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function joinGame(playerID, gameID, name) {
+        function joinGame(gameID, name) {
             var url = hostUrl + joinGameWebApi;
             var dataToSend = {
-                PlayerID: playerID,
                 GameID: gameID,
                 PlayerName: name
             };
@@ -128,31 +142,35 @@
                 type: "POST",
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function leaveGame(playerID) {
+        function leaveGame() {
             var url = hostUrl + leaveGameWebApi;
             return $.ajax({
                 url: url,
-                data: JSON.stringify(playerID),
                 type: "POST",
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function addCard(playerID, cardNumber) {
+        function addCard(cardNumber) {
             var url = hostUrl + playerWebApi;
             var moveInfo =
                 {
-                    PlayerID: playerID,
                     CardNumber: cardNumber
                 };
             return $.ajax({
@@ -161,7 +179,10 @@
                 data: JSON.stringify(moveInfo),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
@@ -176,29 +197,33 @@
                 data: JSON.stringify(playerID),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             });
         }
 
-        function getFinalGameResults(playerID) {
+        function getFinalGameResults() {
             var url = hostUrl + resultsGameWebApi;
             return $.ajax({
                 url: url,
-                data: JSON.stringify(playerID),
                 type: "POST",
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
         }
 
-        function removePlayer(playerID, playerIndex) {
+        function removePlayer(playerIndex) {
             var url = hostUrl + removePlayerWebApi;
             var moveInfo =
                 {
-                    PlayerID: playerID,
                     PlayerIndex: playerIndex
                 };
             return $.ajax({
@@ -207,7 +232,10 @@
                 data: JSON.stringify(moveInfo),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });
@@ -226,7 +254,10 @@
                 data: JSON.stringify(chatInputs),
                 crossDomain: true,
                 contentType: "application/json; charset=utf-8",
-                dataType: "json"
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
             }).done(function (data) {
                 return data;
             });

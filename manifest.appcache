@@ -1,8 +1,14 @@
 ﻿CACHE MANIFEST
-# 2014-02-07 v1.1.13
+# 2015-01-03 v1.1.17
 
 CACHE:
 
+app/carddata/CardsFRF.min.js
+app/carddata/CardsKTK.min.js
+app/carddata/CardsM15.min.js
+app/carddata/CardsJOU.min.js
+app/carddata/CardsBNG.min.js
+app/carddata/CardsTHS.min.js
 app/dashboard/dashboard.html
 app/about/about.html
 app/boostersim/boostersim.html
@@ -69,12 +75,6 @@ app/draftsim/ai.min.js
 app/about/about.min.js
 app/carddisplay/carddisplay.min.js
 app/multiplayerdraft/multiplayerdraft.min.js
-app/carddata/CardsBNG.min.js
-app/carddata/CardsTHS.min.js
-app/carddata/CardsJOU.min.js
-app/carddata/CardsM15.min.js
-app/carddata/CardsKTK.min.js
-app/carddata/CardsFRF.min.js
 
 Images/Lands/plains.png
 Images/Lands/island.png
@@ -336,6 +336,61 @@ Images/KTK/WitnessoftheAges.jpg
 Images/KTK/WoodedFoothills.jpg
 Images/KTK/WoollyLoxodon.jpg
 Images/KTK/ZurgoHelmsmasher.jpg
+
+Images/FRF/AbzanKin-Guard.jpg
+Images/FRF/ArchfiendofDepravity.jpg
+Images/FRF/BattleBrawler.jpg
+Images/FRF/bloodfellcaves.jpg
+Images/FRF/BlossomingSands.jpg
+Images/FRF/CruxofFate.jpg
+Images/FRF/DaghatartheAdamant.jpg
+Images/FRF/DismalBackwater.jpg
+Images/FRF/DragonscaleGeneral.jpg
+Images/FRF/DromokatheEternal.jpg
+Images/FRF/EtherealAmbush.jpg
+Images/FRF/FlamecrushRider.jpg
+Images/FRF/FlamerushRider.jpg
+Images/FRF/FrontierMastodon.jpg
+Images/FRF/FrontierSiege.jpg
+Images/FRF/GoblinHeelcutter.jpg
+Images/FRF/GurmagAngler.jpg
+Images/FRF/HonorsReward.jpg
+Images/FRF/HoodedAssassin.jpg
+Images/FRF/HungeringYeti.jpg
+Images/FRF/JeskaiInfiltrator.jpg
+Images/FRF/JeskaiSage.jpg
+Images/FRF/JungleHollow.jpg
+Images/FRF/Kolaghan--theStormsFury.jpg
+Images/FRF/Lightform.jpg
+Images/FRF/MarangRiverProwler.jpg
+Images/FRF/MonasteryMentor.jpg
+Images/FRF/MonasterySiege.jpg
+Images/FRF/OutpostSiege.jpg
+Images/FRF/PalaceSiege.jpg
+Images/FRF/Rageform.jpg
+Images/FRF/RuggedHighlands.jpg
+Images/FRF/Sage-EyeAvengers.jpg
+Images/FRF/SandsteppeMastodon.jpg
+Images/FRF/ScouredBarrens.jpg
+Images/FRF/ShamanicRevelation.jpg
+Images/FRF/ShamanoftheGreatHunt.jpg
+Images/FRF/ShuYun--theSilentTempest.jpg
+Images/FRF/Silumgar--DragonUsurper.jpg
+Images/FRF/SoulfireGrandMaster.jpg
+Images/FRF/Soulflayer.jpg
+Images/FRF/SoulSummons.jpg
+Images/FRF/SwiftwaterCliffs.jpg
+Images/FRF/TemporalTrespass.jpg
+Images/FRF/TemurWarShaman.jpg
+Images/FRF/ThornwoodFalls.jpg
+Images/FRF/TorrentElemental.jpg
+Images/FRF/TranquilCove.jpg
+Images/FRF/ugin--thespiritdragon.jpg
+Images/FRF/ValorousStance.jpg
+Images/FRF/WanderingChampion.jpg
+Images/FRF/WhisperwoodElemental.jpg
+Images/FRF/Wind-ScarredCrag.jpg
+Images/FRF/YasovaDragonclaw.jpg
 
 NETWORK:
 *

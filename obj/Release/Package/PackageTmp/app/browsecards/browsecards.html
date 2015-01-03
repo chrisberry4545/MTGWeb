@@ -1,81 +1,101 @@
 ﻿<section class="mainbar" data-ng-controller="browsecards as vm">
     <section class="matter">
         <div class="container-fluid">
+
             <div class="row-fluid">
-                <button ng-click="vm.swapCards()" class="span-12 btn btn-primary chris-btn">
-                    <span ng-if="!vm.showingTHS">Browse THS Cards</span>
-                    <span ng-if="!vm.showingBNG">Browse BNG Cards</span>
-                </button>
-            </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Mythic Cards"
-                             subtitle="{{vm.cards.mythicCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.mythicCards">
-                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
+                <div class="span10">
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="row-fluid text-center">
+                                <select ng-model="vm.selectedSet" ng-change="vm.swapCards()">
+                                    <option value="6">Show Fate Reforged Cards</option>
+                                    <option value="5">Show Khans of Tarkir Cards</option>
+                                    <option value="1">Show Magic 2015 Cards</option>
+                                    <option value="2">Show Theros Cards</option>
+                                    <option value="3">Show Born of the Gods Cards</option>
+                                    <option value="4">Show Journey into Nyx Cards</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Mythic Cards"
+                                     subtitle="{{vm.cards.mythicCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.cards.mythicCards">
+                                            <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Rare Cards"
+                                     subtitle="{{vm.cards.rareCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.cards.rareCards">
+                                            <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Uncommon Cards"
+                                     subtitle="{{vm.cards.uncommonCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.cards.uncommonCards">
+                                            <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Common Cards"
+                                     subtitle="{{vm.cards.commonCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.cards.commonCards">
+                                            <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Rare Cards"
-                             subtitle="{{vm.cards.rareCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.rareCards">
-                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="span2 hidden-phone">
+                    <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
                 </div>
+
             </div>
 
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Uncommon Cards"
-                             subtitle="{{vm.cards.uncommonCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.uncommonCards">
-                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Common Cards"
-                             subtitle="{{vm.cards.commonCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.commonCards">
-                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </section>

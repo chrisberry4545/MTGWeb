@@ -1,19 +1,19 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="app">
+<html manifest="manifest.appcache" data-ng-app="app">
 <head>
     <style>
         /* This helps the ng-show/ng-hide animations start at the right place. */
         /* Since Angular has this but needs to load, this gives us the class early. */
         .ng-hide {
-            display: none!important;
+            display: none !important;
         }
     </style>
-    <title>MTG Mirror - BNG Draft and Sealed Simulator</title>
+    <title>MTG Mirror - Khans of Tarkir Draft and Sealed Simulator</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta name="description" content="MTG Draft Simulator">
-    <meta name="keywords" content="MTG, Magic the gathering, BNG, Born of the Gods, draft, booster, simulator">
+    <meta name="keywords" content="MTG, Magic the gathering, KTK, Khans of Tarkir, M15, Magic 2015, draft, booster, simulator, mtgmirror, mirror">
     <meta name="author" content="Chris Berry">
 
     <script>
@@ -25,6 +25,7 @@
             document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
         }
     </script>
+
 
     <script type="text/javascript">
 
@@ -41,14 +42,16 @@
 
     </script>
 
-    <link href="content/ie10mobile.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="/mtgmirrorfavicon.png">
+    <link href="content/ie10mobile.min.css" rel="stylesheet" />
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <link href="content/font-awesome.min.css" rel="stylesheet" />
-    <link href="content/toastr.css" rel="stylesheet" />
-    <link href="content/customtheme.css" rel="stylesheet">
+    <link href="content/toastr.min.css" rel="stylesheet" />
+    <link href="content/customtheme.min.css" rel="stylesheet">
     <link href="content/bootstrap-responsive.min.css" rel="stylesheet" />
-    <link href="content/styles.css" rel="stylesheet" />
-    <link href="Content/chrisstylesheet.css" rel="stylesheet" />
+    <link href="content/styles.min.css" rel="stylesheet" />
+    <link href="Content/chrisstylesheet.min.css" rel="stylesheet" />
 </head>
 <body>
     <div>
@@ -56,7 +59,7 @@
         <div id="splash-page" data-ng-show="false">
             <div class="page-splash">
                 <div class="page-splash-message">
-                    MTG Mirror - BNG Draft and Sealed Simulator
+                    MTG Mirror - Khans of Tarkir Draft and Sealed Simulator
                 </div>
                 <div class="progress progress-striped active page-progress-bar">
                     <div class="bar"></div>
@@ -78,42 +81,56 @@
     <script src="scripts/moment.min.js"></script>
     <script src="scripts/ui-bootstrap-tpls-0.6.0.min.js"></script>
     <script src="scripts/spin.min.js"></script>
+    <script src="Scripts/FileSaver.min.js"></script>
+    <script src="Scripts/Chart.min.js"></script>
 
     <!-- Bootstrapping -->
-    <script src="app/app.js"></script>
-    <script src="app/config.js"></script>
-    <script src="app/config.exceptionHandler.js"></script>
-    <script src="app/config.route.js"></script>
+    <script src="app/app.min.js"></script>
+    <script src="app/config.min.js"></script>
+    <script src="app/config.exceptionHandler.min.js"></script>
+    <script src="app/config.route.min.js"></script>
 
     <!-- common Modules -->
-    <script src="app/common/common.js"></script>
-    <script src="app/common/logger.js"></script>
-    <script src="app/common/spinner.js"></script>
+    <script src="app/common/common.min.js"></script>
+    <script src="app/common/logger.min.js"></script>
+    <script src="app/common/spinner.min.js"></script>
 
     <!-- common.bootstrap Modules -->
-    <script src="app/common/bootstrap/bootstrap.dialog.js"></script>
+    <script src="app/common/bootstrap/bootstrap.dialog.min.js"></script>
 
     <!-- app -->
-    <script src="app/admin/admin.js"></script>
-    <script src="app/dashboard/dashboard.js"></script>
-    <script src="app/layout/shell.js"></script>
-    <script src="app/layout/sidebar.js"></script>
+    <script src="app/admin/admin.min.js"></script>
+    <script src="app/dashboard/dashboard.min.js"></script>
+    <script src="app/layout/shell.min.js"></script>
+    <script src="app/layout/sidebar.min.js"></script>
 
     <!-- app Services -->
-    <script src="app/services/datacontext.js"></script>
-    <script src="app/services/directives.js"></script>
-    <script src="app/services/webapicontext.js"></script>
+    <script src="app/services/datacontext.min.js"></script>
+    <script src="app/services/directives.min.js"></script>
+    <script src="app/services/webapicontext.min.js"></script>
+    <script src="app/services/localStorageService.min.js"></script>
+    <script src="app/services/downloadDataService.min.js"></script>
+    <script src="app/services/graphAnalysis.min.js"></script>
+    <script src="app/services/deckFunctions.min.js"></script>
+    <script src="app/services/handsimulator.min.js"></script>
 
     <!-- My modules -->
-    <script src="app/boostersim/boostersim.js"></script>
-    <script src="app/browsecards/browsecards.js"></script>
-    <script src="app/sealedsim/sealedsim.js"></script>
-    <script src="app/draftsim/draftsim.js"></script>
-    <script src="app/draftsim/ai.js"></script>
-    <script src="app/about/about.js"></script>
-    <script src="app/carddisplay/carddisplay.js"></script>
-    <script src="app/multiplayerdraft/multiplayerdraft.js"></script>
-    <script src="app/carddata/CardsBNG.js"></script>
-    <script src="app/carddata/CardsTHS.js"></script>
+    <script src="app/services/landcards.min.js"></script>
+    <script src="app/boostersim/boostersim.min.js"></script>
+    <script src="app/browsecards/browsecards.min.js"></script>
+    <script src="app/sealedsim/sealedsim.min.js"></script>
+    <script src="app/draftsim/draftsim.min.js"></script>
+    <script src="app/draftsim/ai.min.js"></script>
+    <script src="app/about/about.min.js"></script>
+    <script src="app/carddisplay/carddisplay.min.js"></script>
+    <script src="app/multiplayerdraft/multiplayerdraft.min.js"></script>
+    <script src="app/carddata/CardsBNG.min.js"></script>
+    <script src="app/carddata/CardsTHS.min.js"></script>
+    <script src="app/carddata/CardsJOU.min.js"></script>
+    <script src="app/carddata/CardsM15.min.js"></script>
+    <script src="app/carddata/CardsKTK.min.js"></script>
+    <script src="app/carddata/CardsFRF.min.js"></script>
+    <script src="app/carddata/CardsDTK.min.js"></script>
+    <script src="app/handmodal/handmodal.min.js"></script>
 </body>
 </html>

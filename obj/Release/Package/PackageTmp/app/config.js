@@ -16,7 +16,7 @@
     };
 
     var config = {
-        appErrorPrefix: '[HT Error] ', //Configure the exceptionHandler decorator
+        appErrorPrefix: '[MTGMirror Error] ', //Configure the exceptionHandler decorator
         docTitle: 'MTG Mirror: ',
         events: events,
         remoteServiceName: remoteServiceName,

@@ -9,7 +9,6 @@
 
         var vm = this
         vm.allCards = [];
-        vm.THSCards = [];
 
         vm.cardClicked = function(c)
         {
@@ -33,14 +32,14 @@
         }
 
         function sendToLocation(destination) {
-            window.location = destination;
+            location.href = destination;
         }
 
 
         activate();
 
         function activate() {
-            var promises = [getAllCards(), getAllTHSCards()];
+            var promises = [getAllCards()];
             common.activateController(promises, controllerId)
                 .then(function () {
                     preload();
@@ -49,27 +48,31 @@
 
         var images = new Array();
         function preload() {
-            var fullCards = vm.allCards.concat(vm.THSCards);
-            for (var i = 0; i < fullCards.length; i++) {
-                images[i] = new Image();
-                images[i].src = fullCards[i].src;
-            }
+            
+            //var fullCards = vm.allCards.concat(vm.THSCards);
+            //for (var i = 0; i < fullCards.length; i++) {
+            //    images[i] = new Image();
+            //    images[i].src = fullCards[i].src;
+            //}
         }
 
         function getAllCards() {
-            return datacontext.getAllCards().then(function (data) {
-                return vm.allCards = data;
-            });
+            //var set3Cards = datacontext.getAllSet3CardsNoDelay().slice(0);
+            //var set1Cards = datacontext.getAllSet1CardsNoDelay().slice(0);
+            //var set2Cards = datacontext.getAllSet2CardsNoDelay().slice(0);
+
+            //vm.allCards = $.merge(set3Cards, set2Cards);
+            //vm.allCards = $.merge(vm.allCards, set1Cards);
+            //vm.allCards = datacontext.getAllCoreSetCardsNoDelay().slice(0);
         }
 
-        function getAllTHSCards() {
-            return datacontext.getAllTHSCards().then(function (data) {
-                return vm.THSCards = data;
-            });
-        }
 
         vm.convertToColor = function (colorArray)
         {
+            if (colorArray == null)
+            {
+                return "";
+            }
             var colorString = "";
             colorArray.forEach(function (color) {
                 var result = colorMap.filter(function (obj) {
@@ -90,11 +93,14 @@
         ];
 
         vm.convertToRarity = function (rarityCode) {
+            if (rarityCode == null)
+            {
+                return "";
+            }
             var rarityString = "";
             var result = rarityMap.filter(function (obj) {
                 return obj.code == rarityCode;
             });
-            rarityString += result[0].rarity;
             return rarityString;
         }
 
@@ -106,6 +112,9 @@
         ];
 
         vm.convertToType = function (typeArray) {
+            if (typeArray == null) {
+                return "";
+            }
             var typeString = "";
             typeArray.forEach(function (type) {
                 var result = typeMap.filter(function (obj) {

@@ -30,13 +30,23 @@
                     }
                 }
             }, {
-                url: '/boostersim',
+                url: '/draftsim',
                 config: {
-                    title: 'boostersim',
-                    templateUrl: 'app/boostersim/boostersim.html',
+                    title: 'draftsim',
+                    templateUrl: 'app/draftsim/draftsim.html',
+                    settings: {
+                        nav: 2,
+                        content: '<i></i> Draft Simulator'
+                    }
+                }
+            }, {
+                url: '/sealedsim',
+                config: {
+                    title: 'sealedsim',
+                    templateUrl: 'app/sealedsim/sealedsim.html',
                     settings: {
                         nav: 3,
-                        content: '<i></i> Booster Simulator'
+                        content: '<i></i> Sealed Simulator'
                     }
                 }
             }, {
@@ -50,23 +60,13 @@
                     }
                 }
             }, {
-                url: '/sealedsim',
+                url: '/boostersim',
                 config: {
-                    title: 'sealedsim',
-                    templateUrl: 'app/sealedsim/sealedsim.html',
+                    title: 'boostersim',
+                    templateUrl: 'app/boostersim/boostersim.html',
                     settings: {
                         nav: 5,
-                        content: '<i></i> Sealed Simulator'
-                    }
-                }
-            }, {
-                url: '/draftsim',
-                config: {
-                    title: 'draftsim',
-                    templateUrl: 'app/draftsim/draftsim.html',
-                    settings: {
-                        nav: 2,
-                        content: '<i></i> Draft Simulator'
+                        content: '<i></i> Booster Simulator'
                     }
                 }
             }, {
@@ -80,17 +80,17 @@
                     }
                 }
             }
-            , {
-                url: '/multiplayerdraft',
-                config: {
-                    title: 'multiplayerdraft',
-                    templateUrl: 'app/multiplayerdraft/multiplayerdraft.html',
-                    settings: {
-                        nav: 7,
-                        content: '<i></i> Multiplayer Draft'
-                    }
-                }
-            }
+            //, {
+            //    url: '/multiplayerdraft',
+            //    config: {
+            //        title: 'multiplayerdraft',
+            //        templateUrl: 'app/multiplayerdraft/multiplayerdraft.html',
+            //        settings: {
+            //            nav: 7,
+            //            content: '<i></i> Multiplayer Draft'
+            //        }
+            //    }
+            //}
             //,{
             //    url: '/admin',
             //    config: {

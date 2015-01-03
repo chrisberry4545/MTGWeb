@@ -12,9 +12,7 @@
 
         var vm = this;
         vm.title = 'Multiplayer Draft';
-        vm.playerID = 0;
         vm.tabNumber = 0;
-        vm.dataLoaded = false;
         vm.pingTime = 2500;
 
         vm.playersInGame = [];
@@ -22,7 +20,7 @@
 
         vm.allCards = [];
 
-        vm.boosters_to_open = [2, 1];
+        vm.boosters_to_open = [1, 1, 1];
 
         vm.name = null;
         vm.unsetName = "";
@@ -59,7 +57,7 @@
             if (vm.gameState != vm.createdGameState)
             {
                 vm.loading = true;
-                $.when(webapicontext.createGame(vm.playerID, vm.boosters_to_open, vm.name)).then(function (data) {
+                $.when(webapicontext.createGame(vm.name)).then(function (data) {
                     if (data != null) {
                         vm.gameState = vm.createdGameState;
                         vm.gameData = data;
@@ -73,7 +71,7 @@
         vm.joinGame = function (gameID) {
             logSuccess("Joining game..");
             vm.loading = true;
-            $.when(webapicontext.joinGame(vm.playerID, gameID, vm.name)).then(function (data) {
+            $.when(webapicontext.joinGame(gameID, vm.name)).then(function (data) {
                 if (data != null) {
                     vm.gameState = vm.joinedGameState;
                     vm.gameData = data;
@@ -91,7 +89,7 @@
 
         vm.leaveGame = function () {
             vm.loading = true;
-            $.when(webapicontext.leaveGame(vm.playerID)).then(function (data) {
+            $.when(webapicontext.leaveGame()).then(function (data) {
                 vm.loading = false;
                 resetGameVariables();
             })
@@ -99,7 +97,7 @@
 
         vm.refreshGameInfo = function () {
             vm.loading = true;
-            $.when(webapicontext.getGameInfo(vm.playerID)).then(function (data) {
+            $.when(webapicontext.getGameInfo()).then(function (data) {
 
                 if (data != null)
                 {
@@ -192,7 +190,7 @@
             if (!vm.gameData.Player.HadTurn) {
                 log("Card picked..");
                 vm.loading = true;
-                $.when(webapicontext.addCard(vm.playerID, cardNumber)).then(function (data) {
+                $.when(webapicontext.addCard(cardNumber)).then(function (data) {
                     if (data != null) {
                         vm.gameData = data;
                         if (vm.gameData.GameState == vm.postGameState) {
@@ -214,7 +212,7 @@
         }
 
         function getGameStats() {
-            $.when(webapicontext.getFinalGameResults(vm.playerID)).then(function (data) {
+            $.when(webapicontext.getFinalGameResults()).then(function (data) {
                 vm.gameData = data;
                 vm.gameState = vm.postGameState;
                 common.$apply();
@@ -234,7 +232,7 @@
                     logSuccess("Starting draft..");
                     vm.loading = true;
                 }
-                $.when(webapicontext.startGame(vm.playerID)).then(function (data) {
+                $.when(webapicontext.startGame(vm.boosters_to_open)).then(function (data) {
                     if (data != null) {
                         if (data.RoundTime - 2 > 0) {
                             vm.timeRemaining = data.RoundTime - 2;
@@ -257,23 +255,23 @@
 
         function activate() {
             vm.getGamesList();
-            var set1Cards = datacontext.getAllSet1CardsNoDelay();
-            var set2Cards = datacontext.getAllSet2CardsNoDelay();
+            var set3Cards = datacontext.getAllSet3CardsNoDelay().splice(0);
+            var set1Cards = datacontext.getAllSet1CardsNoDelay().splice(0);
+            var set2Cards = datacontext.getAllSet2CardsNoDelay().splice(0);
 
             vm.allCards = $.merge(set2Cards, set1Cards);
+            vm.allCards = $.merge(vm.allCards, set3Cards);
             common.activateController([setupPlayerID()], controllerId)
                 .then(function () {
-                    vm.loading = false;
                     worker();
+                    vm.loading = false;
                 });
         };
 
         function setupPlayerID() {
             $.when(webapicontext.getPlayerID()).then(function (data) {
                 if (data != null) {
-                    vm.playerID = data.PlayerID;
                     assignCorrectGameData(data);
-                    vm.dataLoaded = true;
                     common.$apply();
                 }
             });
@@ -308,7 +306,7 @@
         vm.removePlayer = function (index) {
             log("Attempting to remove player..");
             vm.loading = true;
-            $.when(webapicontext.removePlayer(vm.playerID, index)).then(function (data) {
+            $.when(webapicontext.removePlayer(index)).then(function (data) {
                 log("Player successfully removed.");
                 vm.loading = false;
             });

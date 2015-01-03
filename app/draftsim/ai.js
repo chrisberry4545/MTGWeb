@@ -19,19 +19,20 @@ function processTurn(ai) {
         cardToAdd = standardProcess(cards, ai);
     }
 
-    var index = ai.boosterCards.indexOf(cardToAdd);
-    if (index > -1) {
-        ai.boosterCards.splice(index, 1);
-    }
-    ai.cards.push(cardToAdd);
+    if (cardToAdd != null) {
+        var index = ai.boosterCards.indexOf(cardToAdd);
+        if (index > -1) {
+            ai.boosterCards.splice(index, 1);
+        }
+        ai.cards.push(cardToAdd);
 
-    if (ai.colors.length <= 3 - cardToAdd.Color.length)
-    {
-        cardToAdd.Color.forEach(function (color) {
-            if (color !== "C" && ai.colors.indexOf(color) === -1) {
-                ai.colors.push(color);
-            }
-        });
+        if (ai.colors.length <= 3 - cardToAdd.Color.length) {
+            cardToAdd.Color.forEach(function (color) {
+                if (color !== "C" && ai.colors.indexOf(color) === -1) {
+                    ai.colors.push(color);
+                }
+            });
+        }
     }
        
 }
@@ -103,6 +104,9 @@ function standardProcess(cards, ai) {
         }
     }
     var pickedCard = cards[bestNumber];
+    if (pickedCard == null) {
+        return pickedCard;
+    }
     var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
     return pickedCardWithExtraConsiderations;
 }

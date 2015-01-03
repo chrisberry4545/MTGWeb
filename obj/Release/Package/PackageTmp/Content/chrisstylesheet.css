@@ -1,6 +1,6 @@
 ﻿.image_width
 {
-    width:170px;
+    width:260px;
 }
 
 .christopbar > li.nlightblue > a:hover,
@@ -29,6 +29,12 @@
     margin:10px;
 }
 
+.chris-button_text
+{
+    display:table-cell;
+    vertical-align:central;
+}
+
 .chris-side_bar {
 }
 
@@ -44,6 +50,10 @@ img.chris-disabled {
     filter: grayscale(100%);
     filter: url(/Conten/grayscale.svg); /* Firefox 4+ */
     filter: gray; /* IE 6-9 */
+}
+
+.textcenter {
+    text-align:center;
 }
 
 .overlay_center {
@@ -69,4 +79,25 @@ img.chris-disabled {
     display:inline-block;
     min-width:100px;
     min-height:20px;
+}
+.chris-warning_text{
+    color:red;
+}
+
+.chris-btn-thin {
+    margin:10px;
+    padding:2px;
+}
+
+.chris-btn-save {
+    height:60px;
+}
+
+.modal{
+    width:75%;
+    left:25%;
+    height:75%;
+}
+.modal-body {
+    max-height: 622px;
 }

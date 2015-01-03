@@ -15,8 +15,8 @@
         var vm = this;
         vm.title = 'Sealed Simulator';
         vm.boosters_to_open_dtk = 0;
-        vm.boosters_to_open_frf = 6;
-        vm.boosters_to_open_ktk = 0;
+        vm.boosters_to_open_frf = 0;
+        vm.boosters_to_open_ktk = 6;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;

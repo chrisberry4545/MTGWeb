@@ -1,73 +1,173 @@
 ﻿<section class="mainbar" data-ng-controller="sealedsim as vm">
     <section class="matter">
         <div class="container-fluid">
-            <div class="row-fluid hidden-phone">
-                <div class="span12" style="text-align:center">
-                    <div class="input-prepend">
-                        <span class="add-on">Number of Born of the Gods Boosters: </span>
-                        <input type="text" ng-model="vm.boosters_to_open" />
-                    </div>
-                </div>
-                <div class="span12" style="text-align:center">
-                    <div class="input-prepend">
-                        <span class="add-on">Number of Theros Boosters: </span>
-                        <input type="text" ng-model="vm.boosters_to_open_ths" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-fluid visible-phone">
-                <div class="span12" style="text-align:center">
-                    <span class="add-on">Number of Born of the Gods Boosters: </span>
-                </div>
-                <div class="span12" style="text-align:center">
-                    <input type="text" ng-model="vm.boosters_to_open" />
-                </div>
-                <div class="span12" style="text-align:center">
-                    <span class="add-on">Number of Theros Boosters: </span>
-                </div>
-                <div class="span12" style="text-align:center">
-                    <input type="text" ng-model="vm.boosters_to_open_ths" />
-                </div>
-            </div>
+            <div ng-include data-src="'/app/handmodal/handmodal.html'"></div>
 
             <div class="row-fluid">
-                <button ng-click="vm.openBoosters()" class="btn btn-primary chris-btn span12">Open Boosters</button>
-            </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Cards from packs"
-                             subtitle="{{vm.boosterCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.boosterCards track by $index">
-                                    <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
+                <div class="span10">
+
+                    <div class="row-fluid hidden-phone">
+                        <div class="span6">
+                            <div class="row-fluid" style="text-align:center;">
+                                <div class="input-prepend">
+                                    <span class="add-on">Number of Fate Reforged Boosters: </span>
+                                    <input type="number" ng-model="vm.boosters_to_open_frf" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="row-fluid" style="text-align:center;">
+                                <div class="input-prepend">
+                                    <span class="add-on">Number of Khans of Tarkir Boosters: </span>
+                                    <input type="number" ng-model="vm.boosters_to_open_ktk" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="widget wmtg">
-                        <div data-cc-widget-header title="Selected Cards"
-                             subtitle="{{vm.selectedCards.length}}"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.selectedCards track by $index">
-                                    <img ng-click="vm.removeFromDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
+                    <div class="row-fluid visible-phone">
+                        <div class="span12">
+                            <div class="row-fluid" style="text-align:center">
+                                <span class="add-on">Number of Fate Reforged Boosters: </span>
+                            </div>
+                            <div class="row-fluid" style="text-align:center">
+                                <input type="number" ng-model="vm.boosters_to_open_frf" />
+                            </div>
+                        </div>
+                        <div class="span12">
+                            <div class="row-fluid" style="text-align:center">
+                                <span class="add-on">Number of Khans of Tarkir Boosters: </span>
+                            </div>
+                            <div class="row-fluid" style="text-align:center">
+                                <input type="number" ng-model="vm.boosters_to_open_ktk" />
+                            </div>
                         </div>
                     </div>
+                    <!--<div class="row-fluid">
+                        <div ng-include data-src="'/app/sealedsim/radioSeededPacks.html'"></div>
+                    </div>-->
+                    <div class="row-fluid" style=" margin-bottom:15px;">
+                        <button ng-click="vm.includeOlderSets()" class="pull-left">
+                            More Options
+                            <i ng-if="!vm.showOldSets" class="icon-chevron-down"></i>
+                            <i ng-if="vm.showOldSets" class="icon-chevron-up"></i>
+                        </button>
+                    </div>
+                    <div class="row-fluid textcenter">
+                        <div ng-if="vm.showOldSets" ng-include data-src="'/app/sealedsim/hideShowOlderSetsButton.html'"></div>
+                    </div>
+
+                    <div class="row-fluid" style="margin-bottom:15px;">
+                        <button ng-click="vm.openBoosters()" class="btn btn-primary chris-btn span12">Open Boosters</button>
+                    </div>
+
+                    <div class="row-fluid" style="margin-bottom:15px;">
+                        <button class="pull-left" ng-click="vm.saveSelection()">Save selection <i class="icon-save"></i></button>
+                        <button class="pull-right" ng-click="vm.saveCompletePool()">Save pool <i class="icon-save"></i></button>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Cards from packs"
+                                     subtitle="{{vm.boosterCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.boosterCards track by $index">
+                                            <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                        <li data-ng-repeat="card in vm.landcards track by $index">
+                                            <img ng-click="vm.addLandCard(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Card Pool Stats"
+                                     subtitle=""
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <div class="row-fluid">
+                                        <div class="span4 textcenter">
+                                            <h4>Number of Color Symbols</h4>
+                                            <div id="colorPieChartContainer-cardPool"></div>
+                                        </div>
+                                        <div class="span4 textcenter">
+                                            <h4>Number of Card Types</h4>
+                                            <div id="typePieChartContainer-cardPool"></div>
+                                        </div>
+                                        <div class="span4 textcenter">
+                                            <h4>Mana Curve</h4>
+                                            <div id="manaCurveBarChartContainer-cardPool"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Selected Cards"
+                                     subtitle="{{vm.selectedCards.length + vm.selectedLandCards.length}}"
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <ul class="today-datas">
+                                        <li data-ng-repeat="card in vm.selectedCards track by $index">
+                                            <img ng-click="vm.removeFromDeck(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                        <li data-ng-repeat="card in vm.selectedLandCards track by $index">
+                                            <img ng-click="vm.removeLandCard(card)" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <button class="span-12 btn btn-primary chris-btn" ng-click="vm.openHandSimulator()">Try a test hand</button>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget wmtg">
+                                <div data-cc-widget-header title="Selected Cards Stats"
+                                     subtitle=""
+                                     allow-collapse="true"></div>
+                                <div class="widget-content text-center text-info">
+                                    <div class="row-fluid">
+                                        <div class="span4 textcenter">
+                                            <h4>Number of Color Symbols</h4>
+                                            <div id="colorPieChartContainer-selectedCards"></div>
+                                        </div>
+                                        <div class="span4 textcenter">
+                                            <h4>Number of Card Types</h4>
+                                            <div id="typePieChartContainer-selectedCards"></div>
+                                        </div>
+                                        <div class="span4 textcenter">
+                                            <h4>Mana Curve</h4>
+                                            <div id="manaCurveBarChartContainer-selectedCards"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
+
+                <div class="span2 hidden-phone">
+                    <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
+                </div>
             </div>
+
         </div>
     </section>
 </section>

@@ -1,0 +1,26 @@
+﻿<script type="text/ng-template" id="handmodal.html">
+    <div class="modal-header">
+        <h3 class="modal-title" style="display:inline-block;">Test Hand</h3>
+        <button style="float:right; border:0; background:0;" ng-click="cancel()">X</button>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget wmtg">
+                    <div class="widget-content text-center text-info">
+                        <ul class="today-datas">
+                            <li data-ng-repeat="card in handCards track by $index">
+                                <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button style="float:left;" class="btn btn-primary chris-btn" ng-click="mulligan()">Mulligan</button>
+        <button class="btn btn-primary chris-btn" ng-click="generateNewHand()">New hand</button>
+    </div>
+</script>

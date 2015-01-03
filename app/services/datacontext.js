@@ -3,9 +3,9 @@
 
     var serviceId = 'datacontext';
     angular.module('app').factory(serviceId,
-        ['common', datacontext]);
+        ['common', 'landcards', datacontext]);
 
-    function datacontext(common) {
+    function datacontext(common, landcards) {
         var $q = common.$q;
 
         function getSeedCardNumber(cardColor) {
@@ -60,9 +60,9 @@
         }
 
         function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, seedColor) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters - 1, numDTKBoosters);
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters - 1, numFRFBoosters, numDTKBoosters);
             //Replace core set boosters with seeded boosters.
-            var cards = getAllFRFCardsSortedByRarity();
+            var cards = getAllKTKCardsSortedByRarity();
             var boostersToSeed = openXCardBoostersForColor(1, cards, seedColor);
             //boostersToSeed.rareCards.push(KTK[getSeedCardNumber(seedColor)]);
 
@@ -200,7 +200,33 @@
 
         function openXFRFBoosters(numBoosters) {
             var cards = getAllFRFCardsSortedByRarity();
-            return openXCardBoosters(numBoosters, cards);
+            var openedCards = openXCardBoosters(numBoosters, cards);
+
+
+            //In Fate Reforged there is a chance a basic land can be replaced by a fetchland or a life land.
+            var chanceOfLifeLand = 1 / 3;
+            var chanceOfFetchLand = 1 / 72;
+            for (var i = 0; i < numBoosters; i++) {
+                if (Math.random() < chanceOfLifeLand) {
+                    if (Math.random() < chanceOfFetchLand) {
+                        var ktkFetchLands = [229, 232, 238, 247, 248];
+                        var cardNumberToGet = Math.round(Math.random() * (ktkFetchLands.length - 1));
+                        var fetchLandToAdd = KTK[ktkFetchLands[cardNumberToGet]];
+                        openedCards.rareCards.push(fetchLandToAdd);
+                    } else {
+                        var ktkLifeLands = [228, 230, 231, 234, 239, 241, 242, 243, 245, 246];
+                        var ktkLifeLandToGet = Math.round(Math.random() * (ktkLifeLands.length - 1));
+                        var lifeLandToAdd = KTK[ktkLifeLands[ktkLifeLandToGet]];
+                        openedCards.commonCards.push(lifeLandToAdd);
+                    }
+                } else {
+                    var lands = landcards.getLandCards();
+                    var landCardNumberToGet = Math.round(Math.random() * (lands.length - 1));
+                    openedCards.commonCards.push(lands[landCardNumberToGet]);
+                }
+            }
+
+            return openedCards;
         }
 
         function openXDTKBoosters(numBoosters) {
