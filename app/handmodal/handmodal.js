@@ -28,6 +28,18 @@
             $modalInstance.dismiss('cancel');
         };
 
+        $scope.nextCard = function () {
+            var nextCard = handsimulator.getNextCard();
+            if (nextCard != null) {
+                $scope.handCards.push(nextCard);
+            } else {
+                var getLogFn = common.logger.getLogFn;
+                var log = getLogFn(controllerId);
+                var logError = common.logger.getLogFn(controllerId, 'error');
+                logError("There are no more cards to draw");
+            }
+        }
+
 
         activate();
 

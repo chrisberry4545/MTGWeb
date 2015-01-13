@@ -17,9 +17,14 @@
             return deckCards.slice(0, numberOfCards);
         }
 
+        function getRemainingCards(deckCards, numberToStartFrom) {
+            return deckCards.slice(numberToStartFrom, deckCards.length);
+        }
+
         var service = {
             shuffleDeck: shuffleDeck,
-            drawXCards: drawXCards
+            drawXCards: drawXCards,
+            getRemainingCards: getRemainingCards
         };
 
 

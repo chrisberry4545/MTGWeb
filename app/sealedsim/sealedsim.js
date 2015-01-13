@@ -15,8 +15,8 @@
         var vm = this;
         vm.title = 'Sealed Simulator';
         vm.boosters_to_open_dtk = 0;
-        vm.boosters_to_open_frf = 0;
-        vm.boosters_to_open_ktk = 6;
+        vm.boosters_to_open_frf = 4;
+        vm.boosters_to_open_ktk = 2;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;
@@ -131,7 +131,7 @@
                 return false;
             }
             if (vm.include_seeded_boosters != "0") {
-                if (vm.boosters_to_open_frf > 0) {
+                if (vm.boosters_to_open_ktk > 0) {
 
                     return datacontext.openMixtureOfSeededBoosters(
                         parseInt(vm.boosters_to_open_ths),
@@ -161,7 +161,7 @@
                             return vm.boosterCards;
                         });
                 } else {
-                    logError("You must include at least one booster of the latest set to include a seeded booster.");
+                    logError("You must include at least one booster from KTK to include a seeded booster.");
                 }
             } else {
                 return datacontext.openMixtureOfSortedBoosters(

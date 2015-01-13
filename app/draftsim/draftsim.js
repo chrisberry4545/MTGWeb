@@ -21,8 +21,8 @@
 
         vm.boosters_to_open = 1;
 
-        vm.boosters_to_open_frf = 0;
-        vm.boosters_to_open_ktk = 3;
+        vm.boosters_to_open_frf = 1;
+        vm.boosters_to_open_ktk = 2;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;
