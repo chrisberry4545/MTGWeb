@@ -191,6 +191,11 @@
     <Content Include="app\handmodal\handmodal.min.js">
       <DependentUpon>handmodal.js</DependentUpon>
     </Content>
+    <Content Include="app\highpickreport\highpickreport.html" />
+    <Content Include="app\highpickreport\highpickreport.js" />
+    <Content Include="app\highpickreport\highpickreport.min.js">
+      <DependentUpon>highpickreport.js</DependentUpon>
+    </Content>
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\shell.js" />
     <Content Include="app\layout\shell.min.js">
@@ -602,6 +607,9 @@
     </Content>
     <Content Include="app\carddata\CardsDTK.min.js.map">
       <DependentUpon>CardsDTK.min.js</DependentUpon>
+    </Content>
+    <Content Include="app\highpickreport\highpickreport.min.js.map">
+      <DependentUpon>highpickreport.min.js</DependentUpon>
     </Content>
     <None Include="My Project\PublishProfiles\chrisbdev.com - Web Deploy %282%29.pubxml" />
     <None Include="My Project\PublishProfiles\chrisbdev.com - Web Deploy.pubxml" />

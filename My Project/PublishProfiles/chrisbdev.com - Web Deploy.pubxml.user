@@ -221,7 +221,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/07/2014 16:18:17</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.html">
-      <publishTime>01/13/2015 13:46:07</publishTime>
+      <publishTime>01/18/2015 10:15:38</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.js">
       <publishTime>09/06/2014 17:22:26</publishTime>
@@ -245,25 +245,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/draftsim/draftsim.js">
-      <publishTime>01/09/2015 18:12:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/draftsim/draftsim.min.js">
-      <publishTime>01/09/2015 18:12:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/draftsim/draftsim.min.js.map">
-      <publishTime>01/09/2015 18:12:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/handmodal/handmodal.html">
-      <publishTime>01/13/2015 13:36:54</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/handmodal/handmodal.js">
-      <publishTime>01/13/2015 13:43:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/handmodal/handmodal.min.js">
-      <publishTime>01/13/2015 13:43:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/handmodal/handmodal.min.js.map">
-      <publishTime>01/13/2015 13:43:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/layout/shell.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -308,40 +308,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/07/2014 16:18:13</publishTime>
     </File>
     <File Include="app/sealedsim/hideShowOlderSetsButton.html">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>12/29/2014 14:14:48</publishTime>
     </File>
     <File Include="app/sealedsim/radioSeededPacks.html">
-      <publishTime>10/01/2015 10:09:42</publishTime>
+      <publishTime>01/18/2015 10:13:17</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.html">
       <publishTime>10/01/2015 09:56:49</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.js">
-      <publishTime>10/01/2015 10:08:30</publishTime>
+      <publishTime>01/18/2015 10:11:45</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.min.js">
-      <publishTime>10/01/2015 10:08:30</publishTime>
+      <publishTime>01/18/2015 10:11:45</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.min.js.map">
-      <publishTime>10/01/2015 10:08:30</publishTime>
+      <publishTime>01/18/2015 10:11:45</publishTime>
     </File>
     <File Include="app/services/datacontext.js">
-      <publishTime>03/01/2015 13:07:12</publishTime>
+      <publishTime>01/18/2015 10:08:03</publishTime>
     </File>
     <File Include="app/services/datacontext.min.js">
-      <publishTime>03/01/2015 13:07:12</publishTime>
+      <publishTime>01/18/2015 10:08:03</publishTime>
     </File>
     <File Include="app/services/datacontext.min.js.map">
-      <publishTime>03/01/2015 13:07:12</publishTime>
+      <publishTime>01/18/2015 10:08:03</publishTime>
     </File>
     <File Include="app/services/deckFunctions.js">
-      <publishTime>01/13/2015 13:32:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/deckFunctions.min.js">
-      <publishTime>01/13/2015 13:32:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/deckFunctions.min.js.map">
-      <publishTime>01/13/2015 13:32:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/directives.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -371,13 +371,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/handsimulator.js">
-      <publishTime>01/13/2015 13:35:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/handsimulator.min.js">
-      <publishTime>01/13/2015 13:35:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/handsimulator.min.js.map">
-      <publishTime>01/13/2015 13:35:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/landcards.js">
       <publishTime>12/10/2014 13:02:22</publishTime>
@@ -401,10 +401,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/webapicontext.min.js">
-      <publishTime>12/07/2014 16:18:15</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/webapicontext.min.js.map">
-      <publishTime>12/07/2014 16:18:15</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/AjaxMin.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3194,7 +3194,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/01/2015 18:12:24</publishTime>
     </File>
     <File Include="manifest.appcache">
-      <publishTime>10/01/2015 10:19:41</publishTime>
+      <publishTime>01/18/2015 10:17:12</publishTime>
     </File>
     <File Include="manifest/mtgmirror.appcache">
       <publishTime>09/07/2014 19:20:34</publishTime>

@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'draftsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', draftsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', 'webapicontext', draftsim]);
 
-    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal) {
+    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, webapicontext) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
@@ -71,6 +71,7 @@
 
         vm.addToDeck = function(card)
         {
+            webapicontext.postCardSelected(card.Number, card.Set, vm.boosterCards.length);
             _removeFromArrayAndAddToArray(vm.boosterCards, vm.selectedCards, card);
             logSuccess("You've chosen " + card.Name + "!");
             takeTurn();

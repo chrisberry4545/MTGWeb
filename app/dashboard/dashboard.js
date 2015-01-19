@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'dashboard';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', dashboard]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'webapicontext', dashboard]);
 
-    function dashboard(common, datacontext) {
+    function dashboard(common, datacontext, webapicontext) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
 
@@ -34,7 +34,6 @@
         function sendToLocation(destination) {
             location.href = destination;
         }
-
 
         activate();
 

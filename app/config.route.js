@@ -79,6 +79,16 @@
                         content: '<i></i> About'
                     }
                 }
+            }, {
+                url: '/pickreport',
+                config: {
+                    title: 'pickreport',
+                    templateUrl: 'app/highpickreport/highpickreport.html',
+                    settings: {
+                        nav: 7,
+                        content: 'Pick Report'
+                    }
+                }
             }
             //, {
             //    url: '/multiplayerdraft',

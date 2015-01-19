@@ -1,0 +1,40 @@
+﻿<section id="dashboard-view" class="mainbar" data-ng-controller="highpickreport as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <h1>Hello</h1>
+
+                <button ng-click="vm.testButton()">test</button>
+
+                <div ng-repeat="pick in vm.pickReport">
+                    <h1>{{pick.Rarity}} - {{pick.Set}}</h1>
+                    <table>
+                        <tr>
+                            <th>
+                                Card Name
+                            </th>
+                            <th>
+                                Ranking
+                            </th>
+                            <th>
+                                Pick Score
+                            </th>
+                        </tr>
+                        <tr ng-repeat="card in pick.CardPicksInfo track by $index">
+                            <td>
+                                {{card.CardName}}
+                            </td>
+                            <td>
+                                {{$index + 1}}
+                            </td>
+                            <td>
+                                {{card.PickScore}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>

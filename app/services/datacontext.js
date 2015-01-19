@@ -60,7 +60,7 @@
         }
 
         function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, seedColor) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters - 1, numFRFBoosters, numDTKBoosters);
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters);
             //Replace core set boosters with seeded boosters.
             var cards = getAllKTKCardsSortedByRarity();
             var boostersToSeed = openXCardBoostersForColor(1, cards, seedColor);
@@ -327,46 +327,46 @@
             return cards;
         }
 
-        function getClanPromo(clan) {
+        function getClanPromo(clan) { //FRF
             if (Math.random() > 7 / 8) {
                 switch (clan) {
                     case "W":
-                        return KTK[163 - 1];
+                        return FRF[143 - 1];
                         break;
                     case "U":
-                        return KTK[190 - 1];
+                        return FRF[27 - 1];
                         break;
                     case "B":
-                        return KTK[199 - 1];
+                        return FRF[56 - 1];
                         break;
                     case "R":
-                        return KTK[214 - 1];
+                        return FRF[64 - 1];
                         break;
                     case "G":
-                        return KTK[206 - 1];
+                        return FRF[113 - 1];
                         break;
                 }
             } else {
                 var cardsToUse;
                 switch (clan) {
                     case "W":
-                        cardsToUse = [160, 12, 174, 200, 179, 13, 85, 133];
+                        cardsToUse = [8, 9, 11, 151];
                         break;
                     case "U":
-                        cardsToUse = [195, 184, 180, 176, 18, 58, 108];
+                        cardsToUse = [43, 50, 52, 156];
                         break;
                     case "B":
-                        cardsToUse = [211, 203, 193, 192, 182, 36, 73, 82, 141, 45];
+                        cardsToUse = [62, 79, 87, 157];
                         break;
                     case "R":
-                        cardsToUse = [185, 171, 168, 164, 66, 112, 113];
+                        cardsToUse = [90, 99, 110, 155];
                         break;
                     case "G":
-                        cardsToUse = [209, 207, 197, 166, 42, 106, 144];
+                        cardsToUse = [131, 142, 148, 149];
                         break;
                 }
                 var cardNumberToGet = cardsToUse[Math.floor(Math.random() * cardsToUse.length)];
-                return KTK[cardNumberToGet - 1];
+                return FRF[cardNumberToGet - 1];
             }
         }
 

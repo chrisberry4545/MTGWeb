@@ -22,6 +22,42 @@
         var removePlayerWebApi = "/api/removeplayer";
         var chatWebApi = "/api/chat";
 
+        var cardSelectedApi = "/api/cardselected";
+
+        function setupFRFData() {
+            var url = hostUrl + "/api/test";
+            return $.ajax({
+                type: "POST",
+                url: url,
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                }
+            });
+        }
+
+        function getCardsSelected() {
+            var url = hostUrl + cardSelectedApi + "?setName=" + "FRF";
+            return $.get(url, function (data) {
+                return data;
+            });
+        }
+
+        function postCardSelected(cardNumber, set, remainingCards) {
+            var url = hostUrl + cardSelectedApi;
+            var cardInputs = {
+                CardNumber: cardNumber,
+                Set: set,
+                RemainingCards: remainingCards
+            }
+            return $.ajax({
+                type: "POST",
+                url: url,
+                data: cardInputs
+            });
+        }
 
         function getPlayerID() {
             var url = hostUrl + playerWebApi;
@@ -276,7 +312,10 @@
             getFinalGameResults: getFinalGameResults,
             changeName: changeName,
             removePlayer: removePlayer,
-            postMessage: postMessage
+            postMessage: postMessage,
+            postCardSelected: postCardSelected,
+            getCardsSelected: getCardsSelected,
+            setupFRFData: setupFRFData
         };
 
 
