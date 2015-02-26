@@ -204,7 +204,7 @@
 
 
             //In Fate Reforged there is a chance a basic land can be replaced by a fetchland or a life land.
-            var chanceOfLifeLand = 1 / 3;
+            var chanceOfLifeLand = 1 / 1;
             var chanceOfFetchLand = 1 / 72;
             for (var i = 0; i < numBoosters; i++) {
                 if (Math.random() < chanceOfLifeLand) {

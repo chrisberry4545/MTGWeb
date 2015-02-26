@@ -17,10 +17,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/about/about.min.js">
-      <publishTime>12/07/2014 16:18:06</publishTime>
+      <publishTime>07/12/2014 16:18:06</publishTime>
     </File>
     <File Include="app/about/about.min.js.map">
-      <publishTime>12/07/2014 16:18:06</publishTime>
+      <publishTime>07/12/2014 16:18:06</publishTime>
     </File>
     <File Include="app/admin/admin.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -32,7 +32,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2014 16:07:53</publishTime>
     </File>
     <File Include="app/admin/admin.min.js.map">
-      <publishTime>12/07/2014 16:17:13</publishTime>
+      <publishTime>07/12/2014 16:17:13</publishTime>
     </File>
     <File Include="app/adverts/advertimages/ic_launcher.png">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -65,10 +65,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/boostersim/cardmodel.min.js">
-      <publishTime>12/07/2014 16:17:13</publishTime>
+      <publishTime>07/12/2014 16:17:13</publishTime>
     </File>
     <File Include="app/boostersim/cardmodel.min.js.map">
-      <publishTime>12/07/2014 16:17:13</publishTime>
+      <publishTime>07/12/2014 16:17:13</publishTime>
     </File>
     <File Include="app/browsecards/browsecards.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -86,10 +86,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/carddata/CardsBNG.min.js">
-      <publishTime>12/07/2014 16:18:07</publishTime>
+      <publishTime>07/12/2014 16:18:07</publishTime>
     </File>
     <File Include="app/carddata/CardsBNG.min.js.map">
-      <publishTime>12/07/2014 16:18:07</publishTime>
+      <publishTime>07/12/2014 16:18:07</publishTime>
     </File>
     <File Include="app/carddata/CardsDTK.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -101,22 +101,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/carddata/CardsFRF.js">
-      <publishTime>01/09/2015 18:06:05</publishTime>
+      <publishTime>09/01/2015 18:06:05</publishTime>
     </File>
     <File Include="app/carddata/CardsFRF.min.js">
-      <publishTime>01/09/2015 18:06:06</publishTime>
+      <publishTime>09/01/2015 18:06:06</publishTime>
     </File>
     <File Include="app/carddata/CardsFRF.min.js.map">
-      <publishTime>01/09/2015 18:06:06</publishTime>
+      <publishTime>09/01/2015 18:06:06</publishTime>
     </File>
     <File Include="app/carddata/CardsJOU.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/carddata/CardsJOU.min.js">
-      <publishTime>12/07/2014 16:18:07</publishTime>
+      <publishTime>07/12/2014 16:18:07</publishTime>
     </File>
     <File Include="app/carddata/CardsJOU.min.js.map">
-      <publishTime>12/07/2014 16:18:08</publishTime>
+      <publishTime>07/12/2014 16:18:08</publishTime>
     </File>
     <File Include="app/carddata/CardsKTK.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -128,22 +128,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/carddata/CardsM15.js">
-      <publishTime>09/06/2014 16:38:27</publishTime>
+      <publishTime>06/09/2014 16:38:27</publishTime>
     </File>
     <File Include="app/carddata/CardsM15.min.js">
-      <publishTime>09/06/2014 16:38:28</publishTime>
+      <publishTime>06/09/2014 16:38:28</publishTime>
     </File>
     <File Include="app/carddata/CardsM15.min.js.map">
-      <publishTime>09/06/2014 16:38:28</publishTime>
+      <publishTime>06/09/2014 16:38:28</publishTime>
     </File>
     <File Include="app/carddata/CardsTHS.js">
-      <publishTime>01/04/2014 19:49:41</publishTime>
+      <publishTime>04/01/2014 19:49:41</publishTime>
     </File>
     <File Include="app/carddata/CardsTHS.min.js">
-      <publishTime>12/07/2014 16:18:09</publishTime>
+      <publishTime>07/12/2014 16:18:09</publishTime>
     </File>
     <File Include="app/carddata/CardsTHS.min.js.map">
-      <publishTime>12/07/2014 16:18:09</publishTime>
+      <publishTime>07/12/2014 16:18:09</publishTime>
     </File>
     <File Include="app/carddisplay/carddisplay.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -152,94 +152,94 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/carddisplay/carddisplay.min.js">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/carddisplay/carddisplay.min.js.map">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/bootstrap/bootstrap.dialog.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/common/bootstrap/bootstrap.dialog.min.js">
-      <publishTime>12/07/2014 16:18:11</publishTime>
+      <publishTime>07/12/2014 16:18:11</publishTime>
     </File>
     <File Include="app/common/bootstrap/bootstrap.dialog.min.js.map">
-      <publishTime>12/07/2014 16:18:11</publishTime>
+      <publishTime>07/12/2014 16:18:11</publishTime>
     </File>
     <File Include="app/common/common.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/common/common.min.js">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/common.min.js.map">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/logger.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/common/logger.min.js">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/logger.min.js.map">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/spinner.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/common/spinner.min.js">
-      <publishTime>12/07/2014 16:18:10</publishTime>
+      <publishTime>07/12/2014 16:18:10</publishTime>
     </File>
     <File Include="app/common/spinner.min.js.map">
-      <publishTime>12/07/2014 16:18:11</publishTime>
+      <publishTime>07/12/2014 16:18:11</publishTime>
     </File>
     <File Include="app/config.exceptionHandler.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/config.exceptionHandler.min.js">
-      <publishTime>12/07/2014 16:18:16</publishTime>
+      <publishTime>07/12/2014 16:18:16</publishTime>
     </File>
     <File Include="app/config.exceptionHandler.min.js.map">
-      <publishTime>12/07/2014 16:18:16</publishTime>
+      <publishTime>07/12/2014 16:18:16</publishTime>
     </File>
     <File Include="app/config.js">
-      <publishTime>09/07/2014 21:44:18</publishTime>
+      <publishTime>07/09/2014 21:44:18</publishTime>
     </File>
     <File Include="app/config.min.js">
-      <publishTime>12/07/2014 16:18:16</publishTime>
+      <publishTime>07/12/2014 16:18:16</publishTime>
     </File>
     <File Include="app/config.min.js.map">
-      <publishTime>12/07/2014 16:18:16</publishTime>
+      <publishTime>07/12/2014 16:18:16</publishTime>
     </File>
     <File Include="app/config.route.js">
-      <publishTime>12/07/2014 10:56:24</publishTime>
+      <publishTime>07/12/2014 10:56:24</publishTime>
     </File>
     <File Include="app/config.route.min.js">
-      <publishTime>12/07/2014 16:18:16</publishTime>
+      <publishTime>07/12/2014 16:18:16</publishTime>
     </File>
     <File Include="app/config.route.min.js.map">
-      <publishTime>12/07/2014 16:18:17</publishTime>
+      <publishTime>07/12/2014 16:18:17</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.html">
-      <publishTime>01/18/2015 10:15:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.js">
-      <publishTime>09/06/2014 17:22:26</publishTime>
+      <publishTime>06/09/2014 17:22:26</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.min.js">
-      <publishTime>09/06/2014 17:22:21</publishTime>
+      <publishTime>06/09/2014 17:22:21</publishTime>
     </File>
     <File Include="app/dashboard/dashboard.min.js.map">
-      <publishTime>09/06/2014 17:22:26</publishTime>
+      <publishTime>06/09/2014 17:22:26</publishTime>
     </File>
     <File Include="app/draftsim/ai.js">
-      <publishTime>03/01/2015 12:36:47</publishTime>
+      <publishTime>01/03/2015 12:36:47</publishTime>
     </File>
     <File Include="app/draftsim/ai.min.js">
-      <publishTime>03/01/2015 12:36:47</publishTime>
+      <publishTime>01/03/2015 12:36:47</publishTime>
     </File>
     <File Include="app/draftsim/ai.min.js.map">
-      <publishTime>03/01/2015 12:36:47</publishTime>
+      <publishTime>01/03/2015 12:36:47</publishTime>
     </File>
     <File Include="app/draftsim/draftsim.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -269,13 +269,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/layout/shell.js">
-      <publishTime>05/04/2014 16:00:00</publishTime>
+      <publishTime>04/05/2014 16:00:00</publishTime>
     </File>
     <File Include="app/layout/shell.min.js">
-      <publishTime>12/07/2014 16:18:12</publishTime>
+      <publishTime>07/12/2014 16:18:12</publishTime>
     </File>
     <File Include="app/layout/shell.min.js.map">
-      <publishTime>12/07/2014 16:18:13</publishTime>
+      <publishTime>07/12/2014 16:18:13</publishTime>
     </File>
     <File Include="app/layout/sidebar.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -284,10 +284,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/layout/sidebar.min.js">
-      <publishTime>12/07/2014 16:18:13</publishTime>
+      <publishTime>07/12/2014 16:18:13</publishTime>
     </File>
     <File Include="app/layout/sidebar.min.js.map">
-      <publishTime>12/07/2014 16:18:13</publishTime>
+      <publishTime>07/12/2014 16:18:13</publishTime>
     </File>
     <File Include="app/layout/topnav.html">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -299,40 +299,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/multiplayerdraft/multiplayerdraft.js">
-      <publishTime>01/07/2014 20:39:46</publishTime>
+      <publishTime>07/01/2014 20:39:46</publishTime>
     </File>
     <File Include="app/multiplayerdraft/multiplayerdraft.min.js">
-      <publishTime>12/07/2014 16:18:13</publishTime>
+      <publishTime>07/12/2014 16:18:13</publishTime>
     </File>
     <File Include="app/multiplayerdraft/multiplayerdraft.min.js.map">
-      <publishTime>12/07/2014 16:18:13</publishTime>
+      <publishTime>07/12/2014 16:18:13</publishTime>
     </File>
     <File Include="app/sealedsim/hideShowOlderSetsButton.html">
-      <publishTime>12/29/2014 14:14:48</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/sealedsim/radioSeededPacks.html">
-      <publishTime>01/18/2015 10:13:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.html">
-      <publishTime>10/01/2015 09:56:49</publishTime>
+      <publishTime>01/10/2015 09:56:49</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.js">
-      <publishTime>01/18/2015 10:11:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.min.js">
-      <publishTime>01/18/2015 10:11:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/sealedsim/sealedsim.min.js.map">
-      <publishTime>01/18/2015 10:11:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/datacontext.js">
-      <publishTime>01/18/2015 10:08:03</publishTime>
+      <publishTime>02/22/2015 12:25:20</publishTime>
     </File>
     <File Include="app/services/datacontext.min.js">
-      <publishTime>01/18/2015 10:08:03</publishTime>
+      <publishTime>02/22/2015 12:25:08</publishTime>
     </File>
     <File Include="app/services/datacontext.min.js.map">
-      <publishTime>01/18/2015 10:08:03</publishTime>
+      <publishTime>02/22/2015 12:25:20</publishTime>
     </File>
     <File Include="app/services/deckFunctions.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -347,19 +347,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/directives.min.js">
-      <publishTime>12/07/2014 16:18:14</publishTime>
+      <publishTime>07/12/2014 16:18:14</publishTime>
     </File>
     <File Include="app/services/directives.min.js.map">
-      <publishTime>12/07/2014 16:18:14</publishTime>
+      <publishTime>07/12/2014 16:18:14</publishTime>
     </File>
     <File Include="app/services/downloadDataService.js">
-      <publishTime>10/07/2014 23:05:21</publishTime>
+      <publishTime>07/10/2014 23:05:21</publishTime>
     </File>
     <File Include="app/services/downloadDataService.min.js">
-      <publishTime>12/07/2014 16:18:14</publishTime>
+      <publishTime>07/12/2014 16:18:14</publishTime>
     </File>
     <File Include="app/services/downloadDataService.min.js.map">
-      <publishTime>12/07/2014 16:18:15</publishTime>
+      <publishTime>07/12/2014 16:18:15</publishTime>
     </File>
     <File Include="app/services/graphAnalysis.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -380,22 +380,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="app/services/landcards.js">
-      <publishTime>12/10/2014 13:02:22</publishTime>
+      <publishTime>10/12/2014 13:02:22</publishTime>
     </File>
     <File Include="app/services/landcards.min.js">
-      <publishTime>12/10/2014 13:02:22</publishTime>
+      <publishTime>10/12/2014 13:02:22</publishTime>
     </File>
     <File Include="app/services/landcards.min.js.map">
-      <publishTime>12/10/2014 13:02:22</publishTime>
+      <publishTime>10/12/2014 13:02:22</publishTime>
     </File>
     <File Include="app/services/localStorageService.js">
-      <publishTime>10/07/2014 21:49:45</publishTime>
+      <publishTime>07/10/2014 21:49:45</publishTime>
     </File>
     <File Include="app/services/localStorageService.min.js">
-      <publishTime>12/07/2014 16:18:15</publishTime>
+      <publishTime>07/12/2014 16:18:15</publishTime>
     </File>
     <File Include="app/services/localStorageService.min.js.map">
-      <publishTime>12/07/2014 16:18:15</publishTime>
+      <publishTime>07/12/2014 16:18:15</publishTime>
     </File>
     <File Include="app/services/webapicontext.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -419,13 +419,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/bootstrap-responsive.min.css">
-      <publishTime>12/07/2014 15:18:43</publishTime>
+      <publishTime>07/12/2014 15:18:43</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>12/07/2014 15:18:43</publishTime>
+      <publishTime>07/12/2014 15:18:43</publishTime>
     </File>
     <File Include="Content/chrisstylesheet.css">
       <publishTime>12/12/2014 16:07:53</publishTime>
@@ -437,19 +437,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/customtheme.min.css">
-      <publishTime>12/07/2014 16:36:56</publishTime>
+      <publishTime>07/12/2014 16:36:56</publishTime>
     </File>
     <File Include="Content/font-awesome-ie7.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/font-awesome-ie7.min.css">
-      <publishTime>12/07/2014 15:18:43</publishTime>
+      <publishTime>07/12/2014 15:18:43</publishTime>
     </File>
     <File Include="Content/font-awesome.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/font-awesome.min.css">
-      <publishTime>12/07/2014 15:18:43</publishTime>
+      <publishTime>07/12/2014 15:18:43</publishTime>
     </File>
     <File Include="Content/font/fontawesome-webfont.eot">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -473,7 +473,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/ie10mobile.min.css">
-      <publishTime>12/07/2014 16:36:56</publishTime>
+      <publishTime>07/12/2014 16:36:56</publishTime>
     </File>
     <File Include="Content/images/AngularJS-small.png">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -494,7 +494,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/styles.min.css">
-      <publishTime>12/07/2014 16:36:56</publishTime>
+      <publishTime>07/12/2014 16:36:56</publishTime>
     </File>
     <File Include="Content/toastr.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -503,562 +503,562 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/toastr.min.css">
-      <publishTime>12/07/2014 15:18:43</publishTime>
+      <publishTime>07/12/2014 15:18:43</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AbzanAdvantage.jpg">
-      <publishTime>01/09/2015 16:51:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AbzanBeastmaster.jpg">
-      <publishTime>01/09/2015 16:53:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AbzanKin-Guard.jpg">
-      <publishTime>01/09/2015 16:53:09</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AbzanRunemark.jpg">
-      <publishTime>01/09/2015 16:51:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AbzanSkycaptain.jpg">
-      <publishTime>01/09/2015 16:51:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AinokGuide.jpg">
-      <publishTime>01/09/2015 16:53:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Alesha--WhoSmilesatDeath.jpg">
-      <publishTime>01/09/2015 16:52:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AleshasVanguard.jpg">
-      <publishTime>01/09/2015 16:52:23</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AmbushKrotiq.jpg">
-      <publishTime>01/09/2015 16:53:11</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AncestralVengeance.jpg">
-      <publishTime>01/09/2015 16:52:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ArashinCleric.jpg">
-      <publishTime>01/09/2015 16:51:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ArashinWarBeast.jpg">
-      <publishTime>01/09/2015 16:53:11</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Arcbond.jpg">
-      <publishTime>01/09/2015 16:52:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ArchersofQarsi.jpg">
-      <publishTime>01/09/2015 16:53:12</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ArchfiendofDepravity.jpg">
-      <publishTime>01/09/2015 16:52:25</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Atarka--WorldRender.jpg">
-      <publishTime>01/09/2015 16:53:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AvenSkirmisher.jpg">
-      <publishTime>01/09/2015 16:51:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/AvenSurveyor.jpg">
-      <publishTime>01/09/2015 16:52:03</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BatheinDragonfire.jpg">
-      <publishTime>01/09/2015 16:52:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BattleBrawle.jpg">
-      <publishTime>01/06/2015 10:06:16</publishTime>
+      <publishTime>06/01/2015 10:06:16</publishTime>
     </File>
     <File Include="Images/FRF/BattleBrawler.jpg">
-      <publishTime>01/09/2015 16:52:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BattlefrontKrushok.jpg">
-      <publishTime>01/09/2015 16:53:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/bloodfellcaves.jpg">
-      <publishTime>01/09/2015 16:53:41</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BloodfireEnforcers.jpg">
-      <publishTime>01/09/2015 16:52:48</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BlossomingSands.jpg">
-      <publishTime>01/09/2015 16:53:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BreakThroughtheLine.jpg">
-      <publishTime>01/09/2015 16:52:49</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/BrutalHordechief.jpg">
-      <publishTime>01/09/2015 16:52:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CachedDefenses.jpg">
-      <publishTime>01/09/2015 16:53:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ChannelHarm.jpg">
-      <publishTime>01/09/2015 16:51:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CitadelSiege.jpg">
-      <publishTime>01/09/2015 16:51:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Cloudform.jpg">
-      <publishTime>01/09/2015 16:52:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CollateralDamage.jpg">
-      <publishTime>01/09/2015 16:52:50</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CrucibleoftheSpiritDragon.jpg">
-      <publishTime>01/09/2015 16:53:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CruxofFate.jpg">
-      <publishTime>01/09/2015 16:52:27</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/CunningStrike.jpg">
-      <publishTime>01/09/2015 16:53:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DaghatartheAdamant.jpg">
-      <publishTime>01/09/2015 16:51:48</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DarkDeal.jpg">
-      <publishTime>01/09/2015 16:52:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DefiantOgre.jpg">
-      <publishTime>01/09/2015 16:52:50</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DestructorDragon.jpg">
-      <publishTime>01/09/2015 16:53:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DiplomacyoftheWastes.jpg">
-      <publishTime>01/09/2015 16:52:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DismalBackwater.jpg">
-      <publishTime>01/09/2015 16:53:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DouseinGloom.jpg">
-      <publishTime>01/09/2015 16:52:29</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DragonBellMonk.jpg">
-      <publishTime>01/09/2015 16:51:49</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Dragonrage.jpg">
-      <publishTime>01/09/2015 16:52:51</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DragonscaleGeneral.jpg">
-      <publishTime>01/09/2015 16:51:49</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Dromoka--theEternal.jpg">
-      <publishTime>01/09/2015 16:53:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/DromokatheEternal.jpg">
-      <publishTime>01/06/2015 10:48:24</publishTime>
+      <publishTime>06/01/2015 10:48:24</publishTime>
     </File>
     <File Include="Images/FRF/EliteScaleguard.jpg">
-      <publishTime>01/09/2015 16:51:50</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/EnhancedAwareness.jpg">
-      <publishTime>01/09/2015 16:52:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/EtherealAmbush.jpg">
-      <publishTime>01/09/2015 16:53:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Fascination.jpg">
-      <publishTime>01/09/2015 16:52:05</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FearsomeAwakening.jpg">
-      <publishTime>01/09/2015 16:52:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FeralKrushok.jpg">
-      <publishTime>01/09/2015 16:53:15</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FierceInvocation.jpg">
-      <publishTime>01/09/2015 16:52:52</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FlamecrushRider.jpg">
-      <publishTime>01/03/2015 12:19:57</publishTime>
+      <publishTime>03/01/2015 12:19:57</publishTime>
     </File>
     <File Include="Images/FRF/FlamerushRider.jpg">
-      <publishTime>01/09/2015 16:52:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FlamewakePhoenix.jpg">
-      <publishTime>01/09/2015 16:52:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Forest.jpg">
-      <publishTime>01/09/2015 16:53:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FormlessNurturing.jpg">
-      <publishTime>01/09/2015 16:53:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FriendlyFire.jpg">
-      <publishTime>01/09/2015 16:52:54</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FrontierMastodon.jpg">
-      <publishTime>01/09/2015 16:53:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FrontierSiege.jpg">
-      <publishTime>01/09/2015 16:53:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FrostWalker.jpg">
-      <publishTime>01/09/2015 16:52:06</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/FruitOfTheFirstTree.jpg">
-      <publishTime>01/09/2015 16:53:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GhastlyConscription.jpg">
-      <publishTime>01/09/2015 16:52:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GoblinBoomKeg.jpg">
-      <publishTime>01/09/2015 16:53:37</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GoblinHeelcutter.jpg">
-      <publishTime>01/09/2015 16:52:55</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GoreSwine.jpg">
-      <publishTime>01/09/2015 16:52:56</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GraveStrength.jpg">
-      <publishTime>01/09/2015 16:52:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Great-HornKrushok.jpg">
-      <publishTime>01/09/2015 16:51:51</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GrimContest.jpg">
-      <publishTime>01/09/2015 16:53:33</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/GurmagAngler.jpg">
-      <publishTime>01/09/2015 16:52:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HarshSustenance.jpg">
-      <publishTime>01/09/2015 16:53:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HerosBlade.jpg">
-      <publishTime>01/09/2015 16:53:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HewedStoneRetainers.jpg">
-      <publishTime>01/09/2015 16:53:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HonorsReward.jpg">
-      <publishTime>01/09/2015 16:51:51</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HoodedAssassin.jpg">
-      <publishTime>01/09/2015 16:52:33</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HumbleDefector.jpg">
-      <publishTime>01/09/2015 16:52:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HungeringYeti.jpg">
-      <publishTime>01/09/2015 16:52:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/HunttheWeak.jpg">
-      <publishTime>01/09/2015 16:53:19</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Island.jpg">
-      <publishTime>01/09/2015 16:53:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/JeskaiBarricade.jpg">
-      <publishTime>01/09/2015 16:51:52</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/JeskaiInfiltrator.jpg">
-      <publishTime>01/09/2015 16:52:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/JeskaiRunemark.jpg">
-      <publishTime>01/09/2015 16:52:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/JeskaiSage.jpg">
-      <publishTime>01/09/2015 16:52:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/JungleHollow.jpg">
-      <publishTime>01/09/2015 16:53:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Kolaghan--theStormsFury.jpg">
-      <publishTime>01/09/2015 16:53:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Lightform.jpg">
-      <publishTime>01/09/2015 16:51:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/LightningShrieker.jpg">
-      <publishTime>01/09/2015 16:52:58</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Lotus-EyeMystics.jpg">
-      <publishTime>01/09/2015 16:51:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/LotusPathDjinn.jpg">
-      <publishTime>01/09/2015 16:52:09</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MaptheWastes.jpg">
-      <publishTime>01/09/2015 16:53:19</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarangRiverProwler.jpg">
-      <publishTime>01/09/2015 16:52:09</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarduRunemark.jpg">
-      <publishTime>01/09/2015 16:52:59</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarduScout.jpg">
-      <publishTime>01/09/2015 16:53:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarduShadowspear.jpg">
-      <publishTime>01/09/2015 16:52:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarduStrikeLeader.jpg">
-      <publishTime>01/09/2015 16:52:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MarduWoe-Reaper.jpg">
-      <publishTime>01/09/2015 16:51:54</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MasteryOfTheUnseen.jpg">
-      <publishTime>01/09/2015 16:51:55</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MercilessExecutioner.jpg">
-      <publishTime>01/09/2015 16:52:35</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MindscourDragon.jpg">
-      <publishTime>01/09/2015 16:52:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MistfireAdept.jpg">
-      <publishTime>01/09/2015 16:52:11</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MobRule.jpg">
-      <publishTime>01/09/2015 16:53:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MonasteryMentor.jpg">
-      <publishTime>01/09/2015 16:51:55</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/MonasterySiege.jpg">
-      <publishTime>01/09/2015 16:52:11</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Mountain.jpg">
-      <publishTime>01/09/2015 16:53:47</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/NeutralizingBlast.jpg">
-      <publishTime>01/09/2015 16:52:12</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/NoxiousDragon.jpg">
-      <publishTime>01/09/2015 16:52:36</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Ojutai--SoulOfWinter.jpg">
-      <publishTime>01/09/2015 16:53:35</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/OrcSureshot.jpg">
-      <publishTime>01/09/2015 16:52:37</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/OutpostSiege.jpg">
-      <publishTime>01/09/2015 16:53:01</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/PalaceSiege.jpg">
-      <publishTime>01/09/2015 16:52:37</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/PilgrimoftheFires.jpg">
-      <publishTime>01/09/2015 16:53:39</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Plains.jpg">
-      <publishTime>01/09/2015 16:53:48</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/PressurePoint.jpg">
-      <publishTime>01/09/2015 16:51:56</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Pyrotechnics.jpg">
-      <publishTime>01/09/2015 16:53:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/QarsiHighPriest.jpg">
-      <publishTime>01/09/2015 16:52:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Rageform.jpg">
-      <publishTime>01/09/2015 16:53:03</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RakshasasDisdain.jpg">
-      <publishTime>01/09/2015 16:52:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RallyTheAncestors.jpg">
-      <publishTime>01/09/2015 16:51:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ReachofShadows.jpg">
-      <publishTime>01/09/2015 16:52:39</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RealityShift.jpg">
-      <publishTime>01/09/2015 16:52:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Refocus.jpg">
-      <publishTime>01/09/2015 16:52:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RenownedWeaponsmith.jpg">
-      <publishTime>01/09/2015 16:52:15</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ReturntotheEarth.jpg">
-      <publishTime>01/09/2015 16:53:20</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RiteofUndoing.jpg">
-      <publishTime>01/09/2015 16:52:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RuggedHighlands.jpg">
-      <publishTime>01/09/2015 16:53:49</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/RuthlessInstincts.jpg">
-      <publishTime>01/09/2015 16:53:21</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Sage-EyeAvengers.jpg">
-      <publishTime>01/09/2015 16:52:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SagesReverie.jpg">
-      <publishTime>01/09/2015 16:51:58</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Sandblast.jpg">
-      <publishTime>01/09/2015 16:51:58</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SandsteppeMastodon.jpg">
-      <publishTime>01/09/2015 16:53:21</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SandsteppeOutcast.jpg">
-      <publishTime>01/09/2015 16:51:59</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ScouredBarrens.jpg">
-      <publishTime>01/09/2015 16:53:50</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ScrolloftheMasters.jpg">
-      <publishTime>01/09/2015 16:53:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ShamanicRevelation.jpg">
-      <publishTime>01/09/2015 16:53:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ShamanoftheGreatHunt.jpg">
-      <publishTime>01/09/2015 16:53:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ShiftingLoyalties.jpg">
-      <publishTime>01/09/2015 16:52:17</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ShockmawDragon.jpg">
-      <publishTime>01/09/2015 16:53:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ShuYun--theSilentTempest.jpg">
-      <publishTime>01/09/2015 16:52:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SibsigHost.jpg">
-      <publishTime>01/09/2015 16:52:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SibsigMuckdraggers.jpg">
-      <publishTime>01/09/2015 16:52:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Silumgar--DragonUsurper.jpg">
-      <publishTime>01/01/2015 17:37:50</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Silumgar--theDriftingDeath.jpg">
-      <publishTime>01/09/2015 16:53:36</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SmolderingEfreet.jpg">
-      <publishTime>01/09/2015 16:53:05</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SoulfireGrandMaster.jpg">
-      <publishTime>01/09/2015 16:52:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Soulflayer.jpg">
-      <publishTime>01/09/2015 16:52:41</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SoulSummons.jpg">
-      <publishTime>01/09/2015 16:52:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SuddenReclamation.jpg">
-      <publishTime>01/09/2015 16:53:23</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SultaiEmissary.jpg">
-      <publishTime>01/09/2015 16:52:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SultaiRunemark.jpg">
-      <publishTime>01/09/2015 16:52:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SultaiSkullkeeper.jpg">
-      <publishTime>01/09/2015 16:52:18</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SupplantForm.jpg">
-      <publishTime>01/09/2015 16:52:19</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Swamp.jpg">
-      <publishTime>01/09/2015 16:53:51</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/SwiftwaterCliffs.jpg">
-      <publishTime>01/09/2015 16:53:52</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Tasigur--theGoldenFang.jpg">
-      <publishTime>01/09/2015 16:52:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TasigursCruelty.jpg">
-      <publishTime>01/09/2015 16:52:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TemporalTrespass.jpg">
-      <publishTime>01/09/2015 16:52:20</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TemurBattleRage.jpg">
-      <publishTime>01/09/2015 16:53:06</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TemurRunemark.jpg">
-      <publishTime>01/09/2015 16:53:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TemurSabertooth.jpg">
-      <publishTime>01/09/2015 16:53:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TemurWarShaman.jpg">
-      <publishTime>01/09/2015 16:53:25</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ThornwoodFalls.jpg">
-      <publishTime>01/09/2015 16:53:52</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TorrentElemental.jpg">
-      <publishTime>01/09/2015 16:52:20</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TranquilCove.jpg">
-      <publishTime>01/09/2015 16:53:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/TyphoidRats.jpg">
-      <publishTime>01/09/2015 16:52:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ugin--thespiritdragon.jpg">
-      <publishTime>01/09/2015 16:51:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/UginsConstruct.jpg">
-      <publishTime>01/09/2015 16:53:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/ValorousStance.jpg">
-      <publishTime>01/09/2015 16:52:01</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Vaultbreaker.jpg">
-      <publishTime>01/09/2015 16:53:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WanderingChampion.jpg">
-      <publishTime>01/09/2015 16:52:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WardenoftheFirstTree.jpg">
-      <publishTime>01/09/2015 16:53:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WardscaleDragon.jpg">
-      <publishTime>01/09/2015 16:52:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WarFlare.jpg">
-      <publishTime>01/09/2015 16:53:36</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WhiskAway.jpg">
-      <publishTime>01/09/2015 16:52:21</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WhispereroftheWilds.jpg">
-      <publishTime>01/09/2015 16:53:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WhisperwoodElemental.jpg">
-      <publishTime>01/09/2015 16:53:27</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Wildcall.jpg">
-      <publishTime>01/09/2015 16:53:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WildSlash.jpg">
-      <publishTime>01/09/2015 16:53:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WilloftheNaga.jpg">
-      <publishTime>01/09/2015 16:52:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/Wind-ScarredCrag.jpg">
-      <publishTime>01/09/2015 16:53:53</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WindsofQalSisma.jpg">
-      <publishTime>01/09/2015 16:53:29</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/WriteIntoBeing.jpg">
-      <publishTime>01/09/2015 16:52:23</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/FRF/YasovaDragonclaw.jpg">
-      <publishTime>01/09/2015 16:53:29</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/JOU/1.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1601,7 +1601,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/AnafenzatheForemost.jpg">
-      <publishTime>10/09/2014 20:29:39</publishTime>
+      <publishTime>09/10/2014 20:29:39</publishTime>
     </File>
     <File Include="Images/KTK/AnkleShanker.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1658,7 +1658,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/BloodstainedBrave.jpg">
-      <publishTime>10/09/2014 19:30:23</publishTime>
+      <publishTime>09/10/2014 19:30:23</publishTime>
     </File>
     <File Include="Images/KTK/BloodstainedMire.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1904,7 +1904,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/KheruSpellthief.jpg">
-      <publishTime>04/09/2014 19:20:12</publishTime>
+      <publishTime>09/04/2014 19:20:12</publishTime>
     </File>
     <File Include="Images/KTK/KillShot.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1951,6 +1951,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/KTK/MarduHordechief.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
+    <File Include="Images/KTK/MarduRoughrider.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
     <File Include="Images/KTK/MarduSkullhunter.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
@@ -1976,10 +1979,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/MockingInstigator.jpg">
-      <publishTime>04/09/2014 19:20:11</publishTime>
+      <publishTime>09/04/2014 19:20:11</publishTime>
     </File>
     <File Include="Images/KTK/Mockinstigator.jpg">
-      <publishTime>04/09/2014 19:20:11</publishTime>
+      <publishTime>09/04/2014 19:20:11</publishTime>
     </File>
     <File Include="Images/KTK/MoltingSnakeskin.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2018,7 +2021,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/PearLakeAncient.jpg">
-      <publishTime>10/09/2014 19:30:34</publishTime>
+      <publishTime>09/10/2014 19:30:34</publishTime>
     </File>
     <File Include="Images/KTK/PearlLakeAncient.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2120,7 +2123,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/SecretPlan.jpg">
-      <publishTime>10/09/2014 19:30:23</publishTime>
+      <publishTime>09/10/2014 19:30:23</publishTime>
     </File>
     <File Include="Images/KTK/SecretPlans.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2174,7 +2177,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/StubbornRefusal.jpg">
-      <publishTime>08/09/2014 20:28:54</publishTime>
+      <publishTime>09/08/2014 20:28:54</publishTime>
     </File>
     <File Include="Images/KTK/SultaiAscendancy.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2330,7 +2333,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/WitnesoftheAges.jpg">
-      <publishTime>10/09/2014 19:30:24</publishTime>
+      <publishTime>09/10/2014 19:30:24</publishTime>
     </File>
     <File Include="Images/KTK/WitnessoftheAges.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2342,868 +2345,868 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/KTK/Zurgo--Helmsmasher.jpg">
-      <publishTime>09/02/2014 20:49:22</publishTime>
+      <publishTime>02/09/2014 20:49:22</publishTime>
     </File>
     <File Include="Images/KTK/ZurgoHelmsmasher.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/Lands/forest.png">
-      <publishTime>12/10/2014 12:58:50</publishTime>
+      <publishTime>10/12/2014 12:58:50</publishTime>
     </File>
     <File Include="Images/Lands/island.png">
-      <publishTime>12/10/2014 12:59:15</publishTime>
+      <publishTime>10/12/2014 12:59:15</publishTime>
     </File>
     <File Include="Images/Lands/mountain.png">
-      <publishTime>12/10/2014 12:59:24</publishTime>
+      <publishTime>10/12/2014 12:59:24</publishTime>
     </File>
     <File Include="Images/Lands/plains.png">
-      <publishTime>12/10/2014 12:59:49</publishTime>
+      <publishTime>10/12/2014 12:59:49</publishTime>
     </File>
     <File Include="Images/Lands/swamp.png">
-      <publishTime>12/10/2014 13:00:07</publishTime>
+      <publishTime>10/12/2014 13:00:07</publishTime>
     </File>
     <File Include="Images/M15/AccursedSpirit.jpg">
-      <publishTime>07/04/2014 06:33:23</publishTime>
+      <publishTime>04/07/2014 06:33:23</publishTime>
     </File>
     <File Include="Images/M15/actonimpulse.jpg">
-      <publishTime>07/04/2014 06:34:01</publishTime>
+      <publishTime>04/07/2014 06:34:01</publishTime>
     </File>
     <File Include="Images/M15/AegisAngel.jpg">
-      <publishTime>01/07/2014 19:26:46</publishTime>
+      <publishTime>07/01/2014 19:26:46</publishTime>
     </File>
     <File Include="Images/M15/AeronautTinkerer.jpg">
-      <publishTime>07/04/2014 06:32:22</publishTime>
+      <publishTime>04/07/2014 06:32:22</publishTime>
     </File>
     <File Include="Images/M15/AEtherspouts.jpg">
-      <publishTime>04/07/2014 06:32:30</publishTime>
-    </File>
-    <File Include="Images/M15/AEtherWhirlwind.jpg">
-      <publishTime>01/07/2014 22:09:08</publishTime>
-    </File>
-    <File Include="Images/M15/AggressiveMining.jpg">
-      <publishTime>07/04/2014 06:34:02</publishTime>
-    </File>
-    <File Include="Images/M15/AjanisPridemate.jpg">
-      <publishTime>07/04/2014 06:31:34</publishTime>
-    </File>
-    <File Include="Images/M15/AjaniSteadfast.jpg">
-      <publishTime>07/04/2014 06:31:33</publishTime>
-    </File>
-    <File Include="Images/M15/AltacBloodseeker.jpg">
-      <publishTime>07/04/2014 06:34:03</publishTime>
-    </File>
-    <File Include="Images/M15/AmphinPathmage.jpg">
-      <publishTime>07/04/2014 06:32:36</publishTime>
-    </File>
-    <File Include="Images/M15/AncientSilverback.jpg">
-      <publishTime>07/04/2014 06:36:17</publishTime>
-    </File>
-    <File Include="Images/M15/Avacyn--GuardianAngel.jpg">
-      <publishTime>07/04/2014 06:31:35</publishTime>
-    </File>
-    <File Include="Images/M15/AvariceAmulet.jpg">
-      <publishTime>07/04/2014 06:37:43</publishTime>
-    </File>
-    <File Include="Images/M15/BacktoNature.jpg">
-      <publishTime>07/04/2014 06:36:21</publishTime>
-    </File>
-    <File Include="Images/M15/BattlefieldForge.jpg">
-      <publishTime>07/04/2014 06:38:03</publishTime>
-    </File>
-    <File Include="Images/M15/BattleMastery.jpg">
-      <publishTime>07/04/2014 06:31:36</publishTime>
-    </File>
-    <File Include="Images/M15/BelligerentSliver.jpg">
-      <publishTime>07/04/2014 06:34:03</publishTime>
-    </File>
-    <File Include="Images/M15/BlackCat.jpg">
-      <publishTime>07/04/2014 06:33:26</publishTime>
-    </File>
-    <File Include="Images/M15/BlastfireBolt.jpg">
-      <publishTime>07/04/2014 06:34:04</publishTime>
-    </File>
-    <File Include="Images/M15/BloodHost.jpg">
-      <publishTime>07/04/2014 06:33:28</publishTime>
-    </File>
-    <File Include="Images/M15/BoonweaverGiant.jpg">
-      <publishTime>07/04/2014 06:31:37</publishTime>
-    </File>
-    <File Include="Images/M15/BorderlandMarauder.jpg">
-      <publishTime>07/04/2014 06:34:05</publishTime>
-    </File>
-    <File Include="Images/M15/BrawlersPlate.jpg">
-      <publishTime>07/04/2014 06:37:43</publishTime>
-    </File>
-    <File Include="Images/M15/BronzeSable.jpg">
-      <publishTime>07/04/2014 06:37:44</publishTime>
-    </File>
-    <File Include="Images/M15/broodkeeper.jpg">
-      <publishTime>07/04/2014 06:34:06</publishTime>
-    </File>
-    <File Include="Images/M15/BurningAnger.jpg">
-      <publishTime>07/04/2014 06:34:07</publishTime>
-    </File>
-    <File Include="Images/M15/Cancel.jpg">
-      <publishTime>01/07/2014 19:26:48</publishTime>
-    </File>
-    <File Include="Images/M15/CarnivorousMoss-Beast.jpg">
-      <publishTime>07/04/2014 06:36:25</publishTime>
-    </File>
-    <File Include="Images/M15/CarrionCrow.jpg">
-      <publishTime>07/04/2014 06:33:29</publishTime>
-    </File>
-    <File Include="Images/M15/CausticTar.jpg">
-      <publishTime>07/04/2014 06:33:31</publishTime>
-    </File>
-    <File Include="Images/M15/CavesofKoilos.jpg">
-      <publishTime>07/04/2014 06:38:04</publishTime>
-    </File>
-    <File Include="Images/M15/CentaurCourser.jpg">
-      <publishTime>01/07/2014 19:26:54</publishTime>
-    </File>
-    <File Include="Images/M15/Chandra--Pyromaster.jpg">
-      <publishTime>07/04/2014 06:34:11</publishTime>
-    </File>
-    <File Include="Images/M15/ChargingRhino.jpg">
-      <publishTime>07/04/2014 06:36:29</publishTime>
-    </File>
-    <File Include="Images/M15/ChasmSkulker.jpg">
-      <publishTime>07/04/2014 06:32:40</publishTime>
-    </File>
-    <File Include="Images/M15/ChiefEngineer.jpg">
-      <publishTime>07/04/2014 06:32:43</publishTime>
-    </File>
-    <File Include="Images/M15/ChildofNight.jpg">
-      <publishTime>07/04/2014 06:33:32</publishTime>
-    </File>
-    <File Include="Images/M15/ChordofCalling.jpg">
-      <publishTime>07/04/2014 06:36:36</publishTime>
-    </File>
-    <File Include="Images/M15/Chronostutter.jpg">
-      <publishTime>07/04/2014 06:32:45</publishTime>
-    </File>
-    <File Include="Images/M15/CircleofFlame.jpg">
-      <publishTime>07/04/2014 06:34:15</publishTime>
-    </File>
-    <File Include="Images/M15/ClearaPath.jpg">
-      <publishTime>07/04/2014 06:34:22</publishTime>
-    </File>
-    <File Include="Images/M15/ConeofFlame.jpg">
-      <publishTime>07/04/2014 06:34:28</publishTime>
-    </File>
-    <File Include="Images/M15/Congregate.jpg">
-      <publishTime>07/04/2014 06:31:37</publishTime>
-    </File>
-    <File Include="Images/M15/ConstrictingSliver.jpg">
-      <publishTime>07/04/2014 06:31:38</publishTime>
-    </File>
-    <File Include="Images/M15/CoralBarrier.jpg">
-      <publishTime>07/04/2014 06:32:50</publishTime>
-    </File>
-    <File Include="Images/M15/CovenantofBlood.jpg">
-      <publishTime>07/04/2014 06:33:33</publishTime>
-    </File>
-    <File Include="Images/M15/CripplingBlight.jpg">
-      <publishTime>07/04/2014 06:33:34</publishTime>
-    </File>
-    <File Include="Images/M15/CrowdsFavor.jpg">
-      <publishTime>07/04/2014 06:34:34</publishTime>
-    </File>
-    <File Include="Images/M15/CrucibleofFire.jpg">
-      <publishTime>07/04/2014 06:34:38</publishTime>
-    </File>
-    <File Include="Images/M15/CruelSadist.jpg">
-      <publishTime>07/04/2014 06:33:35</publishTime>
-    </File>
-    <File Include="Images/M15/DarksteelCitadel.jpg">
-      <publishTime>07/04/2014 06:38:04</publishTime>
-    </File>
-    <File Include="Images/M15/DauntlessRiverMarshal.jpg">
-      <publishTime>07/04/2014 06:31:40</publishTime>
-    </File>
-    <File Include="Images/M15/DevouringLight.jpg">
-      <publishTime>07/04/2014 06:31:41</publishTime>
-    </File>
-    <File Include="Images/M15/DiffusionSliver.jpg">
-      <publishTime>07/04/2014 06:32:54</publishTime>
-    </File>
-    <File Include="Images/M15/Dissipate.jpg">
-      <publishTime>07/04/2014 06:32:57</publishTime>
-    </File>
-    <File Include="Images/M15/Divination.jpg">
-      <publishTime>07/04/2014 06:32:59</publishTime>
-    </File>
-    <File Include="Images/M15/DivineFavor.jpg">
-      <publishTime>07/04/2014 06:31:43</publishTime>
-    </File>
-    <File Include="Images/M15/DivineVerdict.jpg">
-      <publishTime>01/07/2014 19:26:46</publishTime>
-    </File>
-    <File Include="Images/M15/ElvishMystic.jpg">
-      <publishTime>07/04/2014 06:36:40</publishTime>
-    </File>
-    <File Include="Images/M15/Encrust.jpg">
-      <publishTime>07/04/2014 06:32:59</publishTime>
-    </File>
-    <File Include="Images/M15/EndlessObedience.jpg">
-      <publishTime>07/04/2014 06:33:36</publishTime>
-    </File>
-    <File Include="Images/M15/ensoulartifact.jpg">
-      <publishTime>07/04/2014 06:33:00</publishTime>
-    </File>
-    <File Include="Images/M15/EphemeralShields.jpg">
-      <publishTime>07/04/2014 06:31:43</publishTime>
-    </File>
-    <File Include="Images/M15/EternalThirst.jpg">
-      <publishTime>07/04/2014 06:33:37</publishTime>
-    </File>
-    <File Include="Images/M15/EvolvingWilds.jpg">
-      <publishTime>07/04/2014 06:38:05</publishTime>
-    </File>
-    <File Include="Images/M15/FeastontheFallen.jpg">
-      <publishTime>07/04/2014 06:33:38</publishTime>
-    </File>
-    <File Include="Images/M15/FeralIncarnation.jpg">
-      <publishTime>07/04/2014 06:36:44</publishTime>
-    </File>
-    <File Include="Images/M15/Festergloom.jpg">
-      <publishTime>07/04/2014 06:33:39</publishTime>
-    </File>
-    <File Include="Images/M15/FirstResponse.jpg">
-      <publishTime>07/04/2014 06:31:44</publishTime>
-    </File>
-    <File Include="Images/M15/FleshtoDust.jpg">
-      <publishTime>07/04/2014 06:33:39</publishTime>
-    </File>
-    <File Include="Images/M15/Forest.jpg">
-      <publishTime>07/04/2014 06:38:08</publishTime>
-    </File>
-    <File Include="Images/M15/ForgeDevil.jpg">
-      <publishTime>07/04/2014 06:34:42</publishTime>
-    </File>
-    <File Include="Images/M15/FoundryStreetDenizen.jpg">
-      <publishTime>07/04/2014 06:34:48</publishTime>
-    </File>
-    <File Include="Images/M15/FrenziedGoblin.jpg">
-      <publishTime>07/04/2014 06:34:54</publishTime>
-    </File>
-    <File Include="Images/M15/FrostLynx.jpg">
-      <publishTime>07/04/2014 06:33:01</publishTime>
-    </File>
-    <File Include="Images/M15/FugitiveWizard.jpg">
-      <publishTime>07/04/2014 06:33:01</publishTime>
-    </File>
-    <File Include="Images/M15/FurnaceWhelp.jpg">
-      <publishTime>01/07/2014 19:26:51</publishTime>
-    </File>
-    <File Include="Images/M15/GargoyleSentinel.jpg">
-      <publishTime>07/04/2014 06:37:45</publishTime>
-    </File>
-    <File Include="Images/M15/Garruk--ApexPredator.jpg">
-      <publishTime>07/04/2014 06:37:41</publishTime>
-    </File>
-    <File Include="Images/M15/GarruksPackleader.jpg">
-      <publishTime>01/07/2014 19:26:55</publishTime>
-    </File>
-    <File Include="Images/M15/GatherCourage.jpg">
-      <publishTime>07/04/2014 06:36:47</publishTime>
-    </File>
-    <File Include="Images/M15/GeistoftheMoors.jpg">
-      <publishTime>07/04/2014 06:31:45</publishTime>
-    </File>
-    <File Include="Images/M15/GeneratorServant.jpg">
-      <publishTime>07/04/2014 06:34:58</publishTime>
-    </File>
-    <File Include="Images/M15/GenesisHydra.jpg">
-      <publishTime>07/04/2014 06:36:49</publishTime>
-    </File>
-    <File Include="Images/M15/GlacialCrasher.jpg">
-      <publishTime>07/04/2014 06:33:02</publishTime>
-    </File>
-    <File Include="Images/M15/GoblinKaboomist.jpg">
-      <publishTime>07/04/2014 06:35:02</publishTime>
-    </File>
-    <File Include="Images/M15/GoblinRabblemaster.jpg">
-      <publishTime>07/04/2014 06:35:07</publishTime>
-    </File>
-    <File Include="Images/M15/GoblinRoughrider.jpg">
-      <publishTime>07/04/2014 06:35:10</publishTime>
-    </File>
-    <File Include="Images/M15/Gravedigger.jpg">
-      <publishTime>07/04/2014 06:33:40</publishTime>
-    </File>
-    <File Include="Images/M15/Grindclock.jpg">
-      <publishTime>07/04/2014 06:37:45</publishTime>
-    </File>
-    <File Include="Images/M15/Hammerhand.jpg">
-      <publishTime>07/04/2014 06:35:13</publishTime>
-    </File>
-    <File Include="Images/M15/HauntedPlateMail.jpg">
-      <publishTime>07/04/2014 06:37:46</publishTime>
-    </File>
-    <File Include="Images/M15/HeatRay.jpg">
-      <publishTime>07/04/2014 06:35:16</publishTime>
-    </File>
-    <File Include="Images/M15/HeliodsPilgrim.jpg">
-      <publishTime>07/04/2014 06:31:46</publishTime>
-    </File>
-    <File Include="Images/M15/HoardingDragon.jpg">
-      <publishTime>07/04/2014 06:35:19</publishTime>
-    </File>
-    <File Include="Images/M15/HornetNest.jpg">
-      <publishTime>07/04/2014 06:36:51</publishTime>
-    </File>
-    <File Include="Images/M15/HornetQueen.jpg">
-      <publishTime>07/04/2014 06:36:54</publishTime>
-    </File>
-    <File Include="Images/M15/HotSoup.jpg">
-      <publishTime>07/04/2014 06:37:47</publishTime>
-    </File>
-    <File Include="Images/M15/HuntersAmbush.jpg">
-      <publishTime>07/04/2014 06:36:58</publishTime>
-    </File>
-    <File Include="Images/M15/HunttheWeak.jpg">
-      <publishTime>07/04/2014 06:36:56</publishTime>
-    </File>
-    <File Include="Images/M15/HushwingGryff.jpg">
-      <publishTime>07/04/2014 06:31:46</publishTime>
-    </File>
-    <File Include="Images/M15/Hydrosurge.jpg">
-      <publishTime>07/04/2014 06:33:03</publishTime>
-    </File>
-    <File Include="Images/M15/IllusoryAngel.jpg">
-      <publishTime>07/04/2014 06:33:03</publishTime>
-    </File>
-    <File Include="Images/M15/IndulgentTormentor.jpg">
-      <publishTime>07/04/2014 06:33:42</publishTime>
-    </File>
-    <File Include="Images/M15/InfernoFist.jpg">
-      <publishTime>07/04/2014 06:35:22</publishTime>
-    </File>
-    <File Include="Images/M15/InGarruksWake.jpg">
-      <publishTime>07/04/2014 06:33:41</publishTime>
-    </File>
-    <File Include="Images/M15/InspiredCharge.jpg">
-      <publishTime>01/07/2014 19:26:47</publishTime>
-    </File>
-    <File Include="Images/M15/IntotheVoid.jpg">
-      <publishTime>07/04/2014 06:33:04</publishTime>
-    </File>
-    <File Include="Images/M15/InvasiveSpecies.jpg">
-      <publishTime>07/04/2014 06:37:00</publishTime>
-    </File>
-    <File Include="Images/M15/Invisibility.jpg">
-      <publishTime>07/04/2014 06:33:05</publishTime>
-    </File>
-    <File Include="Images/M15/Island.jpg">
-      <publishTime>07/04/2014 06:38:10</publishTime>
-    </File>
-    <File Include="Images/M15/Jace--theLivingGuildpact.jpg">
-      <publishTime>07/04/2014 06:33:05</publishTime>
-    </File>
-    <File Include="Images/M15/JacesIngenuity.jpg">
-      <publishTime>07/04/2014 06:33:06</publishTime>
-    </File>
-    <File Include="Images/M15/Jalira--MasterPolymorphist.jpg">
-      <publishTime>07/04/2014 06:33:07</publishTime>
-    </File>
-    <File Include="Images/M15/JorubaiMurkLurker.jpg">
-      <publishTime>07/04/2014 06:33:08</publishTime>
-    </File>
-    <File Include="Images/M15/Juggernaut.jpg">
-      <publishTime>07/04/2014 06:37:48</publishTime>
-    </File>
-    <File Include="Images/M15/kaloniantwingrove.jpg">
-      <publishTime>07/04/2014 06:37:04</publishTime>
-    </File>
-    <File Include="Images/M15/KapshoKitefins.jpg">
-      <publishTime>07/04/2014 06:33:08</publishTime>
-    </File>
-    <File Include="Images/M15/KinsbaileSkirmisher.jpg">
-      <publishTime>07/04/2014 06:31:47</publishTime>
-    </File>
-    <File Include="Images/M15/KirdChieftain.jpg">
-      <publishTime>07/04/2014 06:35:24</publishTime>
-    </File>
-    <File Include="Images/M15/KrenkosEnforcer.jpg">
-      <publishTime>07/04/2014 06:35:27</publishTime>
-    </File>
-    <File Include="Images/M15/kurkesh--onakkeancient.jpg">
-      <publishTime>07/04/2014 06:35:29</publishTime>
-    </File>
-    <File Include="Images/M15/kurkesh--OnakkeAncient.png">
-      <publishTime>07/02/2014 19:23:08</publishTime>
-    </File>
-    <File Include="Images/M15/LavaAxe.jpg">
-      <publishTime>07/04/2014 06:35:31</publishTime>
-    </File>
-    <File Include="Images/M15/Leeching Sliver.jpg">
-      <publishTime>07/02/2014 19:20:27</publishTime>
-    </File>
-    <File Include="Images/M15/LeechingSliver.jpg">
-      <publishTime>07/04/2014 06:33:43</publishTime>
-    </File>
-    <File Include="Images/M15/LifesLegacy.jpg">
-      <publishTime>07/04/2014 06:37:07</publishTime>
-    </File>
-    <File Include="Images/M15/LightningStrike.jpg">
-      <publishTime>07/04/2014 06:35:32</publishTime>
-    </File>
-    <File Include="Images/M15/LilianaVess.jpg">
-      <publishTime>07/04/2014 06:33:44</publishTime>
-    </File>
-    <File Include="Images/M15/LivingTotem.jpg">
-      <publishTime>07/04/2014 06:37:11</publishTime>
-    </File>
-    <File Include="Images/M15/LlanowarWastes.jpg">
-      <publishTime>07/04/2014 06:38:11</publishTime>
-    </File>
-    <File Include="Images/M15/MahamotiDjinn.jpg">
-      <publishTime>01/07/2014 19:26:49</publishTime>
-    </File>
-    <File Include="Images/M15/MarkedbyHonor.jpg">
-      <publishTime>07/04/2014 06:31:48</publishTime>
-    </File>
-    <File Include="Images/M15/MassCalcify.jpg">
-      <publishTime>07/04/2014 06:31:49</publishTime>
-    </File>
-    <File Include="Images/M15/MasterofPredicaments.jpg">
-      <publishTime>07/04/2014 06:33:09</publishTime>
-    </File>
-    <File Include="Images/M15/meditationpuzzle.jpg">
-      <publishTime>07/04/2014 06:31:49</publishTime>
-    </File>
-    <File Include="Images/M15/MercurialPretender.jpg">
-      <publishTime>07/04/2014 06:33:10</publishTime>
-    </File>
-    <File Include="Images/M15/meteorite.jpg">
-      <publishTime>07/04/2014 06:37:48</publishTime>
-    </File>
-    <File Include="Images/M15/MidnightGuard.jpg">
-      <publishTime>07/04/2014 06:31:50</publishTime>
-    </File>
-    <File Include="Images/M15/MightMakesRight.jpg">
-      <publishTime>07/04/2014 06:35:34</publishTime>
-    </File>
-    <File Include="Images/M15/MilitaryIntelligence.jpg">
-      <publishTime>07/04/2014 06:33:10</publishTime>
-    </File>
-    <File Include="Images/M15/MindRot.jpg">
-      <publishTime>07/04/2014 06:33:44</publishTime>
-    </File>
-    <File Include="Images/M15/MindSculpt.jpg">
-      <publishTime>07/04/2014 06:33:11</publishTime>
-    </File>
-    <File Include="Images/M15/MinersBane.jpg">
-      <publishTime>07/04/2014 06:35:36</publishTime>
-    </File>
-    <File Include="Images/M15/Mountain.jpg">
-      <publishTime>07/04/2014 06:38:14</publishTime>
-    </File>
-    <File Include="Images/M15/Naturalize.jpg">
-      <publishTime>07/04/2014 06:37:14</publishTime>
-    </File>
-    <File Include="Images/M15/Necrobite.jpg">
-      <publishTime>07/04/2014 06:33:45</publishTime>
-    </File>
-    <File Include="Images/M15/NecrogenScudder.jpg">
-      <publishTime>07/04/2014 06:33:46</publishTime>
-    </File>
-    <File Include="Images/M15/NecromancersAssistant.jpg">
-      <publishTime>07/04/2014 06:33:47</publishTime>
-    </File>
-    <File Include="Images/M15/NecromancersStockpile.jpg">
-      <publishTime>07/04/2014 06:33:47</publishTime>
-    </File>
-    <File Include="Images/M15/Negate.jpg">
-      <publishTime>07/04/2014 06:33:12</publishTime>
-    </File>
-    <File Include="Images/M15/NetcasterSpider.jpg">
-      <publishTime>07/04/2014 06:37:18</publishTime>
-    </File>
-    <File Include="Images/M15/NightfireGiant.jpg">
-      <publishTime>07/04/2014 06:33:48</publishTime>
-    </File>
-    <File Include="Images/M15/Nightmare.jpg">
-      <publishTime>01/07/2014 19:26:50</publishTime>
-    </File>
-    <File Include="Images/M15/NimbusoftheIsles.jpg">
-      <publishTime>07/04/2014 06:33:12</publishTime>
-    </File>
-    <File Include="Images/M15/Nissa--Worldwaker.jpg">
-      <publishTime>07/04/2014 06:37:22</publishTime>
-    </File>
-    <File Include="Images/M15/NissasExpedition.jpg">
-      <publishTime>07/04/2014 06:37:23</publishTime>
-    </File>
-    <File Include="Images/M15/ObeliskofUrd.jpg">
-      <publishTime>07/04/2014 06:37:49</publishTime>
-    </File>
-    <File Include="Images/M15/ObNixilis--Unshackled.jpg">
-      <publishTime>07/04/2014 06:33:49</publishTime>
-    </File>
-    <File Include="Images/M15/OppressiveRays.jpg">
-      <publishTime>07/04/2014 06:31:51</publishTime>
-    </File>
-    <File Include="Images/M15/OreskosSwiftclaw.jpg">
-      <publishTime>07/04/2014 06:31:51</publishTime>
-    </File>
-    <File Include="Images/M15/Ornithopter.jpg">
-      <publishTime>07/04/2014 06:37:50</publishTime>
-    </File>
-    <File Include="Images/M15/Overwhelm.jpg">
-      <publishTime>07/04/2014 06:37:24</publishTime>
-    </File>
-    <File Include="Images/M15/ParagaonofNewDawns.jpg">
-      <publishTime>01/07/2014 19:27:08</publishTime>
-    </File>
-    <File Include="Images/M15/ParagonofEternalWilds.jpg">
-      <publishTime>07/04/2014 06:37:25</publishTime>
-    </File>
-    <File Include="Images/M15/ParagonofFierceDefiance.jpg">
-      <publishTime>07/04/2014 06:35:38</publishTime>
-    </File>
-    <File Include="Images/M15/ParagonofGatheringMists.jpg">
-      <publishTime>07/04/2014 06:33:13</publishTime>
-    </File>
-    <File Include="Images/M15/paragonofnewdawns.jpg">
-      <publishTime>07/04/2014 06:31:52</publishTime>
-    </File>
-    <File Include="Images/M15/ParagonofOpenGraves.jpg">
-      <publishTime>07/04/2014 06:33:50</publishTime>
-    </File>
-    <File Include="Images/M15/PeelfromReality.jpg">
-      <publishTime>07/04/2014 06:33:14</publishTime>
-    </File>
-    <File Include="Images/M15/PerilousVault.jpg">
-      <publishTime>07/04/2014 06:37:51</publishTime>
-    </File>
-    <File Include="Images/M15/PhyrexianRevoker.jpg">
-      <publishTime>07/04/2014 06:37:51</publishTime>
-    </File>
-    <File Include="Images/M15/Phytotitan.jpg">
-      <publishTime>07/04/2014 06:37:26</publishTime>
-    </File>
-    <File Include="Images/M15/PillarofLight.jpg">
-      <publishTime>07/04/2014 06:31:53</publishTime>
-    </File>
-    <File Include="Images/M15/Plains.jpg">
-      <publishTime>07/04/2014 06:38:16</publishTime>
-    </File>
-    <File Include="Images/M15/Plummet.jpg">
-      <publishTime>07/04/2014 06:37:27</publishTime>
-    </File>
-    <File Include="Images/M15/PolymorphistsJest.jpg">
-      <publishTime>07/04/2014 06:33:15</publishTime>
-    </File>
-    <File Include="Images/M15/PreeminentCaptain.jpg">
-      <publishTime>07/04/2014 06:31:53</publishTime>
-    </File>
-    <File Include="Images/M15/ProfaneMemento.jpg">
-      <publishTime>07/04/2014 06:37:52</publishTime>
-    </File>
-    <File Include="Images/M15/Quickling.jpg">
-      <publishTime>07/04/2014 06:33:15</publishTime>
-    </File>
-    <File Include="Images/M15/RadiantFountain.jpg">
-      <publishTime>07/04/2014 06:38:17</publishTime>
-    </File>
-    <File Include="Images/M15/RaisetheAlarm.jpg">
-      <publishTime>07/04/2014 06:31:54</publishTime>
-    </File>
-    <File Include="Images/M15/RangersGuile.jpg">
-      <publishTime>07/04/2014 06:37:27</publishTime>
-    </File>
-    <File Include="Images/M15/RazorfootGriffin.jpg">
-      <publishTime>07/04/2014 06:31:55</publishTime>
-    </File>
-    <File Include="Images/M15/ReclamationSage.jpg">
-      <publishTime>07/04/2014 06:37:28</publishTime>
-    </File>
-    <File Include="Images/M15/ResearchAssistant.jpg">
-      <publishTime>07/04/2014 06:33:16</publishTime>
-    </File>
-    <File Include="Images/M15/ResoluteArchangel.jpg">
-      <publishTime>07/04/2014 06:31:56</publishTime>
-    </File>
-    <File Include="Images/M15/Restock.jpg">
-      <publishTime>07/04/2014 06:37:29</publishTime>
-    </File>
-    <File Include="Images/M15/ReturntoRanks.jpg">
-      <publishTime>01/07/2014 19:26:04</publishTime>
-    </File>
-    <File Include="Images/M15/ReturntotheRanks.jpg">
-      <publishTime>07/04/2014 06:31:56</publishTime>
-    </File>
-    <File Include="Images/M15/RoaringPrimadox.jpg">
-      <publishTime>07/04/2014 06:37:30</publishTime>
-    </File>
-    <File Include="Images/M15/RoguesGloves.jpg">
-      <publishTime>07/04/2014 06:37:53</publishTime>
-    </File>
-    <File Include="Images/M15/RotfeasterMaggot.jpg">
-      <publishTime>07/04/2014 06:33:50</publishTime>
-    </File>
-    <File Include="Images/M15/RummagingGoblin.jpg">
-      <publishTime>07/04/2014 06:35:41</publishTime>
-    </File>
-    <File Include="Images/M15/RuneclawBear.jpg">
-      <publishTime>07/04/2014 06:37:31</publishTime>
-    </File>
-    <File Include="Images/M15/SacredArmory.jpg">
-      <publishTime>07/04/2014 06:37:54</publishTime>
-    </File>
-    <File Include="Images/M15/SanctifiedCharge.jpg">
-      <publishTime>07/04/2014 06:31:57</publishTime>
-    </File>
-    <File Include="Images/M15/SatyrWayfinder.jpg">
-      <publishTime>07/04/2014 06:37:31</publishTime>
-    </File>
-    <File Include="Images/M15/ScrapyardMongrel.jpg">
-      <publishTime>07/04/2014 06:35:45</publishTime>
-    </File>
-    <File Include="Images/M15/scuttlingdoomengine.jpg">
-      <publishTime>07/04/2014 06:37:54</publishTime>
-    </File>
-    <File Include="Images/M15/SeismicStrike.jpg">
-      <publishTime>01/07/2014 19:26:52</publishTime>
-    </File>
-    <File Include="Images/M15/SelflessCathar.jpg">
-      <publishTime>07/04/2014 06:31:58</publishTime>
-    </File>
-    <File Include="Images/M15/SengirVampire.jpg">
-      <publishTime>01/07/2014 19:26:50</publishTime>
-    </File>
-    <File Include="Images/M15/SeraphoftheMasses.jpg">
-      <publishTime>07/04/2014 06:31:59</publishTime>
-    </File>
-    <File Include="Images/M15/SerraAngel.jpg">
-      <publishTime>01/07/2014 19:26:47</publishTime>
-    </File>
-    <File Include="Images/M15/ShadowcloakVampire.jpg">
-      <publishTime>07/04/2014 06:33:51</publishTime>
-    </File>
-    <File Include="Images/M15/ShamanofSpring.jpg">
-      <publishTime>07/04/2014 06:37:32</publishTime>
-    </File>
-    <File Include="Images/M15/ShieldoftheAvatar.jpg">
-      <publishTime>07/04/2014 06:37:55</publishTime>
-    </File>
-    <File Include="Images/M15/ShivanDragon.jpg">
-      <publishTime>01/07/2014 19:26:53</publishTime>
-    </File>
-    <File Include="Images/M15/ShivanReef.jpg">
-      <publishTime>07/04/2014 06:38:18</publishTime>
-    </File>
-    <File Include="Images/M15/ShrapnelBlast.jpg">
-      <publishTime>07/04/2014 06:35:48</publishTime>
-    </File>
-    <File Include="Images/M15/SiegeDragon.jpg">
-      <publishTime>07/04/2014 06:35:51</publishTime>
-    </File>
-    <File Include="Images/M15/SiegeWurm.jpg">
-      <publishTime>07/04/2014 06:37:33</publishTime>
-    </File>
-    <File Include="Images/M15/SigninBlood.jpg">
-      <publishTime>07/04/2014 06:33:52</publishTime>
-    </File>
-    <File Include="Images/M15/SliverHive.jpg">
-      <publishTime>07/04/2014 06:38:18</publishTime>
-    </File>
-    <File Include="Images/M15/SliverHivelord.jpg">
-      <publishTime>07/04/2014 06:37:42</publishTime>
-    </File>
-    <File Include="Images/M15/SolemnOffering.jpg">
-      <publishTime>07/04/2014 06:31:59</publishTime>
-    </File>
-    <File Include="Images/M15/Soulmender.jpg">
-      <publishTime>07/04/2014 06:32:01</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofInnistrad.jpg">
-      <publishTime>07/04/2014 06:33:53</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofNewPhyrexia.jpg">
-      <publishTime>07/04/2014 06:37:56</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofRavnica.jpg">
-      <publishTime>07/04/2014 06:33:17</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofShandalar.jpg">
-      <publishTime>07/04/2014 06:35:55</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofTheros.jpg">
-      <publishTime>07/04/2014 06:32:00</publishTime>
-    </File>
-    <File Include="Images/M15/SoulofZendikar.jpg">
-      <publishTime>07/04/2014 06:37:34</publishTime>
-    </File>
-    <File Include="Images/M15/spectralward.jpg">
-      <publishTime>07/03/2014 19:33:20</publishTime>
-    </File>
-    <File Include="Images/M15/SpectraWard.jpg">
-      <publishTime>07/04/2014 06:32:01</publishTime>
-    </File>
-    <File Include="Images/M15/SpiritBonds.jpg">
-      <publishTime>07/04/2014 06:32:02</publishTime>
-    </File>
-    <File Include="Images/M15/StabWound.jpg">
-      <publishTime>07/04/2014 06:33:53</publishTime>
-    </File>
-    <File Include="Images/M15/StaffoftheDeathMagus.jpg">
-      <publishTime>07/04/2014 06:37:57</publishTime>
-    </File>
-    <File Include="Images/M15/StaffoftheFlameMagus.jpg">
-      <publishTime>07/04/2014 06:37:57</publishTime>
-    </File>
-    <File Include="Images/M15/StaffoftheMindMagus.jpg">
-      <publishTime>07/04/2014 06:37:58</publishTime>
-    </File>
-    <File Include="Images/M15/StaffoftheSunMagus.jpg">
-      <publishTime>07/04/2014 06:37:59</publishTime>
-    </File>
-    <File Include="Images/M15/StaffoftheWildMagus.jpg">
-      <publishTime>07/04/2014 06:37:59</publishTime>
-    </File>
-    <File Include="Images/M15/StaintheMind.jpg">
-      <publishTime>07/04/2014 06:33:54</publishTime>
-    </File>
-    <File Include="Images/M15/StatuteofDenial.jpg">
-      <publishTime>07/04/2014 06:33:18</publishTime>
-    </File>
-    <File Include="Images/M15/StoketheFlames.jpg">
-      <publishTime>07/04/2014 06:35:59</publishTime>
-    </File>
-    <File Include="Images/M15/StormtideLeviathan.jpg">
-      <publishTime>07/04/2014 06:33:18</publishTime>
-    </File>
-    <File Include="Images/M15/SunbladeElf.jpg">
-      <publishTime>07/04/2014 06:37:35</publishTime>
-    </File>
-    <File Include="Images/M15/SungracePegasus.jpg">
-      <publishTime>07/04/2014 06:32:03</publishTime>
-    </File>
-    <File Include="Images/M15/Swamp.jpg">
-      <publishTime>07/04/2014 06:38:21</publishTime>
-    </File>
-    <File Include="Images/M15/TerraStomper.jpg">
-      <publishTime>01/07/2014 19:26:55</publishTime>
-    </File>
-    <File Include="Images/M15/thechainveil.jpg">
-      <publishTime>07/04/2014 06:38:00</publishTime>
-    </File>
-    <File Include="Images/M15/ThunderingGiant.jpg">
-      <publishTime>07/04/2014 06:36:02</publishTime>
-    </File>
-    <File Include="Images/M15/TirelessMissionaries.jpg">
-      <publishTime>07/04/2014 06:32:05</publishTime>
-    </File>
-    <File Include="Images/M15/TitanicGrowth.jpg">
-      <publishTime>07/04/2014 06:37:36</publishTime>
-    </File>
-    <File Include="Images/M15/TorchFiend.jpg">
-      <publishTime>07/04/2014 06:36:07</publishTime>
-    </File>
-    <File Include="Images/M15/TormodsCrypt.jpg">
-      <publishTime>07/04/2014 06:38:01</publishTime>
-    </File>
-    <File Include="Images/M15/TriplicateSpirits.jpg">
-      <publishTime>07/04/2014 06:32:07</publishTime>
-    </File>
-    <File Include="Images/M15/TurntoFrog.jpg">
-      <publishTime>07/04/2014 06:33:19</publishTime>
-    </File>
-    <File Include="Images/M15/TyphoidRats.jpg">
-      <publishTime>07/04/2014 06:33:55</publishTime>
-    </File>
-    <File Include="Images/M15/TyrantsMachine.jpg">
-      <publishTime>07/04/2014 06:38:01</publishTime>
-    </File>
-    <File Include="Images/M15/ulcerate.jpg">
-      <publishTime>07/04/2014 06:33:56</publishTime>
-    </File>
-    <File Include="Images/M15/UndergrowthScavenger.jpg">
-      <publishTime>07/04/2014 06:37:36</publishTime>
-    </File>
-    <File Include="Images/M15/UnmaketheGraves.jpg">
-      <publishTime>07/04/2014 06:33:56</publishTime>
-    </File>
-    <File Include="Images/M15/Urborg--TombofYawgmoth.jpg">
-      <publishTime>07/04/2014 06:38:22</publishTime>
-    </File>
-    <File Include="Images/M15/VenomSliver.jpg">
-      <publishTime>07/04/2014 06:37:37</publishTime>
-    </File>
-    <File Include="Images/M15/VerdantHaven.jpg">
-      <publishTime>07/04/2014 06:37:38</publishTime>
-    </File>
-    <File Include="Images/M15/Vineweft.jpg">
-      <publishTime>07/04/2014 06:37:39</publishTime>
-    </File>
-    <File Include="Images/M15/VoidSnare.jpg">
-      <publishTime>07/04/2014 06:33:20</publishTime>
-    </File>
-    <File Include="Images/M15/WalkingCorpse.jpg">
-      <publishTime>01/07/2014 19:26:51</publishTime>
-    </File>
-    <File Include="Images/M15/WallofEssence.jpg">
-      <publishTime>07/04/2014 06:32:13</publishTime>
-    </File>
-    <File Include="Images/M15/WallofFire.jpg">
-      <publishTime>07/04/2014 06:36:13</publishTime>
-    </File>
-    <File Include="Images/M15/WallofFrost.jpg">
-      <publishTime>07/04/2014 06:33:21</publishTime>
-    </File>
-    <File Include="Images/M15/WallofLimbs.jpg">
-      <publishTime>07/04/2014 06:33:57</publishTime>
-    </File>
-    <File Include="Images/M15/WallofMulch.jpg">
-      <publishTime>07/04/2014 06:37:39</publishTime>
-    </File>
-    <File Include="Images/M15/WardenoftheBeyond.jpg">
-      <publishTime>07/04/2014 06:32:16</publishTime>
-    </File>
-    <File Include="Images/M15/WasteNot.jpg">
-      <publishTime>07/04/2014 06:33:58</publishTime>
-    </File>
-    <File Include="Images/M15/WelkinTern.jpg">
-      <publishTime>07/04/2014 06:33:22</publishTime>
-    </File>
-    <File Include="Images/M15/Will-ForgedGolem.jpg">
-      <publishTime>07/04/2014 06:38:02</publishTime>
-    </File>
-    <File Include="Images/M15/WitchsFamiliar.jpg">
-      <publishTime>07/04/2014 06:33:59</publishTime>
-    </File>
-    <File Include="Images/M15/XathridSlyblade.jpg">
-      <publishTime>07/04/2014 06:33:59</publishTime>
-    </File>
-    <File Include="Images/M15/YavimayaCoast.jpg">
-      <publishTime>07/04/2014 06:38:22</publishTime>
-    </File>
-    <File Include="Images/M15/Yisan--theWandererBard.jpg">
-      <publishTime>07/04/2014 06:37:40</publishTime>
-    </File>
-    <File Include="Images/M15/ZofShade.jpg">
-      <publishTime>07/04/2014 06:34:00</publishTime>
-    </File>
-    <File Include="Images/M15/Ætherspouts.jpg">
       <publishTime>07/04/2014 06:32:30</publishTime>
     </File>
+    <File Include="Images/M15/AEtherWhirlwind.jpg">
+      <publishTime>07/01/2014 22:09:08</publishTime>
+    </File>
+    <File Include="Images/M15/AggressiveMining.jpg">
+      <publishTime>04/07/2014 06:34:02</publishTime>
+    </File>
+    <File Include="Images/M15/AjanisPridemate.jpg">
+      <publishTime>04/07/2014 06:31:34</publishTime>
+    </File>
+    <File Include="Images/M15/AjaniSteadfast.jpg">
+      <publishTime>04/07/2014 06:31:33</publishTime>
+    </File>
+    <File Include="Images/M15/AltacBloodseeker.jpg">
+      <publishTime>04/07/2014 06:34:03</publishTime>
+    </File>
+    <File Include="Images/M15/AmphinPathmage.jpg">
+      <publishTime>04/07/2014 06:32:36</publishTime>
+    </File>
+    <File Include="Images/M15/AncientSilverback.jpg">
+      <publishTime>04/07/2014 06:36:17</publishTime>
+    </File>
+    <File Include="Images/M15/Avacyn--GuardianAngel.jpg">
+      <publishTime>04/07/2014 06:31:35</publishTime>
+    </File>
+    <File Include="Images/M15/AvariceAmulet.jpg">
+      <publishTime>04/07/2014 06:37:43</publishTime>
+    </File>
+    <File Include="Images/M15/BacktoNature.jpg">
+      <publishTime>04/07/2014 06:36:21</publishTime>
+    </File>
+    <File Include="Images/M15/BattlefieldForge.jpg">
+      <publishTime>04/07/2014 06:38:03</publishTime>
+    </File>
+    <File Include="Images/M15/BattleMastery.jpg">
+      <publishTime>04/07/2014 06:31:36</publishTime>
+    </File>
+    <File Include="Images/M15/BelligerentSliver.jpg">
+      <publishTime>04/07/2014 06:34:03</publishTime>
+    </File>
+    <File Include="Images/M15/BlackCat.jpg">
+      <publishTime>04/07/2014 06:33:26</publishTime>
+    </File>
+    <File Include="Images/M15/BlastfireBolt.jpg">
+      <publishTime>04/07/2014 06:34:04</publishTime>
+    </File>
+    <File Include="Images/M15/BloodHost.jpg">
+      <publishTime>04/07/2014 06:33:28</publishTime>
+    </File>
+    <File Include="Images/M15/BoonweaverGiant.jpg">
+      <publishTime>04/07/2014 06:31:37</publishTime>
+    </File>
+    <File Include="Images/M15/BorderlandMarauder.jpg">
+      <publishTime>04/07/2014 06:34:05</publishTime>
+    </File>
+    <File Include="Images/M15/BrawlersPlate.jpg">
+      <publishTime>04/07/2014 06:37:43</publishTime>
+    </File>
+    <File Include="Images/M15/BronzeSable.jpg">
+      <publishTime>04/07/2014 06:37:44</publishTime>
+    </File>
+    <File Include="Images/M15/broodkeeper.jpg">
+      <publishTime>04/07/2014 06:34:06</publishTime>
+    </File>
+    <File Include="Images/M15/BurningAnger.jpg">
+      <publishTime>04/07/2014 06:34:07</publishTime>
+    </File>
+    <File Include="Images/M15/Cancel.jpg">
+      <publishTime>07/01/2014 19:26:48</publishTime>
+    </File>
+    <File Include="Images/M15/CarnivorousMoss-Beast.jpg">
+      <publishTime>04/07/2014 06:36:25</publishTime>
+    </File>
+    <File Include="Images/M15/CarrionCrow.jpg">
+      <publishTime>04/07/2014 06:33:29</publishTime>
+    </File>
+    <File Include="Images/M15/CausticTar.jpg">
+      <publishTime>04/07/2014 06:33:31</publishTime>
+    </File>
+    <File Include="Images/M15/CavesofKoilos.jpg">
+      <publishTime>04/07/2014 06:38:04</publishTime>
+    </File>
+    <File Include="Images/M15/CentaurCourser.jpg">
+      <publishTime>07/01/2014 19:26:54</publishTime>
+    </File>
+    <File Include="Images/M15/Chandra--Pyromaster.jpg">
+      <publishTime>04/07/2014 06:34:11</publishTime>
+    </File>
+    <File Include="Images/M15/ChargingRhino.jpg">
+      <publishTime>04/07/2014 06:36:29</publishTime>
+    </File>
+    <File Include="Images/M15/ChasmSkulker.jpg">
+      <publishTime>04/07/2014 06:32:40</publishTime>
+    </File>
+    <File Include="Images/M15/ChiefEngineer.jpg">
+      <publishTime>04/07/2014 06:32:43</publishTime>
+    </File>
+    <File Include="Images/M15/ChildofNight.jpg">
+      <publishTime>04/07/2014 06:33:32</publishTime>
+    </File>
+    <File Include="Images/M15/ChordofCalling.jpg">
+      <publishTime>04/07/2014 06:36:36</publishTime>
+    </File>
+    <File Include="Images/M15/Chronostutter.jpg">
+      <publishTime>04/07/2014 06:32:45</publishTime>
+    </File>
+    <File Include="Images/M15/CircleofFlame.jpg">
+      <publishTime>04/07/2014 06:34:15</publishTime>
+    </File>
+    <File Include="Images/M15/ClearaPath.jpg">
+      <publishTime>04/07/2014 06:34:22</publishTime>
+    </File>
+    <File Include="Images/M15/ConeofFlame.jpg">
+      <publishTime>04/07/2014 06:34:28</publishTime>
+    </File>
+    <File Include="Images/M15/Congregate.jpg">
+      <publishTime>04/07/2014 06:31:37</publishTime>
+    </File>
+    <File Include="Images/M15/ConstrictingSliver.jpg">
+      <publishTime>04/07/2014 06:31:38</publishTime>
+    </File>
+    <File Include="Images/M15/CoralBarrier.jpg">
+      <publishTime>04/07/2014 06:32:50</publishTime>
+    </File>
+    <File Include="Images/M15/CovenantofBlood.jpg">
+      <publishTime>04/07/2014 06:33:33</publishTime>
+    </File>
+    <File Include="Images/M15/CripplingBlight.jpg">
+      <publishTime>04/07/2014 06:33:34</publishTime>
+    </File>
+    <File Include="Images/M15/CrowdsFavor.jpg">
+      <publishTime>04/07/2014 06:34:34</publishTime>
+    </File>
+    <File Include="Images/M15/CrucibleofFire.jpg">
+      <publishTime>04/07/2014 06:34:38</publishTime>
+    </File>
+    <File Include="Images/M15/CruelSadist.jpg">
+      <publishTime>04/07/2014 06:33:35</publishTime>
+    </File>
+    <File Include="Images/M15/DarksteelCitadel.jpg">
+      <publishTime>04/07/2014 06:38:04</publishTime>
+    </File>
+    <File Include="Images/M15/DauntlessRiverMarshal.jpg">
+      <publishTime>04/07/2014 06:31:40</publishTime>
+    </File>
+    <File Include="Images/M15/DevouringLight.jpg">
+      <publishTime>04/07/2014 06:31:41</publishTime>
+    </File>
+    <File Include="Images/M15/DiffusionSliver.jpg">
+      <publishTime>04/07/2014 06:32:54</publishTime>
+    </File>
+    <File Include="Images/M15/Dissipate.jpg">
+      <publishTime>04/07/2014 06:32:57</publishTime>
+    </File>
+    <File Include="Images/M15/Divination.jpg">
+      <publishTime>04/07/2014 06:32:59</publishTime>
+    </File>
+    <File Include="Images/M15/DivineFavor.jpg">
+      <publishTime>04/07/2014 06:31:43</publishTime>
+    </File>
+    <File Include="Images/M15/DivineVerdict.jpg">
+      <publishTime>07/01/2014 19:26:46</publishTime>
+    </File>
+    <File Include="Images/M15/ElvishMystic.jpg">
+      <publishTime>04/07/2014 06:36:40</publishTime>
+    </File>
+    <File Include="Images/M15/Encrust.jpg">
+      <publishTime>04/07/2014 06:32:59</publishTime>
+    </File>
+    <File Include="Images/M15/EndlessObedience.jpg">
+      <publishTime>04/07/2014 06:33:36</publishTime>
+    </File>
+    <File Include="Images/M15/ensoulartifact.jpg">
+      <publishTime>04/07/2014 06:33:00</publishTime>
+    </File>
+    <File Include="Images/M15/EphemeralShields.jpg">
+      <publishTime>04/07/2014 06:31:43</publishTime>
+    </File>
+    <File Include="Images/M15/EternalThirst.jpg">
+      <publishTime>04/07/2014 06:33:37</publishTime>
+    </File>
+    <File Include="Images/M15/EvolvingWilds.jpg">
+      <publishTime>04/07/2014 06:38:05</publishTime>
+    </File>
+    <File Include="Images/M15/FeastontheFallen.jpg">
+      <publishTime>04/07/2014 06:33:38</publishTime>
+    </File>
+    <File Include="Images/M15/FeralIncarnation.jpg">
+      <publishTime>04/07/2014 06:36:44</publishTime>
+    </File>
+    <File Include="Images/M15/Festergloom.jpg">
+      <publishTime>04/07/2014 06:33:39</publishTime>
+    </File>
+    <File Include="Images/M15/FirstResponse.jpg">
+      <publishTime>04/07/2014 06:31:44</publishTime>
+    </File>
+    <File Include="Images/M15/FleshtoDust.jpg">
+      <publishTime>04/07/2014 06:33:39</publishTime>
+    </File>
+    <File Include="Images/M15/Forest.jpg">
+      <publishTime>04/07/2014 06:38:08</publishTime>
+    </File>
+    <File Include="Images/M15/ForgeDevil.jpg">
+      <publishTime>04/07/2014 06:34:42</publishTime>
+    </File>
+    <File Include="Images/M15/FoundryStreetDenizen.jpg">
+      <publishTime>04/07/2014 06:34:48</publishTime>
+    </File>
+    <File Include="Images/M15/FrenziedGoblin.jpg">
+      <publishTime>04/07/2014 06:34:54</publishTime>
+    </File>
+    <File Include="Images/M15/FrostLynx.jpg">
+      <publishTime>04/07/2014 06:33:01</publishTime>
+    </File>
+    <File Include="Images/M15/FugitiveWizard.jpg">
+      <publishTime>04/07/2014 06:33:01</publishTime>
+    </File>
+    <File Include="Images/M15/FurnaceWhelp.jpg">
+      <publishTime>07/01/2014 19:26:51</publishTime>
+    </File>
+    <File Include="Images/M15/GargoyleSentinel.jpg">
+      <publishTime>04/07/2014 06:37:45</publishTime>
+    </File>
+    <File Include="Images/M15/Garruk--ApexPredator.jpg">
+      <publishTime>04/07/2014 06:37:41</publishTime>
+    </File>
+    <File Include="Images/M15/GarruksPackleader.jpg">
+      <publishTime>07/01/2014 19:26:55</publishTime>
+    </File>
+    <File Include="Images/M15/GatherCourage.jpg">
+      <publishTime>04/07/2014 06:36:47</publishTime>
+    </File>
+    <File Include="Images/M15/GeistoftheMoors.jpg">
+      <publishTime>04/07/2014 06:31:45</publishTime>
+    </File>
+    <File Include="Images/M15/GeneratorServant.jpg">
+      <publishTime>04/07/2014 06:34:58</publishTime>
+    </File>
+    <File Include="Images/M15/GenesisHydra.jpg">
+      <publishTime>04/07/2014 06:36:49</publishTime>
+    </File>
+    <File Include="Images/M15/GlacialCrasher.jpg">
+      <publishTime>04/07/2014 06:33:02</publishTime>
+    </File>
+    <File Include="Images/M15/GoblinKaboomist.jpg">
+      <publishTime>04/07/2014 06:35:02</publishTime>
+    </File>
+    <File Include="Images/M15/GoblinRabblemaster.jpg">
+      <publishTime>04/07/2014 06:35:07</publishTime>
+    </File>
+    <File Include="Images/M15/GoblinRoughrider.jpg">
+      <publishTime>04/07/2014 06:35:10</publishTime>
+    </File>
+    <File Include="Images/M15/Gravedigger.jpg">
+      <publishTime>04/07/2014 06:33:40</publishTime>
+    </File>
+    <File Include="Images/M15/Grindclock.jpg">
+      <publishTime>04/07/2014 06:37:45</publishTime>
+    </File>
+    <File Include="Images/M15/Hammerhand.jpg">
+      <publishTime>04/07/2014 06:35:13</publishTime>
+    </File>
+    <File Include="Images/M15/HauntedPlateMail.jpg">
+      <publishTime>04/07/2014 06:37:46</publishTime>
+    </File>
+    <File Include="Images/M15/HeatRay.jpg">
+      <publishTime>04/07/2014 06:35:16</publishTime>
+    </File>
+    <File Include="Images/M15/HeliodsPilgrim.jpg">
+      <publishTime>04/07/2014 06:31:46</publishTime>
+    </File>
+    <File Include="Images/M15/HoardingDragon.jpg">
+      <publishTime>04/07/2014 06:35:19</publishTime>
+    </File>
+    <File Include="Images/M15/HornetNest.jpg">
+      <publishTime>04/07/2014 06:36:51</publishTime>
+    </File>
+    <File Include="Images/M15/HornetQueen.jpg">
+      <publishTime>04/07/2014 06:36:54</publishTime>
+    </File>
+    <File Include="Images/M15/HotSoup.jpg">
+      <publishTime>04/07/2014 06:37:47</publishTime>
+    </File>
+    <File Include="Images/M15/HuntersAmbush.jpg">
+      <publishTime>04/07/2014 06:36:58</publishTime>
+    </File>
+    <File Include="Images/M15/HunttheWeak.jpg">
+      <publishTime>04/07/2014 06:36:56</publishTime>
+    </File>
+    <File Include="Images/M15/HushwingGryff.jpg">
+      <publishTime>04/07/2014 06:31:46</publishTime>
+    </File>
+    <File Include="Images/M15/Hydrosurge.jpg">
+      <publishTime>04/07/2014 06:33:03</publishTime>
+    </File>
+    <File Include="Images/M15/IllusoryAngel.jpg">
+      <publishTime>04/07/2014 06:33:03</publishTime>
+    </File>
+    <File Include="Images/M15/IndulgentTormentor.jpg">
+      <publishTime>04/07/2014 06:33:42</publishTime>
+    </File>
+    <File Include="Images/M15/InfernoFist.jpg">
+      <publishTime>04/07/2014 06:35:22</publishTime>
+    </File>
+    <File Include="Images/M15/InGarruksWake.jpg">
+      <publishTime>04/07/2014 06:33:41</publishTime>
+    </File>
+    <File Include="Images/M15/InspiredCharge.jpg">
+      <publishTime>07/01/2014 19:26:47</publishTime>
+    </File>
+    <File Include="Images/M15/IntotheVoid.jpg">
+      <publishTime>04/07/2014 06:33:04</publishTime>
+    </File>
+    <File Include="Images/M15/InvasiveSpecies.jpg">
+      <publishTime>04/07/2014 06:37:00</publishTime>
+    </File>
+    <File Include="Images/M15/Invisibility.jpg">
+      <publishTime>04/07/2014 06:33:05</publishTime>
+    </File>
+    <File Include="Images/M15/Island.jpg">
+      <publishTime>04/07/2014 06:38:10</publishTime>
+    </File>
+    <File Include="Images/M15/Jace--theLivingGuildpact.jpg">
+      <publishTime>04/07/2014 06:33:05</publishTime>
+    </File>
+    <File Include="Images/M15/JacesIngenuity.jpg">
+      <publishTime>04/07/2014 06:33:06</publishTime>
+    </File>
+    <File Include="Images/M15/Jalira--MasterPolymorphist.jpg">
+      <publishTime>04/07/2014 06:33:07</publishTime>
+    </File>
+    <File Include="Images/M15/JorubaiMurkLurker.jpg">
+      <publishTime>04/07/2014 06:33:08</publishTime>
+    </File>
+    <File Include="Images/M15/Juggernaut.jpg">
+      <publishTime>04/07/2014 06:37:48</publishTime>
+    </File>
+    <File Include="Images/M15/kaloniantwingrove.jpg">
+      <publishTime>04/07/2014 06:37:04</publishTime>
+    </File>
+    <File Include="Images/M15/KapshoKitefins.jpg">
+      <publishTime>04/07/2014 06:33:08</publishTime>
+    </File>
+    <File Include="Images/M15/KinsbaileSkirmisher.jpg">
+      <publishTime>04/07/2014 06:31:47</publishTime>
+    </File>
+    <File Include="Images/M15/KirdChieftain.jpg">
+      <publishTime>04/07/2014 06:35:24</publishTime>
+    </File>
+    <File Include="Images/M15/KrenkosEnforcer.jpg">
+      <publishTime>04/07/2014 06:35:27</publishTime>
+    </File>
+    <File Include="Images/M15/kurkesh--onakkeancient.jpg">
+      <publishTime>04/07/2014 06:35:29</publishTime>
+    </File>
+    <File Include="Images/M15/kurkesh--OnakkeAncient.png">
+      <publishTime>02/07/2014 19:23:08</publishTime>
+    </File>
+    <File Include="Images/M15/LavaAxe.jpg">
+      <publishTime>04/07/2014 06:35:31</publishTime>
+    </File>
+    <File Include="Images/M15/Leeching Sliver.jpg">
+      <publishTime>02/07/2014 19:20:27</publishTime>
+    </File>
+    <File Include="Images/M15/LeechingSliver.jpg">
+      <publishTime>04/07/2014 06:33:43</publishTime>
+    </File>
+    <File Include="Images/M15/LifesLegacy.jpg">
+      <publishTime>04/07/2014 06:37:07</publishTime>
+    </File>
+    <File Include="Images/M15/LightningStrike.jpg">
+      <publishTime>04/07/2014 06:35:32</publishTime>
+    </File>
+    <File Include="Images/M15/LilianaVess.jpg">
+      <publishTime>04/07/2014 06:33:44</publishTime>
+    </File>
+    <File Include="Images/M15/LivingTotem.jpg">
+      <publishTime>04/07/2014 06:37:11</publishTime>
+    </File>
+    <File Include="Images/M15/LlanowarWastes.jpg">
+      <publishTime>04/07/2014 06:38:11</publishTime>
+    </File>
+    <File Include="Images/M15/MahamotiDjinn.jpg">
+      <publishTime>07/01/2014 19:26:49</publishTime>
+    </File>
+    <File Include="Images/M15/MarkedbyHonor.jpg">
+      <publishTime>04/07/2014 06:31:48</publishTime>
+    </File>
+    <File Include="Images/M15/MassCalcify.jpg">
+      <publishTime>04/07/2014 06:31:49</publishTime>
+    </File>
+    <File Include="Images/M15/MasterofPredicaments.jpg">
+      <publishTime>04/07/2014 06:33:09</publishTime>
+    </File>
+    <File Include="Images/M15/meditationpuzzle.jpg">
+      <publishTime>04/07/2014 06:31:49</publishTime>
+    </File>
+    <File Include="Images/M15/MercurialPretender.jpg">
+      <publishTime>04/07/2014 06:33:10</publishTime>
+    </File>
+    <File Include="Images/M15/meteorite.jpg">
+      <publishTime>04/07/2014 06:37:48</publishTime>
+    </File>
+    <File Include="Images/M15/MidnightGuard.jpg">
+      <publishTime>04/07/2014 06:31:50</publishTime>
+    </File>
+    <File Include="Images/M15/MightMakesRight.jpg">
+      <publishTime>04/07/2014 06:35:34</publishTime>
+    </File>
+    <File Include="Images/M15/MilitaryIntelligence.jpg">
+      <publishTime>04/07/2014 06:33:10</publishTime>
+    </File>
+    <File Include="Images/M15/MindRot.jpg">
+      <publishTime>04/07/2014 06:33:44</publishTime>
+    </File>
+    <File Include="Images/M15/MindSculpt.jpg">
+      <publishTime>04/07/2014 06:33:11</publishTime>
+    </File>
+    <File Include="Images/M15/MinersBane.jpg">
+      <publishTime>04/07/2014 06:35:36</publishTime>
+    </File>
+    <File Include="Images/M15/Mountain.jpg">
+      <publishTime>04/07/2014 06:38:14</publishTime>
+    </File>
+    <File Include="Images/M15/Naturalize.jpg">
+      <publishTime>04/07/2014 06:37:14</publishTime>
+    </File>
+    <File Include="Images/M15/Necrobite.jpg">
+      <publishTime>04/07/2014 06:33:45</publishTime>
+    </File>
+    <File Include="Images/M15/NecrogenScudder.jpg">
+      <publishTime>04/07/2014 06:33:46</publishTime>
+    </File>
+    <File Include="Images/M15/NecromancersAssistant.jpg">
+      <publishTime>04/07/2014 06:33:47</publishTime>
+    </File>
+    <File Include="Images/M15/NecromancersStockpile.jpg">
+      <publishTime>04/07/2014 06:33:47</publishTime>
+    </File>
+    <File Include="Images/M15/Negate.jpg">
+      <publishTime>04/07/2014 06:33:12</publishTime>
+    </File>
+    <File Include="Images/M15/NetcasterSpider.jpg">
+      <publishTime>04/07/2014 06:37:18</publishTime>
+    </File>
+    <File Include="Images/M15/NightfireGiant.jpg">
+      <publishTime>04/07/2014 06:33:48</publishTime>
+    </File>
+    <File Include="Images/M15/Nightmare.jpg">
+      <publishTime>07/01/2014 19:26:50</publishTime>
+    </File>
+    <File Include="Images/M15/NimbusoftheIsles.jpg">
+      <publishTime>04/07/2014 06:33:12</publishTime>
+    </File>
+    <File Include="Images/M15/Nissa--Worldwaker.jpg">
+      <publishTime>04/07/2014 06:37:22</publishTime>
+    </File>
+    <File Include="Images/M15/NissasExpedition.jpg">
+      <publishTime>04/07/2014 06:37:23</publishTime>
+    </File>
+    <File Include="Images/M15/ObeliskofUrd.jpg">
+      <publishTime>04/07/2014 06:37:49</publishTime>
+    </File>
+    <File Include="Images/M15/ObNixilis--Unshackled.jpg">
+      <publishTime>04/07/2014 06:33:49</publishTime>
+    </File>
+    <File Include="Images/M15/OppressiveRays.jpg">
+      <publishTime>04/07/2014 06:31:51</publishTime>
+    </File>
+    <File Include="Images/M15/OreskosSwiftclaw.jpg">
+      <publishTime>04/07/2014 06:31:51</publishTime>
+    </File>
+    <File Include="Images/M15/Ornithopter.jpg">
+      <publishTime>04/07/2014 06:37:50</publishTime>
+    </File>
+    <File Include="Images/M15/Overwhelm.jpg">
+      <publishTime>04/07/2014 06:37:24</publishTime>
+    </File>
+    <File Include="Images/M15/ParagaonofNewDawns.jpg">
+      <publishTime>07/01/2014 19:27:08</publishTime>
+    </File>
+    <File Include="Images/M15/ParagonofEternalWilds.jpg">
+      <publishTime>04/07/2014 06:37:25</publishTime>
+    </File>
+    <File Include="Images/M15/ParagonofFierceDefiance.jpg">
+      <publishTime>04/07/2014 06:35:38</publishTime>
+    </File>
+    <File Include="Images/M15/ParagonofGatheringMists.jpg">
+      <publishTime>04/07/2014 06:33:13</publishTime>
+    </File>
+    <File Include="Images/M15/paragonofnewdawns.jpg">
+      <publishTime>04/07/2014 06:31:52</publishTime>
+    </File>
+    <File Include="Images/M15/ParagonofOpenGraves.jpg">
+      <publishTime>04/07/2014 06:33:50</publishTime>
+    </File>
+    <File Include="Images/M15/PeelfromReality.jpg">
+      <publishTime>04/07/2014 06:33:14</publishTime>
+    </File>
+    <File Include="Images/M15/PerilousVault.jpg">
+      <publishTime>04/07/2014 06:37:51</publishTime>
+    </File>
+    <File Include="Images/M15/PhyrexianRevoker.jpg">
+      <publishTime>04/07/2014 06:37:51</publishTime>
+    </File>
+    <File Include="Images/M15/Phytotitan.jpg">
+      <publishTime>04/07/2014 06:37:26</publishTime>
+    </File>
+    <File Include="Images/M15/PillarofLight.jpg">
+      <publishTime>04/07/2014 06:31:53</publishTime>
+    </File>
+    <File Include="Images/M15/Plains.jpg">
+      <publishTime>04/07/2014 06:38:16</publishTime>
+    </File>
+    <File Include="Images/M15/Plummet.jpg">
+      <publishTime>04/07/2014 06:37:27</publishTime>
+    </File>
+    <File Include="Images/M15/PolymorphistsJest.jpg">
+      <publishTime>04/07/2014 06:33:15</publishTime>
+    </File>
+    <File Include="Images/M15/PreeminentCaptain.jpg">
+      <publishTime>04/07/2014 06:31:53</publishTime>
+    </File>
+    <File Include="Images/M15/ProfaneMemento.jpg">
+      <publishTime>04/07/2014 06:37:52</publishTime>
+    </File>
+    <File Include="Images/M15/Quickling.jpg">
+      <publishTime>04/07/2014 06:33:15</publishTime>
+    </File>
+    <File Include="Images/M15/RadiantFountain.jpg">
+      <publishTime>04/07/2014 06:38:17</publishTime>
+    </File>
+    <File Include="Images/M15/RaisetheAlarm.jpg">
+      <publishTime>04/07/2014 06:31:54</publishTime>
+    </File>
+    <File Include="Images/M15/RangersGuile.jpg">
+      <publishTime>04/07/2014 06:37:27</publishTime>
+    </File>
+    <File Include="Images/M15/RazorfootGriffin.jpg">
+      <publishTime>04/07/2014 06:31:55</publishTime>
+    </File>
+    <File Include="Images/M15/ReclamationSage.jpg">
+      <publishTime>04/07/2014 06:37:28</publishTime>
+    </File>
+    <File Include="Images/M15/ResearchAssistant.jpg">
+      <publishTime>04/07/2014 06:33:16</publishTime>
+    </File>
+    <File Include="Images/M15/ResoluteArchangel.jpg">
+      <publishTime>04/07/2014 06:31:56</publishTime>
+    </File>
+    <File Include="Images/M15/Restock.jpg">
+      <publishTime>04/07/2014 06:37:29</publishTime>
+    </File>
+    <File Include="Images/M15/ReturntoRanks.jpg">
+      <publishTime>07/01/2014 19:26:04</publishTime>
+    </File>
+    <File Include="Images/M15/ReturntotheRanks.jpg">
+      <publishTime>04/07/2014 06:31:56</publishTime>
+    </File>
+    <File Include="Images/M15/RoaringPrimadox.jpg">
+      <publishTime>04/07/2014 06:37:30</publishTime>
+    </File>
+    <File Include="Images/M15/RoguesGloves.jpg">
+      <publishTime>04/07/2014 06:37:53</publishTime>
+    </File>
+    <File Include="Images/M15/RotfeasterMaggot.jpg">
+      <publishTime>04/07/2014 06:33:50</publishTime>
+    </File>
+    <File Include="Images/M15/RummagingGoblin.jpg">
+      <publishTime>04/07/2014 06:35:41</publishTime>
+    </File>
+    <File Include="Images/M15/RuneclawBear.jpg">
+      <publishTime>04/07/2014 06:37:31</publishTime>
+    </File>
+    <File Include="Images/M15/SacredArmory.jpg">
+      <publishTime>04/07/2014 06:37:54</publishTime>
+    </File>
+    <File Include="Images/M15/SanctifiedCharge.jpg">
+      <publishTime>04/07/2014 06:31:57</publishTime>
+    </File>
+    <File Include="Images/M15/SatyrWayfinder.jpg">
+      <publishTime>04/07/2014 06:37:31</publishTime>
+    </File>
+    <File Include="Images/M15/ScrapyardMongrel.jpg">
+      <publishTime>04/07/2014 06:35:45</publishTime>
+    </File>
+    <File Include="Images/M15/scuttlingdoomengine.jpg">
+      <publishTime>04/07/2014 06:37:54</publishTime>
+    </File>
+    <File Include="Images/M15/SeismicStrike.jpg">
+      <publishTime>07/01/2014 19:26:52</publishTime>
+    </File>
+    <File Include="Images/M15/SelflessCathar.jpg">
+      <publishTime>04/07/2014 06:31:58</publishTime>
+    </File>
+    <File Include="Images/M15/SengirVampire.jpg">
+      <publishTime>07/01/2014 19:26:50</publishTime>
+    </File>
+    <File Include="Images/M15/SeraphoftheMasses.jpg">
+      <publishTime>04/07/2014 06:31:59</publishTime>
+    </File>
+    <File Include="Images/M15/SerraAngel.jpg">
+      <publishTime>07/01/2014 19:26:47</publishTime>
+    </File>
+    <File Include="Images/M15/ShadowcloakVampire.jpg">
+      <publishTime>04/07/2014 06:33:51</publishTime>
+    </File>
+    <File Include="Images/M15/ShamanofSpring.jpg">
+      <publishTime>04/07/2014 06:37:32</publishTime>
+    </File>
+    <File Include="Images/M15/ShieldoftheAvatar.jpg">
+      <publishTime>04/07/2014 06:37:55</publishTime>
+    </File>
+    <File Include="Images/M15/ShivanDragon.jpg">
+      <publishTime>07/01/2014 19:26:53</publishTime>
+    </File>
+    <File Include="Images/M15/ShivanReef.jpg">
+      <publishTime>04/07/2014 06:38:18</publishTime>
+    </File>
+    <File Include="Images/M15/ShrapnelBlast.jpg">
+      <publishTime>04/07/2014 06:35:48</publishTime>
+    </File>
+    <File Include="Images/M15/SiegeDragon.jpg">
+      <publishTime>04/07/2014 06:35:51</publishTime>
+    </File>
+    <File Include="Images/M15/SiegeWurm.jpg">
+      <publishTime>04/07/2014 06:37:33</publishTime>
+    </File>
+    <File Include="Images/M15/SigninBlood.jpg">
+      <publishTime>04/07/2014 06:33:52</publishTime>
+    </File>
+    <File Include="Images/M15/SliverHive.jpg">
+      <publishTime>04/07/2014 06:38:18</publishTime>
+    </File>
+    <File Include="Images/M15/SliverHivelord.jpg">
+      <publishTime>04/07/2014 06:37:42</publishTime>
+    </File>
+    <File Include="Images/M15/SolemnOffering.jpg">
+      <publishTime>04/07/2014 06:31:59</publishTime>
+    </File>
+    <File Include="Images/M15/Soulmender.jpg">
+      <publishTime>04/07/2014 06:32:01</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofInnistrad.jpg">
+      <publishTime>04/07/2014 06:33:53</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofNewPhyrexia.jpg">
+      <publishTime>04/07/2014 06:37:56</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofRavnica.jpg">
+      <publishTime>04/07/2014 06:33:17</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofShandalar.jpg">
+      <publishTime>04/07/2014 06:35:55</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofTheros.jpg">
+      <publishTime>04/07/2014 06:32:00</publishTime>
+    </File>
+    <File Include="Images/M15/SoulofZendikar.jpg">
+      <publishTime>04/07/2014 06:37:34</publishTime>
+    </File>
+    <File Include="Images/M15/spectralward.jpg">
+      <publishTime>03/07/2014 19:33:20</publishTime>
+    </File>
+    <File Include="Images/M15/SpectraWard.jpg">
+      <publishTime>04/07/2014 06:32:01</publishTime>
+    </File>
+    <File Include="Images/M15/SpiritBonds.jpg">
+      <publishTime>04/07/2014 06:32:02</publishTime>
+    </File>
+    <File Include="Images/M15/StabWound.jpg">
+      <publishTime>04/07/2014 06:33:53</publishTime>
+    </File>
+    <File Include="Images/M15/StaffoftheDeathMagus.jpg">
+      <publishTime>04/07/2014 06:37:57</publishTime>
+    </File>
+    <File Include="Images/M15/StaffoftheFlameMagus.jpg">
+      <publishTime>04/07/2014 06:37:57</publishTime>
+    </File>
+    <File Include="Images/M15/StaffoftheMindMagus.jpg">
+      <publishTime>04/07/2014 06:37:58</publishTime>
+    </File>
+    <File Include="Images/M15/StaffoftheSunMagus.jpg">
+      <publishTime>04/07/2014 06:37:59</publishTime>
+    </File>
+    <File Include="Images/M15/StaffoftheWildMagus.jpg">
+      <publishTime>04/07/2014 06:37:59</publishTime>
+    </File>
+    <File Include="Images/M15/StaintheMind.jpg">
+      <publishTime>04/07/2014 06:33:54</publishTime>
+    </File>
+    <File Include="Images/M15/StatuteofDenial.jpg">
+      <publishTime>04/07/2014 06:33:18</publishTime>
+    </File>
+    <File Include="Images/M15/StoketheFlames.jpg">
+      <publishTime>04/07/2014 06:35:59</publishTime>
+    </File>
+    <File Include="Images/M15/StormtideLeviathan.jpg">
+      <publishTime>04/07/2014 06:33:18</publishTime>
+    </File>
+    <File Include="Images/M15/SunbladeElf.jpg">
+      <publishTime>04/07/2014 06:37:35</publishTime>
+    </File>
+    <File Include="Images/M15/SungracePegasus.jpg">
+      <publishTime>04/07/2014 06:32:03</publishTime>
+    </File>
+    <File Include="Images/M15/Swamp.jpg">
+      <publishTime>04/07/2014 06:38:21</publishTime>
+    </File>
+    <File Include="Images/M15/TerraStomper.jpg">
+      <publishTime>07/01/2014 19:26:55</publishTime>
+    </File>
+    <File Include="Images/M15/thechainveil.jpg">
+      <publishTime>04/07/2014 06:38:00</publishTime>
+    </File>
+    <File Include="Images/M15/ThunderingGiant.jpg">
+      <publishTime>04/07/2014 06:36:02</publishTime>
+    </File>
+    <File Include="Images/M15/TirelessMissionaries.jpg">
+      <publishTime>04/07/2014 06:32:05</publishTime>
+    </File>
+    <File Include="Images/M15/TitanicGrowth.jpg">
+      <publishTime>04/07/2014 06:37:36</publishTime>
+    </File>
+    <File Include="Images/M15/TorchFiend.jpg">
+      <publishTime>04/07/2014 06:36:07</publishTime>
+    </File>
+    <File Include="Images/M15/TormodsCrypt.jpg">
+      <publishTime>04/07/2014 06:38:01</publishTime>
+    </File>
+    <File Include="Images/M15/TriplicateSpirits.jpg">
+      <publishTime>04/07/2014 06:32:07</publishTime>
+    </File>
+    <File Include="Images/M15/TurntoFrog.jpg">
+      <publishTime>04/07/2014 06:33:19</publishTime>
+    </File>
+    <File Include="Images/M15/TyphoidRats.jpg">
+      <publishTime>04/07/2014 06:33:55</publishTime>
+    </File>
+    <File Include="Images/M15/TyrantsMachine.jpg">
+      <publishTime>04/07/2014 06:38:01</publishTime>
+    </File>
+    <File Include="Images/M15/ulcerate.jpg">
+      <publishTime>04/07/2014 06:33:56</publishTime>
+    </File>
+    <File Include="Images/M15/UndergrowthScavenger.jpg">
+      <publishTime>04/07/2014 06:37:36</publishTime>
+    </File>
+    <File Include="Images/M15/UnmaketheGraves.jpg">
+      <publishTime>04/07/2014 06:33:56</publishTime>
+    </File>
+    <File Include="Images/M15/Urborg--TombofYawgmoth.jpg">
+      <publishTime>04/07/2014 06:38:22</publishTime>
+    </File>
+    <File Include="Images/M15/VenomSliver.jpg">
+      <publishTime>04/07/2014 06:37:37</publishTime>
+    </File>
+    <File Include="Images/M15/VerdantHaven.jpg">
+      <publishTime>04/07/2014 06:37:38</publishTime>
+    </File>
+    <File Include="Images/M15/Vineweft.jpg">
+      <publishTime>04/07/2014 06:37:39</publishTime>
+    </File>
+    <File Include="Images/M15/VoidSnare.jpg">
+      <publishTime>04/07/2014 06:33:20</publishTime>
+    </File>
+    <File Include="Images/M15/WalkingCorpse.jpg">
+      <publishTime>07/01/2014 19:26:51</publishTime>
+    </File>
+    <File Include="Images/M15/WallofEssence.jpg">
+      <publishTime>04/07/2014 06:32:13</publishTime>
+    </File>
+    <File Include="Images/M15/WallofFire.jpg">
+      <publishTime>04/07/2014 06:36:13</publishTime>
+    </File>
+    <File Include="Images/M15/WallofFrost.jpg">
+      <publishTime>04/07/2014 06:33:21</publishTime>
+    </File>
+    <File Include="Images/M15/WallofLimbs.jpg">
+      <publishTime>04/07/2014 06:33:57</publishTime>
+    </File>
+    <File Include="Images/M15/WallofMulch.jpg">
+      <publishTime>04/07/2014 06:37:39</publishTime>
+    </File>
+    <File Include="Images/M15/WardenoftheBeyond.jpg">
+      <publishTime>04/07/2014 06:32:16</publishTime>
+    </File>
+    <File Include="Images/M15/WasteNot.jpg">
+      <publishTime>04/07/2014 06:33:58</publishTime>
+    </File>
+    <File Include="Images/M15/WelkinTern.jpg">
+      <publishTime>04/07/2014 06:33:22</publishTime>
+    </File>
+    <File Include="Images/M15/Will-ForgedGolem.jpg">
+      <publishTime>04/07/2014 06:38:02</publishTime>
+    </File>
+    <File Include="Images/M15/WitchsFamiliar.jpg">
+      <publishTime>04/07/2014 06:33:59</publishTime>
+    </File>
+    <File Include="Images/M15/XathridSlyblade.jpg">
+      <publishTime>04/07/2014 06:33:59</publishTime>
+    </File>
+    <File Include="Images/M15/YavimayaCoast.jpg">
+      <publishTime>04/07/2014 06:38:22</publishTime>
+    </File>
+    <File Include="Images/M15/Yisan--theWandererBard.jpg">
+      <publishTime>04/07/2014 06:37:40</publishTime>
+    </File>
+    <File Include="Images/M15/ZofShade.jpg">
+      <publishTime>04/07/2014 06:34:00</publishTime>
+    </File>
+    <File Include="Images/M15/Ætherspouts.jpg">
+      <publishTime>04/07/2014 06:32:30</publishTime>
+    </File>
     <File Include="index.html">
-      <publishTime>08/01/2015 18:12:24</publishTime>
+      <publishTime>01/08/2015 18:12:24</publishTime>
     </File>
     <File Include="manifest.appcache">
-      <publishTime>01/18/2015 10:17:12</publishTime>
+      <publishTime>02/22/2015 12:30:38</publishTime>
     </File>
     <File Include="manifest/mtgmirror.appcache">
-      <publishTime>09/07/2014 19:20:34</publishTime>
+      <publishTime>07/09/2014 19:20:34</publishTime>
     </File>
     <File Include="mtgmirror.appcache">
-      <publishTime>09/07/2014 19:17:15</publishTime>
+      <publishTime>07/09/2014 19:17:15</publishTime>
     </File>
     <File Include="mtgmirrorfavicon.png">
-      <publishTime>12/07/2014 17:31:20</publishTime>
+      <publishTime>07/12/2014 17:31:20</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3257,13 +3260,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/FileSaver.js">
-      <publishTime>10/07/2014 22:17:43</publishTime>
+      <publishTime>07/10/2014 22:17:43</publishTime>
     </File>
     <File Include="Scripts/FileSaver.min.js">
-      <publishTime>12/07/2014 16:18:17</publishTime>
+      <publishTime>07/12/2014 16:18:17</publishTime>
     </File>
     <File Include="Scripts/FileSaver.min.js.map">
-      <publishTime>12/07/2014 16:18:17</publishTime>
+      <publishTime>07/12/2014 16:18:17</publishTime>
     </File>
     <File Include="Scripts/jquery-2.0.3-vsdoc.js">
       <publishTime>01/01/0001 00:00:00</publishTime>
