@@ -1,0 +1,285 @@
+﻿@darkcolor: rgb(51,51,51);
+@lightcolor:rgb(255,255,255);
+/*@highlightcolor:#52b9e9;*/ 
+@lessImpactColor: rgb(222,222,222);
+@lessImpactColorOpacity: rgba(222,222,222,0.1);
+@highlightcolor: @lessImpactColor;
+@menuHighlightcolor: #52b9e9;
+
+@stdborder1px: 1px solid @lessImpactColor;
+@stdborder: 2px solid @lessImpactColor;
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.mtgCard
+{
+    width:230px;
+    cursor:pointer;
+}
+
+.christopbar > li.nlightblue > a:hover,
+    .christopbar > li.open.nlightblue > a,
+    .christopbar > li.current.nlightblue > a {
+        background: #52b9e9 !important;
+        -webkit-transition: background 0.5s ease;
+        -moz-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+        transition: background 0.5s ease;
+    }
+
+.chris-btn
+{
+    width: 300px;
+    height:50px;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    border-radius:0;
+    background-color:@lightcolor;
+    color:@darkcolor;
+    border: 1px solid @darkcolor;
+}
+
+.chris-btn:hover {
+    background-image:none;
+    background-color:@highlightcolor;
+}
+
+.chris-btn-mini {
+    width: 150px;
+    height: 30px;
+}
+
+
+
+.chris-p
+{
+    border-bottom:1px solid #808080;
+}
+
+.chris-front_menu_btn
+{
+    margin:10px;
+    display:inline-block;
+}
+
+.chris-button_text
+{
+    display:table-cell;
+    vertical-align:central;
+}
+
+.chris-side_bar {
+}
+
+.chris-main_col {
+    background:#fff;
+}
+
+
+.textcenter {
+    text-align:center;
+}
+
+.overlay_center {
+    opacity: 1;
+    position: fixed;
+    left:50%;
+    top:50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+}
+
+.chris-timer_block_green {
+    background:#b6ff00;
+}
+.chris-timer_block_yellow {
+    background:#ff6a00;
+}
+.chris-timer_block_red {
+    background:#ff0000;
+}
+.chris-timer_block {
+    display:inline-block;
+    min-width:100px;
+    min-height:20px;
+}
+.chris-warning_text{
+    color:red;
+}
+
+.chris-btn-thin {
+    margin:10px;
+    padding:2px;
+}
+
+.chris-btn-save {
+    height:60px;
+}
+
+.modal{
+    width:80%;
+    left:10%;
+    height:80%;
+    top:10%;
+    overflow-y:scroll;
+    display:block;
+    background: @lightcolor;
+}
+.today-datas {
+    padding:0;
+}
+.today-datas li {
+    display:inline;
+}
+.today-datas li > img {
+    padding: 5px;
+}
+
+.widget-head {
+    background:black;
+}
+
+.navbar-default {
+    background: @darkcolor;
+    border: none;
+    height:90px;
+}
+
+.navbar-default > .container-fluid {
+    padding-top: 23px;
+    max-width: 1360px;
+}
+
+.navbar .brand-title {
+    color: @lightcolor;
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+.navbar .brand-title:hover {
+    text-decoration:none;
+}
+
+
+.navbar-nav > li {
+    z-index:5000;
+    background:@darkcolor;
+}
+.navbar-default .navbar-collapse {
+    border:none;
+}
+navbar-nav > li:last-of-type {
+    border-left:none;
+}
+
+.navbar-nav > li > a {
+    color: @lightcolor !important;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li.current > a {
+    color: @darkcolor !important;
+    background:@menuHighlightcolor !important;
+}
+
+input, select {
+    border: @stdborder;
+    text-align:center;
+}
+
+body {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+.optionsButton {
+    width:100%;
+    background:none;
+    border:none;
+    padding: 10px 0 10px 0;
+    cursor:pointer;
+    text-align:center;
+}
+
+.normalPanel {
+    border:@stdborder1px;
+    background:@lessImpactColorOpacity;
+}
+
+.moreOptionsSection {
+    padding:20px;
+}
+
+.totop {
+    position:fixed;
+    right: 50px;
+    bottom:50px;
+}
+
+.totop i {
+    color:@lessImpactColor;
+}
+
+.container-fluid > .row {
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.wmtg > .widget-head {
+    background:none;
+    border-bottom: @stdborder1px;
+}
+
+.wmtg > .widget-head > .page-title {
+    color:black;
+    float:none !important;
+    text-align:center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.widget-icons {
+    margin-top: -20px;
+}
+.widget-icons i {
+    color: @darkcolor;
+    padding-right: 10px;
+}
+
+.chartsColumn {
+    color: @darkcolor;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+.addBottomMargin {
+    margin-bottom:20px;
+}
+.addRowMargins > div {
+    margin-top: 20px;
+}
+
+.addRowMargins > div:first-child {
+    margin-top:0;
+}
+
+@media (max-width: 1000px) {
+    .saveButtons {
+        margin-top:20px;
+    }
+}
+
+@media(max-width: 800px) {
+    .modalButton {
+        width:100%;
+    }
+}

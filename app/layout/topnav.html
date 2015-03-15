@@ -1,27 +1,24 @@
-﻿<nav class="navbar navbar-fixed-top navbar-inverse" data-ng-controller="sidebar as vm">
-    <div class="navbar-inner">
-        <div class="container">
-            <!-- Menu button for smallar screens -->
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+﻿<nav class="navbar navbar-default" data-ng-controller="sidebar as vm">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </a>
-            <!-- Site name for smallar screens -->
-            <a href="/" class="brand"><span class="brand-title">MTG Mirror</span></a>
-
-            <!-- Navigation starts -->
-            <div class="nav-collapse collapse">
-
-                <div class="pull-right navbar-logo">
-                    <ul class="nav pull-right christopbar">
-                        <li class="nlightblue fade-selection-animation" data-ng-class="vm.isCurrent(r)"
-                            data-ng-repeat="r in vm.navRoutes">
-                            <a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </button>
+            <a href="/" class="brand"><span class="brand-title">mtg mirror</span></a>
         </div>
-    </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav right">
+                <li class="" data-ng-class="vm.isCurrent(r)"
+                    data-ng-repeat="r in vm.navRoutes">
+                    <a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>

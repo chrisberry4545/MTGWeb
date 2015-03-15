@@ -16,14 +16,14 @@
             resetAllCanvas: resetAllCanvas
         };
 
-        var whiteColor = '#FFFF99';
-        var blueColor = '#0033CC';
-        var blackColor = '#000000';
-        var redColor = '#FF0000';
-        var greenColor = '#33CC33';
+        var whiteColor = '#FFFFCC';
+        var blueColor = 'rgba(29,151,152,0.5)';
+        var blackColor = 'rgba(6,6,6,0.7)';
+        var redColor = 'rgba(216,90,91,0.8)';
+        var greenColor = 'rgba(74,106,41,0.8)';
         var whiteColor_highlight = '#FFFFCC';
         var blueColor_highlight = '#33CCFF';
-        var blackColor_highlight = '#999966';
+        var blackColor_highlight = 'rgba(0,0,0,0.7)';
         var redColor_highlight = '#CC0000';
         var greenColor_highlight = '#99FF99';
 
@@ -42,10 +42,12 @@
         var cardType_artifact_color = blackColor;
         var cardType_artifact_color_highlight = blackColor_highlight;
 
-        var costBarChart_fillColor = "rgba(17,113,163,0.5)";
-        var costBarChart_strokeColor = "rgba(17,113,163,0.5)";
-        var costBarChart_highlightFill = "rgba(117,197,240,0.5)";
-        var costBarChart_highlightStroke = "rgba(117,197,240,0.5)";
+        var barChartColor = '#dedede';
+        var highlightColor = 'rgb(51,51,51)';
+        var costBarChart_fillColor = barChartColor;
+        var costBarChart_strokeColor = barChartColor;
+        var costBarChart_highlightFill = highlightColor;
+        var costBarChart_highlightStroke = highlightColor;
 
 
         var pieChartContainer;

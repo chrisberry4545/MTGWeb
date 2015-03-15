@@ -62,7 +62,7 @@
         function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, seedColor) {
             var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters);
             //Replace core set boosters with seeded boosters.
-            var cards = getAllKTKCardsSortedByRarity();
+            var cards = getAllDTKCardsSortedByRarity();
             var boostersToSeed = openXCardBoostersForColor(1, cards, seedColor);
             //boostersToSeed.rareCards.push(KTK[getSeedCardNumber(seedColor)]);
 
@@ -86,77 +86,48 @@
         function openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters)
         {
             var cardsBNG = openXBNGBoosters(numBNGBoosters);
-
-            cardsBNG.mythicCards.sort(cardSort);
-            cardsBNG.rareCards.sort(cardSort);
-            cardsBNG.uncommonCards.sort(cardSort);
-            cardsBNG.commonCards.sort(cardSort);
+            sortCards(cardsBNG);
 
             var cardsTHS = openXTHSBoosters(numTHSBoosters);
-
-            cardsTHS.mythicCards.sort(cardSort);
-            cardsTHS.rareCards.sort(cardSort);
-            cardsTHS.uncommonCards.sort(cardSort);
-            cardsTHS.commonCards.sort(cardSort);
+            sortCards(cardsTHS);
 
             var cardsJOU = openXJOUBoosters(numJOUBoosters);
-
-            cardsJOU.mythicCards.sort(cardSort);
-            cardsJOU.rareCards.sort(cardSort);
-            cardsJOU.uncommonCards.sort(cardSort);
-            cardsJOU.commonCards.sort(cardSort);
+            sortCards(cardsJOU);
 
             var cardsCore = openXCoreBoosters(numCoreSetBoosters);
-            cardsCore.mythicCards.sort(cardSort);
-            cardsCore.rareCards.sort(cardSort);
-            cardsCore.uncommonCards.sort(cardSort);
-            cardsCore.commonCards.sort(cardSort);
+            sortCards(cardsCore);
 
             var cardsKTK = openXKTKBoosters(numKTKBoosters);
-            cardsKTK.mythicCards.sort(cardSort);
-            cardsKTK.rareCards.sort(cardSort);
-            cardsKTK.uncommonCards.sort(cardSort);
-            cardsKTK.commonCards.sort(cardSort);
+            sortCards(cardsKTK);
 
             var cardsFRF = openXFRFBoosters(numFRFBoosters);
-            cardsFRF.mythicCards.sort(cardSort);
-            cardsFRF.rareCards.sort(cardSort);
-            cardsFRF.uncommonCards.sort(cardSort);
-            cardsFRF.commonCards.sort(cardSort);
+            sortCards(cardsFRF);
 
             var cardsDTK = openXDTKBoosters(numDTKBoosters);
-            cardsDTK.mythicCards.sort(cardSort);
-            cardsDTK.rareCards.sort(cardSort);
-            cardsDTK.uncommonCards.sort(cardSort);
-            cardsDTK.commonCards.sort(cardSort);
+            sortCards(cardsDTK);
 
-
-            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsTHS.mythicCards);
-            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsTHS.rareCards);
-            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsTHS.uncommonCards);
-            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsTHS.commonCards);
-
-            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsJOU.mythicCards);
-            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsJOU.rareCards);
-            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsJOU.uncommonCards);
-            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsJOU.commonCards);
-
-            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsCore.mythicCards);
-            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsCore.rareCards);
-            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsCore.uncommonCards);
-            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsCore.commonCards);
-
-            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsKTK.mythicCards);
-            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsKTK.rareCards);
-            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsKTK.uncommonCards);
-            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsKTK.commonCards);
-
-            cardsBNG.mythicCards.push.apply(cardsBNG.mythicCards, cardsFRF.mythicCards);
-            cardsBNG.rareCards.push.apply(cardsBNG.rareCards, cardsFRF.rareCards);
-            cardsBNG.uncommonCards.push.apply(cardsBNG.uncommonCards, cardsFRF.uncommonCards);
-            cardsBNG.commonCards.push.apply(cardsBNG.commonCards, cardsFRF.commonCards);
+            combineCardArrays(cardsBNG, cardsTHS);
+            combineCardArrays(cardsBNG, cardsJOU);
+            combineCardArrays(cardsBNG, cardsCore);
+            combineCardArrays(cardsBNG, cardsKTK);
+            combineCardArrays(cardsBNG, cardsFRF);
+            combineCardArrays(cardsBNG, cardsDTK);
 
             return cardsBNG;
+        }
+
+        function sortCards(array) {
+            array.mythicCards.sort(cardSort);
+            array.rareCards.sort(cardSort);
+            array.uncommonCards.sort(cardSort);
+            array.commonCards.sort(cardSort);
+        }
+
+        function combineCardArrays(array1, array2) {
+            array1.mythicCards.push.apply(array1.mythicCards, array2.mythicCards);
+            array1.rareCards.push.apply(array1.rareCards, array2.rareCards);
+            array1.uncommonCards.push.apply(array1.uncommonCards, array2.uncommonCards);
+            array1.commonCards.push.apply(array1.commonCards, array2.commonCards);
         }
 
         function openSortedBoosters(numBoosters)
@@ -205,7 +176,7 @@
 
             //In Fate Reforged there is a chance a basic land can be replaced by a fetchland or a life land.
             var chanceOfLifeLand = 1 / 1;
-            var chanceOfFetchLand = 1 / 72;
+            var chanceOfFetchLand = 1 / 22;
             for (var i = 0; i < numBoosters; i++) {
                 if (Math.random() < chanceOfLifeLand) {
                     if (Math.random() < chanceOfFetchLand) {
@@ -328,77 +299,77 @@
         }
 
         function getClanPromo(clan) { //FRF
+            var cardSet = DTK;
             if (Math.random() > 7 / 8) {
                 switch (clan) {
                     case "W":
-                        return FRF[143 - 1];
+                        return cardSet[217 - 1];
                         break;
                     case "U":
-                        return FRF[27 - 1];
+                        return cardSet[219 - 1];
                         break;
                     case "B":
-                        return FRF[56 - 1];
+                        return cardSet[220 - 1];
                         break;
                     case "R":
-                        return FRF[64 - 1];
+                        return cardSet[218 - 1];
                         break;
                     case "G":
-                        return FRF[113 - 1];
+                        return cardSet[216 - 1];
                         break;
                 }
             } else {
                 var cardsToUse;
                 switch (clan) {
                     case "W":
-                        cardsToUse = [8, 9, 11, 151];
+                        cardsToUse = [2, 3, 19, 23, 41, 175, 209, 212, 221];
                         break;
                     case "U":
-                        cardsToUse = [43, 50, 52, 156];
+                        cardsToUse = [26, 30, 47, 58, 61, 80, 227, 228];
                         break;
                     case "B":
-                        cardsToUse = [62, 79, 87, 157];
+                        cardsToUse = [70, 92, 96, 120, 121, 226, 232];
                         break;
                     case "R":
-                        cardsToUse = [90, 99, 110, 155];
+                        cardsToUse = [88, 112, 141, 162, 169, 214, 224];
                         break;
                     case "G":
-                        cardsToUse = [131, 142, 148, 149];
+                        cardsToUse = [132, 181, 187, 210, 213, 223];
                         break;
                 }
                 var cardNumberToGet = cardsToUse[Math.floor(Math.random() * cardsToUse.length)];
-                return FRF[cardNumberToGet - 1];
+                return cardSet[cardNumberToGet - 1];
             }
         }
 
-        function getSeededClanCardsCommonAndUncommons(clan) {
+        function getSeededClanCardsCommonAndUncommons(clan, cardsSorted) {
             var possibleColors = [];
             var excludedCards = [];
             switch (clan) {
                 case "W":
-                    possibleColors = ["W", "B", "G"];
-                    excludedCards = [11, 14, 16, 17, 20, 22, 27, 31, 64, 66, 67, 72, 73, 75, 76, 77, 78, 81, 82, 88, 89, 90, 91, 130, 132, 134, 136, 137, 141, 143, 144 ,145, 146, 147, 148, 149, 151, 152, 153, 158, 169, 172, 192];
+                    possibleColors = ["W", "G"];
+                    excludedCards = [5, 20, 21, 27, 39, 172, 176, 190, 192, 4, 8, 11, 174, 183, 188, 208];
                     break;
                 case "U":
-                    possibleColors = ["U", "R", "W"];
-                    excludedCards = [1,2,3,6,11,12,13,16,17,21,27,29,30,31,36,39,40,41,42,45,52,53,54,56,57,59,96,98,100,105,106,107,110,112,113,115,116,117,125,126];
+                    possibleColors = ["U", "W"];
+                    excludedCards = [10, 12, 15, 35, 37, 71, 76, 78, 84, 6, 9, 13, 14, 16, 22, 24, 33, 34, 40, 57, 69, 74];
                     break;
                 case "B":
-                    possibleColors = ["B", "G", "U"];
-                    excludedCards = [36,38,39,40,41,42,43,44,46,48,49,50,51,52,53,56,58,63,64,66,70,77,78,79,85,94,128,132,133,134,139,140,143,144,145,147,149,153,156,158,178];
+                    possibleColors = ["B", "U"];
+                    excludedCards = [46, 75, 79, 83, 87, 89, 102, 53, 63, 66, 67, 68, 81, 82, 85, 107, 115];
                     break;
                 case "R":
-                    possibleColors = ["R", "W", "B"];
-                    excludedCards = [1,2,3,6,12,13,14,18,20,21,22,29,30,67,70,72,73,75,76,77,79,81,82,85,88,89,90,91,94,96,100,101,102,106,107,108,114,118,170,177];
+                    possibleColors = ["R", "B"];
+                    excludedCards = [86, 108, 111, 114, 129, 134, 138, 149, 99, 105, 113, 118, 119, 122, 126, 127, 128, 139, 152];
                     break;
                 case "G":
-                    possibleColors = ["G", "U", "R"];
-                    excludedCards = [36,38,43,44,45,46,48,49,50,51,54,57,58,59,63,98,101,102,105,108,110,113,114,115,116,117,118,125,126,128,130,133,136,137,139,140,141,146,148,151,152,156];
+                    possibleColors = ["G", "R"];
+                    excludedCards = [144, 146, 155, 159, 168, 184, 191, 198, 199, 201, 143, 145, 157, 170, 171, 189, 195, 200, 203];
                     break;
             }
 
             var clanCards = new Cards();
 
-            var cardsSorted = getAllKTKCardsSortedByRarity();
             var uncommonCards = cardsSorted.uncommonCards;
             var commonCards = cardsSorted.commonCards;
 
@@ -469,7 +440,7 @@
                 clanCardSet.mythicCards = [clanPromo];
             }
 
-            var booster = getSeededClanCardsCommonAndUncommons(color);//openBoostersNoPromise(0, 0, 0, 0, 1);
+            var booster = getSeededClanCardsCommonAndUncommons(color, allCards);//openBoostersNoPromise(0, 0, 0, 0, 1);
             clanCardSet.uncommonCards = booster.uncommonCards;
             clanCardSet.commonCards = booster.commonCards;
 
@@ -578,22 +549,7 @@
             return $q.when(getAllDTKCardsSortedByRarity())
         }
         function getAllDTKCardsSortedByRarity() {
-            var cards = new Cards();
-            DTK.forEach(function (card) {
-                if (card.Rarity == 'C') {
-                    cards.commonCards.push(card);
-                }
-                else if (card.Rarity == 'U') {
-                    cards.uncommonCards.push(card);
-                }
-                else if (card.Rarity == 'R') {
-                    cards.rareCards.push(card);
-                }
-                else if (card.Rarity == 'M') {
-                    cards.mythicCards.push(card);
-                }
-            });
-            return cards;
+            return sortCardSet(DTK);
         }
 
         function getAllFRFCardsByRarity() {

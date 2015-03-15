@@ -2,112 +2,76 @@
     <section class="matter">
         <div class="container-fluid">
 
-            <div class="row-fluid">
+            <div class="row">
+                <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
+            </div>
 
-                <div class="span10">
+            <div class="row">
 
-                    <div class="row-fluid hidden-phone">
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Fate Reforged Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_frf" />
-                            </div>
-                        </div>
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Khans of Tarkir Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_ktk" />
-                            </div>
-                        </div>
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Magic 2015 Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_core" />
-                            </div>
-                        </div>
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Journey into Nyx Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_jou" />
-                            </div>
-                        </div>
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Born of the Gods Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_bng" />
-                            </div>
-                        </div>
-                        <div class="span12" style="text-align:center;">
-                            <div class="input-prepend">
-                                <span class="add-on">Number of Theros Boosters: </span>
-                                <input type="number" ng-model="vm.boosters_to_open_ths" />
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-xs-12 addRowMargins">
 
-                    <div class="row-fluid visible-phone">
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Fate Reforged Boosters: </span>
+                    <div class="row normalPanel moreOptionsSection">
+
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Number of Dragons of Tarkir Boosters
+                            </div>
+                            <input type="number" ng-model="vm.boosters_to_open_dtk" />
                         </div>
-                        <div class="span12" style="text-align:center">
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Number of Fate Reforged Boosters
+                            </div>
                             <input type="number" ng-model="vm.boosters_to_open_frf" />
                         </div>
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Khans of Tarkir Boosters: </span>
-                        </div>
-                        <div class="span12" style="text-align:center">
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Number of Khans of Tarkir Boosters
+                            </div>
                             <input type="number" ng-model="vm.boosters_to_open_ktk" />
                         </div>
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Magic 2015 Boosters: </span>
-                        </div>
-                        <div class="span12" style="text-align:center">
+                        <div class="col-xs-12 textcenter">
+                            <div>
+                                Magic 2015 Boosters
+                            </div>
                             <input type="number" ng-model="vm.boosters_to_open_core" />
                         </div>
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Journey into the Nyx Boosters: </span>
-                        </div>
-                        <div class="span12" style="text-align:center">
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Journey into Nyx Boosters
+                            </div>
                             <input type="number" ng-model="vm.boosters_to_open_jou" />
                         </div>
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Born of the Gods Boosters: </span>
-                        </div>
-                        <div class="span12" style="text-align:center">
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Born of the Gods Boosters
+                            </div>
                             <input type="number" ng-model="vm.boosters_to_open_bng" />
                         </div>
-                        <div class="span12" style="text-align:center">
-                            <span class="add-on">Number of Theros Boosters: </span>
-                        </div>
-                        <div class="span12" style="text-align:center">
-                            <input type="number" pattern="\d*" ng-model="vm.boosters_to_open_ths" />
-                        </div>
-                    </div>
-
-                    <div class="row-fluid">
-                        <button ng-click="vm.openBoosters()" class="btn btn-primary chris-btn span12">Open Boosters</button>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span12">
-                            <div class="widget wmtg">
-                                <div data-cc-widget-header title="Opened Cards"
-                                     subtitle="{{vm.cards.length}}"
-                                     allow-collapse="true"></div>
-                                <div class="widget-content text-center text-info">
-                                    <ul class="today-datas">
-                                        <li data-ng-repeat="card in vm.cards track by $index">
-                                            <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="col-xs-12 col-md-6 col-lg-4 textcenter">
+                            <div>
+                                Theros Boosters
                             </div>
+                            <input type="number" ng-model="vm.boosters_to_open_ths" />
                         </div>
                     </div>
 
-                </div>
+                    <div class="row textcenter">
+                        <button ng-click="vm.openBoosters()" class="chris-btn">Open Boosters</button>
+                    </div>
 
-                <div class="span2 hidden-phone">
-                    <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
+                    <div class="widget wmtg normalPanel">
+                        <div data-cc-widget-header title="Opened Cards ({{vm.cards.length}})"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <ul class="today-datas">
+                                <li data-ng-repeat="card in vm.cards track by $index">
+                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

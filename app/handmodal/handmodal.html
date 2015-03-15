@@ -5,23 +5,27 @@
     </div>
     <div class="modal-body">
 
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="widget wmtg">
-                    <div class="widget-content text-center text-info">
-                        <ul class="today-datas">
-                            <li data-ng-repeat="card in handCards track by $index">
-                                <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="widget wmtg">
+            <div class="widget-content text-center text-info">
+                <ul class="today-datas">
+                    <li data-ng-repeat="card in handCards track by $index">
+                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="modal-footer">
-        <button style="float:left;" class="btn btn-primary chris-btn" ng-click="mulligan()">Mulligan</button>
-        <button class="btn btn-primary chris-btn" ng-click="nextCard()">Draw a card</button>
-        <button class="btn btn-primary chris-btn" ng-click="generateNewHand()">New hand</button>
+    <div class="modal-footer textcenter">
+        <div class="row">
+            <div class="col-xs-12 col-lg-4 textcenter">
+                <button class="modalButton chris-btn" ng-click="mulligan()">Mulligan</button>
+            </div>
+            <div class="col-xs-12 col-lg-4 textcenter">
+                <button class="modalButton chris-btn" ng-click="nextCard()">Draw a card</button>
+            </div>
+            <div class="col-xs-12 col-lg-4 textcenter">
+                <button class="modalButton chris-btn" ng-click="generateNewHand()">New hand</button>
+            </div>
+        </div>
     </div>
 </script>

@@ -28,7 +28,7 @@
                                         <li data-ng-repeat="card in vm.gameData.Player.Booster.Cards track by $index">
                                             <img ng-class="{true:'chris-disabled', false:''}[vm.gameData.Player.HadTurn]" ng-disabled="vm.gameData.Player.HadTurn"
                                                  ng-click="vm.addCard(card.Number)" src="{{card.Image}}"
-                                                 class="image_width" alt="{{card.Name}}" />
+                                                 class="mtgCard" alt="{{card.Name}}" />
                                         </li>
                                     </ul>
                                 </div>
@@ -46,7 +46,7 @@
                                 <div class="widget-content text-center text-info">
                                     <ul class="today-datas">
                                         <li data-ng-repeat="card in vm.gameData.Player.Cards track by $index">
-                                            <img ng-click="" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                            <img ng-click="" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
                                         </li>
                                     </ul>
                                 </div>
@@ -282,7 +282,7 @@
                         <div class="widget-content text-center text-info">
                             <ul class="today-datas">
                                 <li data-ng-repeat="card in player.Cards track by $index">
-                                    <img src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
                                 </li>
                             </ul>
                         </div>
@@ -300,7 +300,7 @@
                         <div class="widget-content text-center text-info">
                             <ul class="today-datas">
                                 <li data-ng-repeat="card in vm.allCards track by $index">
-                                    <img ng-click="" src="{{card.Image}}" class="image_width" alt="{{card.Name}}" />
+                                    <img ng-click="" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
                                 </li>
                             </ul>
                         </div>

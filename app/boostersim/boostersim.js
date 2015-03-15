@@ -16,8 +16,8 @@
 
 
         vm.boosters_to_open_ktk = localStorageService.getBoosterSim_numBoosters_setOne() || 0;
-        vm.boosters_to_open_frf = localStorageService.getBoosterSim_numBoosters_setTwo() || 3;
-        vm.boosters_to_open_dtk = localStorageService.getBoosterSim_numBoosters_setThree() || 0;
+        vm.boosters_to_open_frf = localStorageService.getBoosterSim_numBoosters_setTwo() || 0;
+        vm.boosters_to_open_dtk = localStorageService.getBoosterSim_numBoosters_setThree() || 3;
 
         vm.boosters_to_open_core = localStorageService.getBoosterSim_numBoosters_setZero() || 0;
         vm.boosters_to_open_ths = 0;

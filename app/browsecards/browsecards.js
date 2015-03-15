@@ -26,7 +26,7 @@
         vm.JOUCards = [];
         vm.cards = [];
 
-        vm.selectedSet = "6";
+        vm.selectedSet = "7";
 
         vm.swapCards = function()
         {
@@ -102,9 +102,9 @@
         activate();
 
         function activate() {
-            common.activateController([getAllFRFCards()], controllerId)
+            common.activateController([getAllDTKCards()], controllerId)
                 .then(function () {
-                    vm.cards = vm.FRFCards;
+                    vm.cards = vm.DTKCards;
                 });
         }
 

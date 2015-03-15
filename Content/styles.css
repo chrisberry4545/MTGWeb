@@ -183,15 +183,11 @@ small {
 .navbar .brand-title {
     margin-left: 30px;
     font-size:30px;
-    font-family:fantasy;
+    font-family:Impact, Charcoal, sans-serif;
 }
 
 .navbar-logo img {
     height: 20px;
-}
-
-.today-datas li {
-    padding: 20px 14px;
 }
 
 /*#region Splash */
@@ -486,54 +482,4 @@ a {
         height: inherit;
     }
 }
-
-@media (max-width: 320px) {
-    .today-datas li {
-        padding: 1em .5em;
-        line-height: 1em;
-    }
-
-        .today-datas li i {
-            font-size: 2em;
-        }
-
-        .today-datas li .datas-text span {
-            font-size: 1em;
-        }
-
-    .btn {
-        margin: .2em;
-        width: 7em;
-    }
-
-    .btn-group > .btn {
-        display: block;
-        width: 7em;
-        margin: .2em;
-    }
-
-    input,
-    select {
-        width: 85%;
-    }
-
-    textarea {
-        width: 80%;
-    }
-
-    .img-polaroid.user-pic {
-        width: 5em;
-    }
-
-    .user .user-details {
-        margin-left: 7em;
-        margin-right: .5em;
-    }
-
-    h3 {
-        font-size: 1.5em !important;
-        line-height: 1.2em !important;
-    }
-}
-
 /*#endregion */

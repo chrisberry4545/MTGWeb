@@ -14,9 +14,9 @@
 
         var vm = this;
         vm.title = 'Sealed Simulator';
-        vm.boosters_to_open_dtk = 0;
-        vm.boosters_to_open_frf = 4;
-        vm.boosters_to_open_ktk = 1;
+        vm.boosters_to_open_dtk = 3;
+        vm.boosters_to_open_frf = 2;
+        vm.boosters_to_open_ktk = 0;
         vm.boosters_to_open_core = 0;
         vm.boosters_to_open_jou = 0;
         vm.boosters_to_open_bng = 0;
@@ -34,13 +34,18 @@
             }
         }
 
+        vm.chartsHidden = false;
+        vm.hideCharts = function () {
+            vm.chartsHidden = !vm.chartsHidden;
+        }
+
         vm.include_seeded_boosters = "W";
         vm.include_seeded_boosters_options = [
-            { key: "W", value: "Abzan Houses" },
-            { key: "U", value: "Jeskai Way" },
-            { key: "B", value: "Sultai Brood"},
-            { key: "R", value: "Mardu Horde" },
-            { key: "G", value: "Temur Frontier" },
+            { key: "W", value: "Dromoka - White/Green" },
+            { key: "U", value: "Ojutai - Blue/White" },
+            { key: "B", value: "Silumgar - Black/Blue" },
+            { key: "R", value: "Kolaghan - Red/Black" },
+            { key: "G", value: "Atarka - Green/Red" },
             { key: "0", value: "Don't use Seeded" }
         ];
 
@@ -142,6 +147,7 @@
                         vm.include_seeded_boosters).then(function (data) {
                             vm.boosterCards = [];
                             vm.selectedCards = [];
+                            vm.selectedLandCards = [];
                             vm.boosterCards.push.apply(vm.boosterCards, data.mythicCards);
                             vm.boosterCards.push.apply(vm.boosterCards, data.rareCards);
                             vm.boosterCards.push.apply(vm.boosterCards, data.uncommonCards);
@@ -194,6 +200,10 @@
             common.activateController([], controllerId)
                 .then(function () {
                     vm.landcards = landcards.getLandCards();
+                    graphAnalysis.setPieChartGraphElement('colorPieChartContainer', graphWidth, graphHeight);
+                    graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer', graphWidth, graphHeight);
+                    graphAnalysis.setTypeChartHolder('typePieChartContainer', graphWidth, graphHeight);
+                    graphAnalysis.resetAllCanvas();
                 });
         };
     }

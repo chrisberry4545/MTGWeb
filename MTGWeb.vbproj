@@ -215,8 +215,6 @@
     <Content Include="app\multiplayerdraft\multiplayerdraft.min.js">
       <DependentUpon>multiplayerdraft.js</DependentUpon>
     </Content>
-    <Content Include="app\sealedsim\hideShowOlderSetsButton.html" />
-    <Content Include="app\sealedsim\radioSeededPacks.html" />
     <Content Include="app\sealedsim\sealedsim.html" />
     <Content Include="app\sealedsim\sealedsim.js" />
     <Content Include="app\sealedsim\sealedsim.min.js">
@@ -260,8 +258,11 @@
     </Content>
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chrisstylesheet.css" />
     <Content Include="Content\chrisstylesheet.min.css">
       <DependentUpon>chrisstylesheet.css</DependentUpon>
     </Content>
@@ -291,6 +292,74 @@
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Images\DTK\Acid-SpewerDragon.jpg" />
+    <Content Include="Images\DTK\AerieBowmasters.jpg" />
+    <Content Include="Images\DTK\Anticipate.jpg" />
+    <Content Include="Images\DTK\ArashinForemost.jpg" />
+    <Content Include="Images\DTK\ArashinSovereign.jpg" />
+    <Content Include="Images\DTK\AtarkasCommand.jpg" />
+    <Content Include="Images\DTK\AvenSunstriker.jpg" />
+    <Content Include="Images\DTK\Blood-ChinFanatic.jpg" />
+    <Content Include="Images\DTK\BoltwingMarauder.jpg" />
+    <Content Include="Images\DTK\CollectedCompany.jpg" />
+    <Content Include="Images\DTK\CunningBreezedancer.jpg" />
+    <Content Include="Images\DTK\DeathbringerRegent.jpg" />
+    <Content Include="Images\DTK\DeathmistRaptor.jpg" />
+    <Content Include="Images\DTK\DenProtector.jpg" />
+    <Content Include="Images\DTK\DescentoftheDragons.jpg" />
+    <Content Include="Images\DTK\DragonFodder.jpg" />
+    <Content Include="Images\DTK\DragonlordAtarka.jpg" />
+    <Content Include="Images\DTK\DragonlordDromoka.jpg" />
+    <Content Include="Images\DTK\DragonlordKolaghan.jpg" />
+    <Content Include="Images\DTK\DragonlordOjutai.jpg" />
+    <Content Include="Images\DTK\DragonlordSilumgar.jpg" />
+    <Content Include="Images\DTK\DragonlordsServant.jpg" />
+    <Content Include="Images\DTK\DragonTempest.jpg" />
+    <Content Include="Images\DTK\EnduringScalelord.jpg" />
+    <Content Include="Images\DTK\EpicConfrontation.jpg" />
+    <Content Include="Images\DTK\EvolvingWilds.jpg" />
+    <Content Include="Images\DTK\Foe-RazerRegent.jpg" />
+    <Content Include="Images\DTK\GudulLurker.jpg" />
+    <Content Include="Images\DTK\HarbingeroftheHunt.jpg" />
+    <Content Include="Images\DTK\HarbringeroftheHunt.jpg" />
+    <Content Include="Images\DTK\HiddenDragonslayer.jpg" />
+    <Content Include="Images\DTK\LightningBerserker.jpg" />
+    <Content Include="Images\DTK\LightningBeserker.jpg" />
+    <Content Include="Images\DTK\MarangRiverSkeleton.jpg" />
+    <Content Include="Images\DTK\NarsetTranscendent.jpg" />
+    <Content Include="Images\DTK\NecromasterDragon.jpg" />
+    <Content Include="Images\DTK\OjutaiExemplars.jpg" />
+    <Content Include="Images\DTK\OjutaisCommand.jpg" />
+    <Content Include="Images\DTK\OjutaisSummons.jpg" />
+    <Content Include="Images\DTK\PristineSkywise.jpg" />
+    <Content Include="Images\DTK\ProfoundJourney.jpg" />
+    <Content Include="Images\DTK\RadiantPurge.jpg" />
+    <Content Include="Images\DTK\RisenExecutioner.jpg" />
+    <Content Include="Images\DTK\Roast.jpg" />
+    <Content Include="Images\DTK\RuthlessDeathfang.jpg" />
+    <Content Include="Images\DTK\SaltRoadAmbushers.jpg" />
+    <Content Include="Images\DTK\SandcrafterMage.jpg" />
+    <Content Include="Images\DTK\SarkhanUnbroken.jpg" />
+    <Content Include="Images\DTK\SavageVentmaw.jpg" />
+    <Content Include="Images\DTK\ScaleguardSentinels.jpg" />
+    <Content Include="Images\DTK\ShamanofForgottenWays.jpg" />
+    <Content Include="Images\DTK\ShorecrasherElemental.jpg" />
+    <Content Include="Images\DTK\Sidisi--UndeadVizier.jpg" />
+    <Content Include="Images\DTK\SilumgarAssassin.jpg" />
+    <Content Include="Images\DTK\SilumgarButcher.jpg" />
+    <Content Include="Images\DTK\SilumgarsAssassin.jpg" />
+    <Content Include="Images\DTK\SilumgarsCommand.jpg" />
+    <Content Include="Images\DTK\SprintingWarbrute.jpg" />
+    <Content Include="Images\DTK\StampedingElkHerd.jpg" />
+    <Content Include="Images\DTK\StormcragElemental.jpg" />
+    <Content Include="Images\DTK\StormwingDragon.jpg" />
+    <Content Include="Images\DTK\StratusDancer.jpg" />
+    <Content Include="Images\DTK\SunbringersTouch.jpg" />
+    <Content Include="Images\DTK\SunscorchRegent.jpg" />
+    <Content Include="Images\DTK\SwiftWarkite.jpg" />
+    <Content Include="Images\DTK\ThunderbreakRegent.jpg" />
+    <Content Include="Images\DTK\UltimatePrice.jpg" />
+    <Content Include="Images\DTK\ZurgoBellstriker.jpg" />
     <Content Include="Images\FRF\AbzanAdvantage.jpg" />
     <Content Include="Images\FRF\AbzanBeastmaster.jpg" />
     <Content Include="Images\FRF\AbzanKin-Guard.jpg" />
@@ -746,8 +815,12 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="Content\chrisstylesheet.css" />
-    <Content Include="manifest.appcache" />
+    <Content Include="Content\chrisstylesheet.less" />
+    <Content Include="Content\chrisstylesheet.css.map" />
+    <Content Include="Content\toastr.css.map">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <None Include="manifest.appcache" />
     <Content Include="app\boostersim\boostersim.min.js.map">
       <DependentUpon>boostersim.min.js</DependentUpon>
     </Content>
