@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'sealedsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', sealedsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', '$scope', sealedsim]);
 
-    function sealedsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal) {
+    function sealedsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, $scope) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
@@ -49,6 +49,17 @@
             { key: "0", value: "Don't use Seeded" }
         ];
 
+
+        vm.additionalSealedPacks = [];
+
+        vm.removeSealedPack = function () {
+            vm.additionalSealedPacks.pop();
+        }
+
+        vm.addSeededPack = function () {
+            vm.additionalSealedPacks.push(vm.include_seeded_boosters);
+        }
+
         vm.boosterCards = [];
 
         vm.selectedCards = [];
@@ -72,7 +83,6 @@
                 vm.selectedLandCards.splice(index, 1);
             }
         }
-
 
         vm.addToDeck = function(card)
         {
@@ -148,9 +158,30 @@
                             vm.boosterCards = [];
                             vm.selectedCards = [];
                             vm.selectedLandCards = [];
+
+                            var additionalMythic = [];
+                            var additionalRare = [];
+                            var additionalUncommon = [];
+                            var additionalCommon = [];
+                            for (var i = 0; i < vm.additionalSealedPacks.length; i++) {
+                                var additionalSeeded = vm.additionalSealedPacks[i];
+                                if (additionalSeeded != "0") {
+                                    var additionalCards = datacontext.openXCardBoostersForLatestSet(1, additionalSeeded);
+                                    additionalMythic.push.apply(additionalMythic, additionalCards.mythicCards);
+                                    additionalRare.push.apply(additionalRare, additionalCards.rareCards);
+                                    additionalUncommon.push.apply(additionalUncommon, additionalCards.uncommonCards);
+                                    additionalCommon.push.apply(additionalCommon, additionalCards.commonCards);
+                                }
+                            }
+
+
+                            vm.boosterCards.push.apply(vm.boosterCards, additionalMythic);
                             vm.boosterCards.push.apply(vm.boosterCards, data.mythicCards);
+                            vm.boosterCards.push.apply(vm.boosterCards, additionalRare);
                             vm.boosterCards.push.apply(vm.boosterCards, data.rareCards);
+                            vm.boosterCards.push.apply(vm.boosterCards, additionalUncommon);
                             vm.boosterCards.push.apply(vm.boosterCards, data.uncommonCards);
+                            vm.boosterCards.push.apply(vm.boosterCards, additionalCommon);
                             vm.boosterCards.push.apply(vm.boosterCards, data.commonCards);
 
                             graphAnalysis.resetAllCanvas();

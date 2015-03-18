@@ -41,6 +41,10 @@
   width: 150px;
   height: 30px;
 }
+.chris-btn-super-mini {
+  width: 30px;
+  height: 20px;
+}
 .chris-p {
   border-bottom: 1px solid #808080;
 }
@@ -115,10 +119,11 @@
 .navbar-default {
   background: #333333;
   border: none;
-  height: 90px;
+  /*height:90px;*/
+  margin-bottom: 0;
 }
 .navbar-default > .container-fluid {
-  padding-top: 23px;
+  /*padding-top: 23px;*/
   max-width: 1360px;
 }
 .navbar .brand-title {
@@ -223,5 +228,23 @@ a:hover {
   .modalButton {
     width: 100%;
   }
+}
+.fixedPos {
+  position: fixed;
+}
+@media (min-width: 1000px) {
+  .fullView {
+    height: calc(100vh - 141px);
+    overflow-y: scroll;
+  }
+  .fullViewWithAdvert {
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+.advert {
+  height: 91px;
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=chrisstylesheet.css.map */

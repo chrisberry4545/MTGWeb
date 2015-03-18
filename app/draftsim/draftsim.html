@@ -5,8 +5,9 @@
         <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
     </div>
 
-    <div class="row addBottomMargin">
-        <div class="col-xs-12 addRowMargins">
+    <div class="row">
+        <div class="col-xs-12 addRowMargins fullView" ng-class="{'col-md-8 col-lg-9': !vm.chartsHidden, 'col-md-12 col-lg-12': vm.chartsHidden }">
+
             <div class="normalPanel">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 textcenter">
@@ -76,17 +77,10 @@
                     <span ng-if="vm.draftStarted">Restart Draft</span>
                 </button>
                 <button class="btn chris-btn" ng-click="vm.hideCharts()" ng-show="vm.chartsHidden">
-                    Show Charts
+                    Show Charts <i class="icon-chevron-down"></i>
                 </button>
             </div>
 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 addRowMargins"  ng-class="{'col-md-8 col-lg-9': !vm.chartsHidden, 'col-md-12 col-lg-12': vm.chartsHidden }">
-
-            
             <div class="widget wmtg normalPanel" ng-if="vm.boosterCards.length > 0 && !vm.draftFinished">
                 <div data-cc-widget-header title="{{vm.topPanelCardsTitle}} ({{vm.boosterCards.length}})"
                      allow-collapse="true"></div>
@@ -161,10 +155,10 @@
 
         </div>
 
-        <div class="col-md-4 col-lg-3 hidden-xs hidden-sm" ng-show="!vm.chartsHidden">
+        <div class="col-md-4 col-lg-3 hidden-xs hidden-sm fullView" ng-show="!vm.chartsHidden">
             <div class="chartsColumn textcenter normalPanel">
                 <button class="btn chris-btn chris-btn-mini" ng-click="vm.hideCharts()">
-                    Hide Charts
+                    Hide Charts <i class="icon-chevron-up"></i>
                 </button>
                 <h3>{{vm.cardStatsTitle}}</h3>
                 <div class="textcenter">
@@ -180,7 +174,6 @@
                     <div id="typePieChartContainer"></div>
                 </div>
             </div>
-            <!--<div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>-->
         </div>
 
 

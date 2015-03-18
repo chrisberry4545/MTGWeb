@@ -2,81 +2,80 @@
     <section class="matter">
         <div class="container-fluid">
 
-            <div class="row">
-                <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
-            </div>
+            <div class="fullViewWithAdvert">
 
-            <div class="row">
-                <div class="col-xs-12 addRowMargins">
-
-                    <div class="textcenter">
-                        <select ng-model="vm.selectedSet" ng-change="vm.swapCards()">
-                            <option value="7">Show Dragons of Tarkir Cards</option>
-                            <option value="6">Show Fate Reforged Cards</option>
-                            <option value="5">Show Khans of Tarkir Cards</option>
-                            <option value="1">Show Magic 2015 Cards</option>
-                            <option value="2">Show Theros Cards</option>
-                            <option value="3">Show Born of the Gods Cards</option>
-                            <option value="4">Show Journey into Nyx Cards</option>
-                        </select>
-                    </div>
-
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Mythic Cards ({{vm.cards.mythicCards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.mythicCards">
-                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Rare Cards ({{vm.cards.rareCards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.rareCards">
-                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Uncommon Cards ({{vm.cards.uncommonCards.length}})"
-                             subtitle=""
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.uncommonCards">
-                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>>
-
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Common Cards ({{vm.cards.commonCards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards.commonCards">
-                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="row">
+                    <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
                 </div>
 
-                <!--<div class="span2 hidden-phone">
-                    <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
-                </div>-->
+                <div class="row" style="margin-top:20px">
+                    <div class="col-xs-12 addRowMargins">
+
+                        <div class="textcenter">
+                            <select ng-model="vm.selectedSet" ng-change="vm.swapCards()">
+                                <option value="7">Show Dragons of Tarkir Cards</option>
+                                <option value="6">Show Fate Reforged Cards</option>
+                                <option value="5">Show Khans of Tarkir Cards</option>
+                                <option value="1">Show Magic 2015 Cards</option>
+                                <option value="2">Show Theros Cards</option>
+                                <option value="3">Show Born of the Gods Cards</option>
+                                <option value="4">Show Journey into Nyx Cards</option>
+                            </select>
+                        </div>
+
+                        <div class="widget wmtg normalPanel">
+                            <div data-cc-widget-header title="Mythic Cards ({{vm.cards.mythicCards.length}})"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <ul class="today-datas">
+                                    <li data-ng-repeat="card in vm.cards.mythicCards">
+                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget wmtg normalPanel">
+                            <div data-cc-widget-header title="Rare Cards ({{vm.cards.rareCards.length}})"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <ul class="today-datas">
+                                    <li data-ng-repeat="card in vm.cards.rareCards">
+                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="widget wmtg normalPanel">
+                            <div data-cc-widget-header title="Uncommon Cards ({{vm.cards.uncommonCards.length}})"
+                                 subtitle=""
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <ul class="today-datas">
+                                    <li data-ng-repeat="card in vm.cards.uncommonCards">
+                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>>
+
+                        <div class="widget wmtg normalPanel">
+                            <div data-cc-widget-header title="Common Cards ({{vm.cards.commonCards.length}})"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
+                                <ul class="today-datas">
+                                    <li data-ng-repeat="card in vm.cards.commonCards">
+                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
-
         </div>
     </section>
 </section>

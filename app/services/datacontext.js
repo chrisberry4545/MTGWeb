@@ -30,6 +30,7 @@
             getAllJOUCardsByRarity: getAllJOUCardsByRarity,
             setDisplayCard: setDisplayCard,
             getDisplayCard: getDisplayCard,
+            openXCardBoostersForLatestSet: openXCardBoostersForLatestSet,
             openSortedBoosters: openSortedBoosters,
             openMixtureOfSortedBoosters: openMixtureOfSortedBoosters,
             openMixtureOfSeededBoosters: openMixtureOfSeededBoosters,
@@ -62,8 +63,7 @@
         function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, seedColor) {
             var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters);
             //Replace core set boosters with seeded boosters.
-            var cards = getAllDTKCardsSortedByRarity();
-            var boostersToSeed = openXCardBoostersForColor(1, cards, seedColor);
+            var boostersToSeed = openXCardBoostersForLatestSet(1, seedColor);
             //boostersToSeed.rareCards.push(KTK[getSeedCardNumber(seedColor)]);
 
             boostersToSeed.rareCards.sort(cardSort);
@@ -215,6 +215,12 @@
                 selectedCards.commonCards.push.apply(selectedCards.commonCards, boosterCards.commonCards);
             }
             return selectedCards;
+        }
+
+        function openXCardBoostersForLatestSet(numBoosters, color) {
+            var cards = getAllDTKCardsSortedByRarity();
+            var boostersToSeed = openXCardBoostersForColor(1, cards, color);
+            return boostersToSeed;
         }
 
         function openXCardBoostersForColor(numBoosters, cards, color) {
@@ -373,7 +379,7 @@
             var uncommonCards = cardsSorted.uncommonCards;
             var commonCards = cardsSorted.commonCards;
 
-            for (var i = 0; i < 4; i++) {
+            for (var i = 0; i < 3; i++) {
                 var cardFound = false;
                 while (!cardFound) {
                     var possibleCard = uncommonCards[Math.floor(Math.random() * uncommonCards.length)];
@@ -390,7 +396,7 @@
                 }
             }
 
-            for (var i = 0; i < 11; i++) {
+            for (var i = 0; i < 10; i++) {
                 var cardFound = false;
                 while (!cardFound) {
                     var possibleCard = commonCards[Math.floor(Math.random() * commonCards.length)];
