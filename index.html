@@ -8,7 +8,7 @@
             display: none !important;
         }
     </style>
-    <title>MTG Mirror - Dragons of Tarkir Draft and Sealed Simulator</title>
+    <title>MTG Mirror - Magic Origins Draft and Sealed Simulator</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
@@ -39,7 +39,6 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-
     </script>
 
 
@@ -60,7 +59,7 @@
         <div id="splash-page" data-ng-show="false">
             <div class="page-splash">
                 <div class="page-splash-message">
-                    MTG Mirror - Dragons of Tarkir Draft and Sealed Simulator
+                    MTG Mirror - Magic Origins Draft and Sealed Simulator
                 </div>
                 <div class="progress progress-striped active page-progress-bar">
                     <div class="bar"></div>
@@ -120,7 +119,7 @@
     <script src="app/boostersim/boostersim.min.js"></script>
     <script src="app/browsecards/browsecards.min.js"></script>
     <script src="app/sealedsim/sealedsim.min.js"></script>
-    <script src="app/draftsim/draftsim.js"></script>
+    <script src="app/draftsim/draftsim.min.js"></script>
     <script src="app/draftsim/ai.min.js"></script>
     <script src="app/about/about.min.js"></script>
     <script src="app/carddisplay/carddisplay.min.js"></script>
@@ -132,7 +131,58 @@
     <script src="app/carddata/CardsKTK.min.js"></script>
     <script src="app/carddata/CardsFRF.min.js"></script>
     <script src="app/carddata/CardsDTK.min.js"></script>
+    <script src="app/carddata/CardsMM2.min.js"></script>
+    <script src="app/carddata/CardsORI.min.js"></script>
     <script src="app/handmodal/handmodal.min.js"></script>
     <script src="app/highpickreport/highpickreport.js"></script>
+
+    <div style="display:none; background-color:darkorange" id="updateAppMessage" class="textcenter">
+        <div id="downloadComplete" style="display:none;">
+            A new version of the app is avaliable. <br />
+            <em>Refresh to start using it!</em>
+        </div>
+        <div id="downloadInProgress">
+            <span>Downloading a new version of the app.</span><br />
+            <span>This will probably take around a minute.</span>
+        </div>
+    </div>
+
+    <script>
+
+        function refreshApp() {
+            location.reload();
+        }
+
+        $(window.applicationCache).bind(
+            "downloading",
+            function (downloadEvent) {
+
+                var updateAppMessage = $('#updateAppMessage');
+                updateAppMessage.show();
+
+                function readyEvent(ev) {
+                    updateAppMessage.css({'background-color': 'green'});
+                    $('#downloadInProgress').hide();
+                    $('#downloadComplete').show();
+                    updateAppMessage.click(refreshApp);
+                }
+
+                $(window.applicationCache).bind(
+                    "cached",
+                    function (event) {
+                        readyEvent(event);
+                    }
+                );
+
+                $(window.applicationCache).bind(
+                    "updateready",
+                    function (event) {
+                        readyEvent(event);
+                    }
+                );
+
+            });
+
+    </script>
 </body>
 </html>

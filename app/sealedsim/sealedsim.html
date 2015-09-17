@@ -13,17 +13,17 @@
 
                     <div class="normalPanel">
                         <div class="row">
-                            <div class="col-xs-12 col-md-6 textcenter">
+                            <div class="col-xs-12 textcenter">
                                 <div>
-                                    Number of Dragons of Tarkir Boosters
+                                    Number of Magic Origins Boosters
                                 </div>
-                                <input type="number" ng-model="vm.boosters_to_open_dtk" />
+                                <input type="number" ng-model="vm.boosters_to_open_ori" />
                             </div>
-                            <div class="col-xs-12 col-md-6 textcenter">
+                            <div class="col-xs-12 textcenter">
                                 <div>
-                                    Number of Fate Reforged Boosters
+                                    Number of Modern Masters 2015 Boosters
                                 </div>
-                                <input type="number" ng-model="vm.boosters_to_open_frf" />
+                                <input type="number" ng-model="vm.boosters_to_open_mm2" />
                             </div>
                         </div>
 
@@ -49,6 +49,18 @@
                             </div>
                             <div class="col-xs-12 textcenter">
                                 <button class="chris-btn chris-btn-mini" ng-click="vm.addSeededPack()">Add Seeded Pack</button>
+                            </div>
+                            <div class="col-xs-12 col-md-6 textcenter">
+                                <div>
+                                    Number of Dragons of Tarkir Boosters
+                                </div>
+                                <input type="number" ng-model="vm.boosters_to_open_dtk" />
+                            </div>
+                            <div class="col-xs-12 col-md-6 textcenter">
+                                <div>
+                                    Number of Fate Reforged Boosters
+                                </div>
+                                <input type="number" ng-model="vm.boosters_to_open_frf" />
                             </div>
                             <div class="col-xs-12 col-md-12 textcenter">
                                 <div>
@@ -107,9 +119,11 @@
                             <ul class="today-datas">
                                 <li data-ng-repeat="card in vm.boosterCards track by $index">
                                     <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    <span ng-click="vm.addToDeck(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
                                 </li>
                                 <li data-ng-repeat="card in vm.landcards track by $index">
                                     <img ng-click="vm.addLandCard(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    <span ng-click="vm.addLandCard(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
                                 </li>
                             </ul>
                         </div>
@@ -127,9 +141,11 @@
                             <ul class="today-datas">
                                 <li data-ng-repeat="card in vm.selectedCards track by $index">
                                     <img ng-click="vm.removeFromDeck(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    <span ng-click="vm.removeFromDeck(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
                                 </li>
                                 <li data-ng-repeat="card in vm.selectedLandCards track by $index">
                                     <img ng-click="vm.removeLandCard(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                                    <span ng-click="vm.removeLandCard(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
                                 </li>
                             </ul>
                         </div>

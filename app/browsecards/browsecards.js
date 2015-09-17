@@ -17,6 +17,7 @@
 
         vm.showingTHS = false;
         vm.showingBNG = true;
+        vm.MM2Cards = [];
         vm.DTKCards = [];
         vm.FRFCards = [];
         vm.KTKCards = [];
@@ -26,12 +27,29 @@
         vm.JOUCards = [];
         vm.cards = [];
 
-        vm.selectedSet = "7";
+        vm.selectedSet = "9";
 
         vm.swapCards = function()
         {
             switch(vm.selectedSet)
             {
+                case "9":
+                    if (vm.ORICards.commonCards != null) {
+                        vm.cards = vm.ORICards;
+                    } else {
+                        getAllORICards().then(function () {
+                            vm.cards = vm.ORICards;
+                        });
+                    }
+                case "8":
+                    if (vm.MM2Cards.commonCards != null) {
+                        vm.cards = vm.MM2Cards;
+                    } else {
+                        getAllMM2Cards().then(function () {
+                            vm.cards = vm.MM2Cards;
+                        });
+                    }
+                    break;
                 case "7":
                     if (vm.DTKCards.commonCards != null) {
                         vm.cards = vm.DTKCards;
@@ -102,10 +120,16 @@
         activate();
 
         function activate() {
-            common.activateController([getAllDTKCards()], controllerId)
+            common.activateController([getAllORICards()], controllerId)
                 .then(function () {
-                    vm.cards = vm.DTKCards;
+                    vm.cards = vm.ORICards;
                 });
+        }
+
+        function getAllMM2Cards() {
+            return datacontext.getAllMM2CardsByRarity().then(function (data) {
+                return vm.MM2Cards = data;
+            });
         }
 
         function getAllDTKCards() {
@@ -151,6 +175,12 @@
         {
             return datacontext.getAllTHSCardsByRarity().then(function (data) {
                 return vm.THSCards = data;
+            });
+        }
+
+        function getAllORICards() {
+            return datacontext.getAllORICardsByRarity().then(function (data) {
+                return vm.ORICards = data;
             });
         }
 

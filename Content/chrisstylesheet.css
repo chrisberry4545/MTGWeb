@@ -247,4 +247,32 @@ a:hover {
   height: 91px;
   border-bottom: 1px solid black;
 }
+#updateAppMessage {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  background: green;
+  padding: 1rem;
+  border: 1px solid black;
+  color: white;
+}
+.foil {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 87px;
+  color: black;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+}
+.today-datas li {
+  position: relative;
+  display: inline-block;
+}
 /*# sourceMappingURL=chrisstylesheet.css.map */
