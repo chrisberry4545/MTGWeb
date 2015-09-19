@@ -14,7 +14,9 @@
         function activate() {
             var promises = [];
             common.activateController(promises, controllerId)
-                .then(function () {  });
+                .then(function () {
+                    trackEvent(controllerId, 'init');
+                });
         }
     }
 })();

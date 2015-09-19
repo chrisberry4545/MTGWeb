@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'draftsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', 'webapicontext', draftsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', 'webapicontext', 'ai', draftsim]);
 
-    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, webapicontext) {
+    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, webapicontext, ai) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
@@ -11,26 +11,12 @@
 
         var vm = this;
 
-
-
-
         vm.title = 'Sealed Simulator';
         vm.column1Title = "Image";
         vm.column2Title = "Name";
         vm.column3Title = "Rarity";
 
         vm.boosters_to_open = 1;
-
-        vm.boosters_to_open_bfz = 3;
-        vm.boosters_to_open_ori = 0;
-        vm.boosters_to_open_mm2 = 0;
-        vm.boosters_to_open_dtk = 0;
-        vm.boosters_to_open_frf = 0;
-        vm.boosters_to_open_ktk = 0;
-        vm.boosters_to_open_core = 0;
-        vm.boosters_to_open_jou = 0;
-        vm.boosters_to_open_bng = 0;
-        vm.boosters_to_open_ths = 0;
 
         vm.boosterCards = [];
 
@@ -42,17 +28,6 @@
         vm.packsOpened = 0;
         vm.totalPacksToOpen = 3;
 
-        vm.fixedBFZpacks = 0;
-        vm.fixedORIpacks = 0;
-        vm.fixedMM2Packs = 0;
-        vm.fixedDTKpacks = 0;
-        vm.fixedFRFPacks = 0;
-        vm.fixedKTKPacks = 0;
-        vm.fixedCorePacks = 0;
-        vm.fixedJOUpacks = 0;
-        vm.fixedBNGpacks = 0;
-        vm.fixedTHSpacks = 0;
-
         vm.landcards = [];
         vm.selectedLandCards = [];
 
@@ -62,33 +37,50 @@
         vm.cardStatsTitle = startingCardsStatsTitle;
 
 
+        vm.setGroups = [];
+        vm.fixedSetGroups = [];
+        function initSetGroups() {
+            datacontext.getCardSetGroups().then(function (data) {
+                data[0][0].boostersToOpen = 3; //Set latest set to open 6 boosters by default
+                vm.setGroups = data;
+                trackEvent(controllerId, 'init');
+            });
+        }
+
+
         vm.chartsHidden = false;
         vm.hideCharts = function () {
             vm.chartsHidden = !vm.chartsHidden;
+            trackEvent(controllerId, 'toggle-charts');
         }
 
         vm.showExtraOptions = false;
         vm.displayExtraOptions = function () {
             if (vm.showExtraOptions) {
                 vm.showExtraOptions = false;
+                trackEvent(controllerId, 'hide-extra-options');
             } else {
                 vm.showExtraOptions = true;
+                trackEvent(controllerId, 'show-extra-options');
             }
         }
 
         vm.downloadFullPool = function () {
             downloadDataService.saveCardsList(vm.selectedCards.concat(vm.deckCards), "MyDraftPool");
+            trackEvent(controllerId, 'download-full-pool');
         }
         vm.downloadDraftDeck = function () {
             downloadDataService.saveCardsList(vm.deckCards.concat(vm.selectedLandCards), "MyDeckSelection");
+            trackEvent(controllerId, 'download-selected-pool');
         }
 
         vm.addToDeck = function(card)
         {
-            webapicontext.postCardSelected(card.Number, card.Set, vm.boosterCards.length);
             _removeFromArrayAndAddToArray(vm.boosterCards, vm.selectedCards, card);
             logSuccess("You've chosen " + card.Name + "!");
             takeTurn();
+
+            trackEvent(controllerId, 'card-picked', card.Name);
 
             if (vm.boosterCards.length == 0) {
                 if (vm.packsOpened < vm.totalPacksToOpen) {
@@ -96,6 +88,7 @@
                 } else {
                     vm.draftFinished = true;
                     vm.topPanelCardsTitle = "Deck Cards";
+                    trackEvent(controllerId, 'finished-draft');
                 }
             }
 
@@ -107,24 +100,28 @@
                 _removeFromArrayAndAddToArray(vm.selectedCards, vm.deckCards, card);
                 vm.cardStatsTitle = "My Deck Stats";
                 graphAnalysis.displayChartsForCards(vm.deckCards);
+                trackEvent(controllerId, 'removed-card-from-selection', card.Name);
             }
         }
         vm.deckCardClick = function (card) {
             if (vm.draftFinished) {
                 _removeFromArrayAndAddToArray(vm.deckCards, vm.selectedCards, card);
                 graphAnalysis.displayChartsForCards(vm.deckCards);
+                trackEvent(controllerId, 'added-card-to-selection', card.Name);
             }
         }
 
         vm.landCardClick = function (card) {
             if (vm.draftFinished) {
                 vm.selectedLandCards.push(card);
+                trackEvent(controllerId, 'added-land-card', card.Name);
             }
         }
         vm.removeLandCard = function (card) {
             var index = vm.selectedLandCards.indexOf(card);
             if (index > -1) {
                 vm.selectedLandCards.splice(index, 1);
+                trackEvent(controllerId, 'removed-land-card', card.Name);
             }
         }
 
@@ -158,9 +155,7 @@
         {
             log("Opening a new pack...");
             vm.packsOpened++;
-            for (var i = 0; i < vm.numberOfPlayers; i++) {
-                openAIBooster(vm.AIs[i]);
-            }
+            openBoosterForEachPlayer();
             vm.boosterCards = vm.AIs[0].boosterCards;
             log("Packs opened: " + vm.packsOpened + " Total packs to open: " + vm.totalPacksToOpen);
         }
@@ -168,7 +163,7 @@
         activate();
 
         function activate() {
-            common.activateController([], controllerId)
+            common.activateController([initSetGroups()], controllerId)
                 .then(function () {
                     vm.landcards = landcards.getLandCards();
                     var graphWidth = 200;
@@ -184,27 +179,9 @@
         vm.numberOfPlayers = 8;
         vm.AIs = [];
 
-        function validateEntries() {
-            if (vm.boosters_to_open_core == null
-                || vm.boosters_to_open_ths == null
-                || vm.boosters_to_open_bng == null
-                || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null
-                || vm.boosters_to_open_frf == null
-                || vm.boosters_to_open_dtk == null
-                || vm.boosters_to_open_mm2 == null
-                || vm.boosters_to_open_ori == null
-                || vm.boosters_to_open_bfz == null) {
-                logError("Please use a number for the amount of boosters.");
-                return false;
-            }
-            return true;
-        }
 
         vm.startDraft = function () {
-            if (!validateEntries()) {
-                return false;
-            }
+
             vm.draftStarted = true;
             vm.draftFinished = false;
             vm.topPanelCardsTitle = startingTopPanelCardsTitle;
@@ -216,23 +193,26 @@
             vm.selectedCards = [];
             vm.deckCards = [];
             vm.selectedLandCards = [];
-            vm.fixedBFZpacks = parseInt(vm.boosters_to_open_bfz);
-            vm.fixedORIpacks = parseInt(vm.boosters_to_open_ori);
-            vm.fixedMM2Packs = parseInt(vm.boosters_to_open_mm2);
-            vm.fixedDTKpacks = parseInt(vm.boosters_to_open_dtk);
-            vm.fixedFRFPacks = parseInt(vm.boosters_to_open_frf);
-            vm.fixedKTKPacks = parseInt(vm.boosters_to_open_ktk);
-            vm.fixedCorePacks = parseInt(vm.boosters_to_open_core);
-            vm.fixedBNGpacks = parseInt(vm.boosters_to_open_bng);
-            vm.fixedTHSpacks = parseInt(vm.boosters_to_open_ths);
-            vm.fixedJOUpacks = parseInt(vm.boosters_to_open_jou);
-            vm.totalPacksToOpen = vm.fixedBNGpacks + vm.fixedTHSpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks + vm.fixedFRFPacks + vm.fixedDTKpacks + vm.fixedMM2Packs + vm.fixedORIpacks + vm.fixedBFZpacks;
+
+            vm.fixedSetGroups = datacontext.copyCardSetGroup(vm.setGroups);
+
+            var totalPacks = 0;
+            for (var i = 0; i < vm.fixedSetGroups.length; i++) {
+                var group = vm.fixedSetGroups[i];
+                for (var k = 0; k < group.length; k++) {
+                    totalPacks += group[k].boostersToOpen;
+                }
+            }
+            vm.totalPacksToOpen = totalPacks;
+
             vm.packsOpened = 1;
             //Open the first booster pack.
             setUpAIs();
             //Set player to vm.
             vm.boosterCards = vm.AIs[0].boosterCards;
             log("You've started a new draft");
+
+            trackEvent(controllerId, 'start-draft');
         };
 
 
@@ -252,14 +232,14 @@
             } else {
                 log("Please add some cards to your deck (click on them below).");
             }
-
+            trackEvent(controllerId, 'opened-hand-simulator');
         };
 
         function takeTurn()
         {
             for (var i = 1; i < vm.AIs.length; i++)
             {
-                processTurn(vm.AIs[i]);
+                vm.AIs[i].processTurn();
             }
 
             var boosterPacks = [];
@@ -279,88 +259,35 @@
             //Player 0 is the human.
             vm.AIs = [];
             for (var i = 0; i < vm.numberOfPlayers; i++) {
-                var player = new ai(i);
-                openAIBooster(player);
+                var player = new ai.AI(i);
                 vm.AIs.push(player);
-
             }
+            openBoosterForEachPlayer();
         }
 
-        function openAIBooster(ai)
-        {
-            var totalPacksOpened = vm.fixedBFZpacks;
-            if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 0, 0, 1).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
-            
-            totalPacksOpened += vm.fixedORIpacks;
-            if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 0, 1, 0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
+        function openBoosterForEachPlayer() {
 
-            totalPacksOpened += vm.fixedMM2Packs;
-            if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 1, 0, 0).then(function (data) {
-                    return addAICards(ai, data);
-                });
+            var setToOpen = getNextBoosterSetToOpen();
+            var totalBoostersForSet = setToOpen.boostersToOpen;
+            setToOpen.boostersToOpen = 1;
+            for (var i = 0; i < vm.numberOfPlayers; i++) {
+                var boosterCards = datacontext.openBoosterForCardSet(setToOpen);
+                addAICards(vm.AIs[i], boosterCards);
             }
+            setToOpen.boostersToOpen = totalBoostersForSet - 1;
 
-            totalPacksOpened += vm.fixedDTKpacks;
-            if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 1, 0, 0, 0).then(function(data) {
-                    return addAICards(ai, data);
-                });
-            }
+        }
 
-            totalPacksOpened += vm.fixedFRFPacks;
-            if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 1, 0, 0, 0, 0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
+        function getNextBoosterSetToOpen() {
+            for (var groupNumber = 0; groupNumber < vm.fixedSetGroups.length; groupNumber++) {
+                var group = vm.fixedSetGroups[groupNumber];
 
-            totalPacksOpened += vm.fixedKTKPacks;
-            if (vm.packsOpened <= totalPacksOpened)
-            {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 1, 0, 0, 0, 0, 0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
-
-            totalPacksOpened += vm.fixedCorePacks;
-            if (vm.packsOpened <= totalPacksOpened)
-            {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 1, 0, 0, 0, 0, 0, 0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
-
-            totalPacksOpened += vm.fixedJOUpacks;
-            if (vm.packsOpened <= totalPacksOpened)
-            {
-                return datacontext.openMixtureOfSortedBoosters(0,0,1,0,0,0,0,0,0,0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
-
-            totalPacksOpened += vm.fixedBNGpacks;
-            if (vm.packsOpened <= totalPacksOpened)
-            {
-                return datacontext.openMixtureOfSortedBoosters(0, 1, 0, 0, 0, 0,0,0,0,0).then(function (data) {
-                    return addAICards(ai, data);
-                });
-            }
-
-            totalPacksOpened += vm.fixedTHSpacks;
-            if (vm.packsOpened <= totalPacksOpened)
-            {
-                return datacontext.openMixtureOfSortedBoosters(1, 0, 0, 0, 0, 0,0,0,0,0).then(function (data) {
-                    return addAICards(ai, data);
-                });
+                for (var setNumber = 0; setNumber < group.length; setNumber++) {
+                    var currentSet = group[setNumber];
+                    if (currentSet.boostersToOpen > 0) {
+                        return currentSet;
+                    }
+                }
             }
         }
 

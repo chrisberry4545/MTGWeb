@@ -1,154 +1,165 @@
-﻿function ai(name) {
-    this.name = name;
-    this.cards = [];
-    this.colors = [];
-    this.boosterCards = [];
-}
+﻿(function () {
+    'use strict';
 
+    var serviceId = 'ai';
+    angular.module('app').factory(serviceId,
+        [ai]);
 
-function processTurn(ai) {
-    var cardToAdd;
-    var cards = ai.boosterCards;
-    if (ai.colors.length === 0) {
-        cardToAdd = noColorsProcess(cards);
-    } else if (ai.colors.length === 1) {
-        cardToAdd = singleColorProcess(cards, ai);
-    } else if (ai.colors.length === 2) {
-        cardToAdd = twoColorProcess(cards, ai);
-    } else {
-        cardToAdd = standardProcess(cards, ai);
-    }
+    function ai() {
 
-    if (cardToAdd != null) {
-        var index = ai.boosterCards.indexOf(cardToAdd);
-        if (index > -1) {
-            ai.boosterCards.splice(index, 1);
+        function AI(name) {
+            this.name = name;
+            this.cards = [];
+            this.colors = [];
+            this.boosterCards = [];
         }
-        ai.cards.push(cardToAdd);
 
-        if (ai.colors.length <= 3 - cardToAdd.Color.length) {
-            cardToAdd.Color.forEach(function (color) {
-                if (color !== "C" && ai.colors.indexOf(color) === -1) {
-                    ai.colors.push(color);
+        AI.prototype.processTurn = function () {
+
+            var cardToAdd;
+            var cards = this.boosterCards;
+            console.log('colors');
+            console.log(this.colors);
+            if (this.colors.length === 0) {
+                cardToAdd = this.noColorsProcess(cards);
+            } else if (this.colors.length === 1) {
+                cardToAdd = this.singleColorProcess(cards);
+            } else if (this.colors.length === 2) {
+                cardToAdd = this.twoColorProcess(cards);
+            } else {
+                cardToAdd = this.standardProcess(cards);
+            }
+
+            if (cardToAdd != null) {
+                var index = this.boosterCards.indexOf(cardToAdd);
+                if (index > -1) {
+                    this.boosterCards.splice(index, 1);
                 }
-            });
-        }
-    }
-       
-}
+                this.cards.push(cardToAdd);
 
-/*Get the card with the highest rating*/
-function noColorsProcess(cards) {
-    var bestRate = 0;
-    var bestNumber = 0;
-    for (var i = 0; i < cards.length; i++) {
-        var cardRating = parseInt(cards[i].Rating);
-        if (cardRating > bestRate) {
-            bestRate = cardRating;
-            bestNumber = i;
-        }
-    }
-    var pickedCard = cards[bestNumber];
-    var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
-    return pickedCardWithExtraConsiderations;
-}
+                if (this.colors.length <= 3 - cardToAdd.Color.length) {
+                    var currentAi = this;
+                    cardToAdd.Color.forEach(function (color) {
+                        if (color !== "C" && currentAi.colors.indexOf(color) === -1) {
+                            currentAi.colors.push(color);
+                        }
+                    });
+                }
+            }
 
-/*Gets the card with the highest rating if it has a single color*/
-function singleColorProcess(cards, ai) {
-    var bestRate = 0;
-    var bestNumber = 0;
-    //Only one color.
-    var color = ai.colors[0];
-    for (var i = 0; i < cards.length; i++) {
-        var cardRating = parseInt(cards[i].Rating);
-        if (cardRating > bestRate
-            && 
-            (cards[i].Color.length <= 2 ||
-            getNumberOfMatchingColors(cards[i], ai.colors) == 1)) {
-            bestRate = cardRating;
-            bestNumber = i;
-        }
-    }
-    var pickedCard = cards[bestNumber];
-    var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
-    return pickedCardWithExtraConsiderations;
-}
+        };
 
-function twoColorProcess(cards, ai) {
-    var bestRate = 0;
-    var bestNumber = 0;
-    for (var i = 0; i < cards.length; i++) {
-        var cardRating = parseInt(cards[i].Rating);
-        if (cardRating > bestRate &&
-            (cards[i].Color.length == 1 ||
-            getNumberOfMatchingColors(cards[i], ai.colors) == 2)) {
-            bestRate = cardRating;
-            bestNumber = i;
+        /*Get the card with the highest rating*/
+        AI.prototype.noColorsProcess = function (cards) {
+            var bestRate = 0;
+            var bestNumber = 0;
+            for (var i = 0; i < cards.length; i++) {
+                var cardRating = parseInt(cards[i].Rating);
+                if (cardRating > bestRate) {
+                    bestRate = cardRating;
+                    bestNumber = i;
+                }
+            }
+            var pickedCard = cards[bestNumber];
+            var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
+            return pickedCardWithExtraConsiderations;
         }
-    }
-    var pickedCard = cards[bestNumber];
-    var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
-    return pickedCardWithExtraConsiderations;
-}
 
-/*Gets the card with the highest rating from the AIs chosen colors.*/
-function standardProcess(cards, ai) {
-    var bestRate = 0;
-    var bestNumber = 0;
-    for (var i = 0; i < cards.length; i++) {
-        var cardRating = parseInt(cards[i].Rating);
-        if (cardRating > bestRate &&
-            (getNumberOfMatchingColors(cards[i], ai.colors) >= cards[i].Color.length)) {
-            bestRate = cardRating;
-            bestNumber = i;
+        /*Gets the card with the highest rating if it has a single color*/
+        AI.prototype.singleColorProcess = function (cards) {
+            var bestRate = 0;
+            var bestNumber = 0;
+            //Only one color.
+            var color = this.colors[0];
+            for (var i = 0; i < cards.length; i++) {
+                var cardRating = parseInt(cards[i].Rating);
+                if (cardRating > bestRate
+                    &&
+                    (cards[i].Color.length <= 2 ||
+                    getNumberOfMatchingColors(cards[i], this.colors) == 1)) {
+                    bestRate = cardRating;
+                    bestNumber = i;
+                }
+            }
+            var pickedCard = cards[bestNumber];
+            var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
+            return pickedCardWithExtraConsiderations;
         }
-    }
-    var pickedCard = cards[bestNumber];
-    if (pickedCard == null) {
-        return pickedCard;
-    }
-    var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
-    return pickedCardWithExtraConsiderations;
-}
 
-function additonalConsiderations(chosenCard, cardsList) {
-    if (isRareOrMythic(chosenCard)) {
-        return chosenCard;
-    } else {
-        //Pick another card if theres a mythic rare other which isnt the card picked.
-        for (var i = 0; i < cardsList.length; i++) {
-            var cardRating = parseInt(cardsList[i].Rating);
-            if (cardRating > 4 && (isRareOrMythic(cardsList[i]))) {
-                return cardsList[i];
+        AI.prototype.twoColorProcess = function (cards) {
+            var bestRate = 0;
+            var bestNumber = 0;
+            for (var i = 0; i < cards.length; i++) {
+                var cardRating = parseInt(cards[i].Rating);
+                if (cardRating > bestRate &&
+                    (cards[i].Color.length == 1 ||
+                    getNumberOfMatchingColors(cards[i], this.colors) == 2)) {
+                    bestRate = cardRating;
+                    bestNumber = i;
+                }
+            }
+            var pickedCard = cards[bestNumber];
+            var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
+            return pickedCardWithExtraConsiderations;
+        }
+
+        /*Gets the card with the highest rating from the AIs chosen colors.*/
+        AI.prototype.standardProcess = function (cards) {
+            var bestRate = 0;
+            var bestNumber = 0;
+            for (var i = 0; i < cards.length; i++) {
+                var cardRating = parseInt(cards[i].Rating);
+                if (cardRating > bestRate &&
+                    (getNumberOfMatchingColors(cards[i], this.colors) >= cards[i].Color.length)) {
+                    bestRate = cardRating;
+                    bestNumber = i;
+                }
+            }
+            var pickedCard = cards[bestNumber];
+            if (pickedCard == null) {
+                return pickedCard;
+            }
+            var pickedCardWithExtraConsiderations = additonalConsiderations(pickedCard, cards);
+            return pickedCardWithExtraConsiderations;
+        }
+
+        function additonalConsiderations(chosenCard, cardsList) {
+            if (isRareOrMythic(chosenCard)) {
+                return chosenCard;
+            } else {
+                //Pick another card if theres a mythic rare other which isnt the card picked.
+                for (var i = 0; i < cardsList.length; i++) {
+                    var cardRating = parseInt(cardsList[i].Rating);
+                    if (cardRating > 4 && (isRareOrMythic(cardsList[i]))) {
+                        return cardsList[i];
+                    }
+                }
+                return chosenCard;
             }
         }
-        return chosenCard;
-    }
-}
 
-function isRareOrMythic(card) {
-    if (card.Rarity === "M" || card.Rarity === "R") {
-        return true;
-    }
-    return false;
-}
-
-
-function arraysIdentical(a, b) {
-    var i = a.length;
-    if (i !== b.length) return false;
-    while (i--) {
-        if (a[i] !== b[i]) return false;
-    }
-    return true;
-};
-
-function getNumberOfMatchingColors(card, aisColors) {
-    var numberOfMatches = 0;
-    $.each(card.Color, function (index, value) {
-        if (aisColors.indexOf(value) != -1) {
-            numberOfMatches++;
+        function isRareOrMythic(card) {
+            if (card.Rarity === "M" || card.Rarity === "R") {
+                return true;
+            }
+            return false;
         }
-    });
-    return numberOfMatches;
-}
+
+
+
+        function getNumberOfMatchingColors(card, aisColors) {
+            var numberOfMatches = 0;
+            $.each(card.Color, function (index, value) {
+                if (aisColors.indexOf(value) != -1) {
+                    numberOfMatches++;
+                }
+            });
+            return numberOfMatches;
+        }
+
+        return {
+            AI: AI
+        }
+
+    }
+})();

@@ -13,16 +13,7 @@
 
                         <div class="textcenter">
                             <select ng-model="vm.selectedSet" ng-change="vm.swapCards()">
-                                <option value="10">Show Battle for Zendikar Cards</option>
-                                <option value="9">Show Magic Origins Cards</option>
-                                <option value="8">Show Modern Masters 2015 Cards</option>
-                                <option value="7">Show Dragons of Tarkir Cards</option>
-                                <option value="6">Show Fate Reforged Cards</option>
-                                <option value="5">Show Khans of Tarkir Cards</option>
-                                <option value="1">Show Magic 2015 Cards</option>
-                                <option value="2">Show Theros Cards</option>
-                                <option value="3">Show Born of the Gods Cards</option>
-                                <option value="4">Show Journey into Nyx Cards</option>
+                                <option ng-repeat="set in vm.flatCardSets" value="{{set.setGroupNum}}|{{set.setNum}}">{{set.cardSet.fullName}}</option>
                             </select>
                         </div>
 

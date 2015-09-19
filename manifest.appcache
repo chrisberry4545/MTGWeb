@@ -1,8 +1,9 @@
 ﻿CACHE MANIFEST
-# 2015-01-20 v1.4.25
+# 2015-01-20 v1.5.1
 
 CACHE:
 
+app/carddata/CardsExpeditionsBFZ.min.js
 app/carddata/CardsBFZ.min.js
 app/carddata/CardsORI.min.js
 app/carddata/CardsMM2.min.js
@@ -151,7 +152,15 @@ Images/BFZ/EncirclingFissure.jpg
 Images/BFZ/EndlessOne.jpg
 Images/BFZ/EvolvingWilds.jpg
 Images/BFZ/ExertInfluence.jpg
+Images/BFZ/ExpeditionAridMesa.jpg
+Images/BFZ/ExpeditionCanopyVista.jpg
+Images/BFZ/ExpeditionCinderGlade.jpg
 Images/BFZ/ExpeditionEnvoy.jpg
+Images/BFZ/ExpeditionHallowedFountain.jpg
+Images/BFZ/ExpeditionPrairieStream.jpg
+Images/BFZ/ExpeditionSmolderingMarsh.jpg
+Images/BFZ/ExpeditionSteamVents.jpg
+Images/BFZ/ExpeditionSunkenHollow.jpg
 Images/BFZ/EyelessWatcher.jpg
 Images/BFZ/FathomFeeder.jpg
 Images/BFZ/FelidarCub.jpg

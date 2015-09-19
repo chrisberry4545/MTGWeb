@@ -14,7 +14,7 @@
                 </script>
             </div>
         </div>
-        <button onclick="$('#advertSection').hide(); $('.fullView').addClass('fullViewWithAdvert')" class="chris-btn chris-btn-mini" style="float:right; margin-top:30px; width: 60px;">
+        <button onclick="$('#advertSection').hide(); $('.fullView').addClass('fullViewWithAdvert'); trackEvent('bannerad', 'hide-ad');" class="chris-btn chris-btn-mini" style="float:right; margin-top:30px; width: 60px;">
             <i ng-if="!vm.showExtraOptions" class="icon-chevron-up"></i>
         </button>
     </div>

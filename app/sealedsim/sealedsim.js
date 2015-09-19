@@ -14,27 +14,28 @@
 
         var vm = this;
         vm.title = 'Sealed Simulator';
-        vm.boosters_to_open_bfz = 6;
-        vm.boosters_to_open_ori = 0;
-        vm.boosters_to_open_mm2 = 0;
-        vm.boosters_to_open_dtk = 0;
-        vm.boosters_to_open_frf = 0;
-        vm.boosters_to_open_ktk = 0;
-        vm.boosters_to_open_core = 0;
-        vm.boosters_to_open_jou = 0;
-        vm.boosters_to_open_bng = 0;
-        vm.boosters_to_open_ths = 0;
 
         vm.landcards = [];
         vm.selectedLandCards = [];
 
-        vm.showOldSets = false;
-        vm.includeOlderSets = function () {
-            if (vm.showOldSets) {
-                vm.showOldSets = false;
+
+        vm.showExtraOptions = false;
+        vm.displayExtraOptions = function () {
+            if (vm.showExtraOptions) {
+                vm.showExtraOptions = false;
+                trackEvent(controllerId, 'hide-extra-options');
             } else {
-                vm.showOldSets = true;
+                vm.showExtraOptions = true;
+                trackEvent(controllerId, 'show-extra-options');
             }
+        }
+
+        vm.setGroups = [];
+        function initSetGroups() {
+            datacontext.getCardSetGroups().then(function (data) {
+                data[0][0].boostersToOpen = 6; //Set latest set to open 6 boosters by default
+                vm.setGroups = data;
+            });
         }
 
         vm.chartsHidden = false;
@@ -42,26 +43,8 @@
             vm.chartsHidden = !vm.chartsHidden;
         }
 
-        vm.include_seeded_boosters = "0";
-        vm.include_seeded_boosters_options = [
-            //{ key: "W", value: "White" },
-            //{ key: "U", value: "Blue" },
-            //{ key: "B", value: "Black" },
-            //{ key: "R", value: "Red" },
-            //{ key: "G", value: "Green" },
-            { key: "0", value: "Don't use Seeded" }
-        ];
+        vm.include_promo = "1";
 
-
-        vm.additionalSealedPacks = [];
-
-        vm.removeSealedPack = function () {
-            vm.additionalSealedPacks.pop();
-        }
-
-        vm.addSeededPack = function () {
-            vm.additionalSealedPacks.push(vm.include_seeded_boosters);
-        }
 
         vm.boosterCards = [];
 
@@ -69,21 +52,26 @@
 
         vm.saveSelection = function () {
             downloadDataService.saveCardsList(vm.selectedCards.concat(vm.selectedLandCards), "sealedselection");
+            trackEvent(controllerId, 'save-selected-cards');
         }
         vm.saveCardsInBooster = function () {
             downloadDataService.saveCardsList(vm.boosterCards, "cardsRemainingInPool");
+            trackEvent(controllerId, 'save-booster-cards');
         }
         vm.saveCompletePool = function () {
             downloadDataService.saveCardsList(vm.selectedCards.concat(vm.boosterCards), "sealedPool");
+            trackEvent(controllerId, 'save-complete-pool');
         }
 
         vm.addLandCard = function (card) {
             vm.selectedLandCards.push(card);
+            trackEvent(controllerId, 'add-land-card', card.Name);
         }
         vm.removeLandCard = function (card) {
             var index = vm.selectedLandCards.indexOf(card);
             if (index > -1) {
                 vm.selectedLandCards.splice(index, 1);
+                trackEvent(controllerId, 'remove-land-card', card.Name);
             }
         }
 
@@ -91,14 +79,16 @@
         {
             logSuccess("Added " + card.Name + " to your selection...");
             _removeFromArrayAndAddToArray(vm.boosterCards, vm.selectedCards, card);
-            graphAnalysis.displayChartsForCards(vm.selectedCards);
+            updateGraphs();
+            trackEvent(controllerId, 'add-to-deck', card.Name);
         };
 
         vm.removeFromDeck = function(card)
         {
             log("Put " + card.Name + " back into sealed pool...")
             _removeFromArrayAndAddToArray(vm.selectedCards, vm.boosterCards, card);
-            graphAnalysis.displayChartsForCards(vm.selectedCards);
+            updateGraphs();
+            trackEvent(controllerId, 'remove-from-deck', card.Name);
         }
 
 
@@ -117,6 +107,7 @@
             } else {
                 log("Please add some cards to your deck (click on them above).");
             }
+            trackEvent(controllerId, 'opened-hand-simulator');
 
         };
 
@@ -129,125 +120,47 @@
             arrayToAddTo.push(card);
         }
 
-        function validateEntries() {
-
-            if (vm.boosters_to_open_core == null
-                || vm.boosters_to_open_ths == null
-                || vm.boosters_to_open_bng == null
-                || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null
-                || vm.boosters_to_open_frf == null
-                || vm.boosters_to_open_dtk == null
-                || vm.boosters_to_open_mm2 == null
-                || vm.boosters_to_open_ori == null
-                || vm.boosters_to_open_bfz == null) {
-                logError("Please use a number for the amount of boosters.");
-                return false;
-            }
-            return true;
-        }
-
         vm.openBoosters = function()
         {
-            if (!validateEntries()) {
-                return false;
-            }
-            if (vm.include_seeded_boosters != "0") {
-                    return datacontext.openMixtureOfSeededBoosters(
-                        parseInt(vm.boosters_to_open_ths),
-                        parseInt(vm.boosters_to_open_bng),
-                        parseInt(vm.boosters_to_open_jou),
-                        parseInt(vm.boosters_to_open_core),
-                        parseInt(vm.boosters_to_open_ktk),
-                        parseInt(vm.boosters_to_open_frf),
-                        parseInt(vm.boosters_to_open_dtk),
-                        parseInt(vm.boosters_to_open_mm2),
-                        parseInt(vm.boosters_to_open_ori),
-                        parseInt(vm.boosters_to_open_bfz),
-                        vm.include_seeded_boosters).then(function (data) {
-                            vm.boosterCards = [];
-                            vm.selectedCards = [];
-                            vm.selectedLandCards = [];
+            vm.boosterCards = [];
 
-                            var additionalMythic = [];
-                            var additionalRare = [];
-                            var additionalUncommon = [];
-                            var additionalCommon = [];
-                            for (var i = 0; i < vm.additionalSealedPacks.length; i++) {
-                                var additionalSeeded = vm.additionalSealedPacks[i];
-                                if (additionalSeeded != "0") {
-                                    var additionalCards = datacontext.openXCardBoostersForLatestSet(1, additionalSeeded);
-                                    additionalMythic.push.apply(additionalMythic, additionalCards.mythicCards);
-                                    additionalRare.push.apply(additionalRare, additionalCards.rareCards);
-                                    additionalUncommon.push.apply(additionalUncommon, additionalCards.uncommonCards);
-                                    additionalCommon.push.apply(additionalCommon, additionalCards.commonCards);
-                                }
-                            }
+            var cardsToUse = datacontext.openBoostersForCardSetGroups(vm.setGroups);
+            vm.boosterCards.push.apply(vm.boosterCards, cardsToUse.mythicCards);
+            vm.boosterCards.push.apply(vm.boosterCards, cardsToUse.rareCards);
+            vm.boosterCards.push.apply(vm.boosterCards, cardsToUse.uncommonCards);
+            vm.boosterCards.push.apply(vm.boosterCards, cardsToUse.commonCards);
 
-
-                            vm.boosterCards.push.apply(vm.boosterCards, additionalMythic);
-                            vm.boosterCards.push.apply(vm.boosterCards, data.mythicCards);
-                            vm.boosterCards.push.apply(vm.boosterCards, additionalRare);
-                            vm.boosterCards.push.apply(vm.boosterCards, data.rareCards);
-                            vm.boosterCards.push.apply(vm.boosterCards, additionalUncommon);
-                            vm.boosterCards.push.apply(vm.boosterCards, data.uncommonCards);
-                            vm.boosterCards.push.apply(vm.boosterCards, additionalCommon);
-                            vm.boosterCards.push.apply(vm.boosterCards, data.commonCards);
-
-                            graphAnalysis.resetAllCanvas();
-                            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-cardPool', graphWidth, graphHeight);
-                            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-cardPool', graphWidth, graphHeight);
-                            graphAnalysis.setTypeChartHolder('typePieChartContainer-cardPool', graphWidth, graphHeight);
-                            graphAnalysis.displayChartsForCards(vm.boosterCards);
-                            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-selectedCards', graphWidth, graphHeight);
-                            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-selectedCards', graphWidth, graphHeight);
-                            graphAnalysis.setTypeChartHolder('typePieChartContainer-selectedCards', graphWidth, graphHeight);
-
-                            return vm.boosterCards;
-                        });
+            if (vm.include_promo == "1") {
+                datacontext.addPromoForLatestSet(vm.boosterCards);
+                trackEvent(controllerId, 'include-promo');
             } else {
-                return datacontext.openMixtureOfSortedBoosters(
-                    parseInt(vm.boosters_to_open_ths),
-                    parseInt(vm.boosters_to_open_bng),
-                    parseInt(vm.boosters_to_open_jou),
-                    parseInt(vm.boosters_to_open_core),
-                    parseInt(vm.boosters_to_open_ktk),
-                    parseInt(vm.boosters_to_open_frf),
-                    parseInt(vm.boosters_to_open_dtk),
-                    parseInt(vm.boosters_to_open_mm2),
-                    parseInt(vm.boosters_to_open_ori),
-                    parseInt(vm.boosters_to_open_bfz)
-                    ).then(function (data) {
-                        vm.boosterCards = [];
-                        vm.selectedCards = [];
-                        vm.boosterCards.push.apply(vm.boosterCards, data.mythicCards);
-                        vm.boosterCards.push.apply(vm.boosterCards, data.rareCards);
-                        vm.boosterCards.push.apply(vm.boosterCards, data.uncommonCards);
-                        vm.boosterCards.push.apply(vm.boosterCards, data.commonCards);
-
-                        graphAnalysis.setPieChartGraphElement('colorPieChartContainer-cardPool', graphWidth, graphHeight);
-                        graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-cardPool', graphWidth, graphHeight);
-                        graphAnalysis.setTypeChartHolder('typePieChartContainer-cardPool', graphWidth, graphHeight);
-                        graphAnalysis.displayChartsForCards(vm.boosterCards);
-                        graphAnalysis.setPieChartGraphElement('colorPieChartContainer-selectedCards', graphWidth, graphHeight);
-                        graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-selectedCards', graphWidth, graphHeight);
-                        graphAnalysis.setTypeChartHolder('typePieChartContainer-selectedCards', graphWidth, graphHeight);
-
-                        return vm.boosterCards;
-                    });
+                trackEvent(controllerId, 'exclude-promo');
             }
+
+            return;
         };
 
         activate();
 
+        function updateGraphs() {
+            graphAnalysis.resetAllCanvas();
+            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-cardPool', graphWidth, graphHeight);
+            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-cardPool', graphWidth, graphHeight);
+            graphAnalysis.setTypeChartHolder('typePieChartContainer-cardPool', graphWidth, graphHeight);
+            graphAnalysis.displayChartsForCards(vm.boosterCards);
+
+            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-selectedCards', graphWidth, graphHeight);
+            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-selectedCards', graphWidth, graphHeight);
+            graphAnalysis.setTypeChartHolder('typePieChartContainer-selectedCards', graphWidth, graphHeight);
+            graphAnalysis.displayChartsForCards(vm.selectedCards);
+        }
+
         function activate() {
-            common.activateController([], controllerId)
+            common.activateController([initSetGroups()], controllerId)
                 .then(function () {
                     vm.landcards = landcards.getLandCards();
-                    graphAnalysis.setPieChartGraphElement('colorPieChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.setTypeChartHolder('typePieChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.resetAllCanvas();
+                    updateGraphs();
+                    trackEvent(controllerId, 'init');
                 });
         };
     }

@@ -39,6 +39,16 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+
+        function trackPageView(page, eventName, label) {
+            trackAction('_trackPageview', page, eventName, label);
+        }
+        function trackEvent(page, eventName, label) {
+            trackAction('_trackEvent', page, eventName, label);
+        }
+        function trackAction(actionType, page, eventName, label) {
+            _gaq.push([actionType, page, eventName, label])
+        }
     </script>
 
 
@@ -125,6 +135,7 @@
     <script src="app/carddisplay/carddisplay.min.js"></script>
     <script src="app/multiplayerdraft/multiplayerdraft.min.js"></script>
     <script src="app/carddata/CardsBFZ.min.js"></script>
+    <script src="app/carddata/CardsExpeditionsBFZ.min.js"></script>
     <script src="app/carddata/CardsBNG.min.js"></script>
     <script src="app/carddata/CardsTHS.min.js"></script>
     <script src="app/carddata/CardsJOU.min.js"></script>

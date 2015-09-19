@@ -10,83 +10,46 @@
 
         var vm = this;
         vm.title = 'Booster Simulator';
-        vm.column1Title = "Image";
-        vm.column2Title = "Name";
-        vm.column3Title = "Rarity";
-
-        vm.boosters_to_open_bfz = localStorageService.getBoosterSim_numBoosters_setTwo() || 3;
-        vm.boosters_to_open_ori = localStorageService.getBoosterSim_numBoosters_setOne() || 0;
-        vm.boosters_to_open_mm2 = localStorageService.getBoosterSim_numBoosters_setZero() || 0;
-        vm.boosters_to_open_ktk = 0;//localStorageService.getBoosterSim_numBoosters_setOne() || 0;
-        vm.boosters_to_open_frf = 0;//localStorageService.getBoosterSim_numBoosters_setTwo() || 0;
-        vm.boosters_to_open_dtk = 0;//localStorageService.getBoosterSim_numBoosters_setThree() || 0;
-
-        vm.boosters_to_open_core = 0;
-        vm.boosters_to_open_ths = 0;
-        vm.boosters_to_open_bng = 0;
-        vm.boosters_to_open_jou = 0;
-
         vm.cards = [];
 
+        vm.setGroups = [];
 
-        function storeValues() {
-            localStorageService.setBoosterSim_numBoosters_setZero(vm.boosters_to_open_mm2);
-            localStorageService.setBoosterSim_numBoosters_setOne(vm.boosters_to_open_ori);
-            localStorageService.setBoosterSim_numBoosters_setTwo(vm.boosters_to_open_bfz);
-            //localStorageService.setBoosterSim_numBoosters_setThree(vm.boosters_to_open_dtk);
+        function initSetGroups() {
+            datacontext.getCardSetGroups().then(function (data) {
+                data[0][0].boostersToOpen = 6; //Set latest set to open 6 boosters by default
+                vm.setGroups = data;
+            });
         }
 
-        function validateEntries() {
-            if (vm.boosters_to_open_core == null
-                || vm.boosters_to_open_ths == null
-                || vm.boosters_to_open_bng == null
-                || vm.boosters_to_open_jou == null
-                || vm.boosters_to_open_ktk == null
-                || vm.boosters_to_open_frf == null
-                || vm.boosters_to_open_dtk == null
-                || vm.boosters_to_open_mm2 == null
-                || vm.boosters_to_open_ori == null
-                || vm.boosters_to_open_bfz == null) {
-                logError("Please use a number for the amount of boosters.");
-                return false;
+        vm.showExtraOptions = false;
+        vm.displayExtraOptions = function () {
+            if (vm.showExtraOptions) {
+                vm.showExtraOptions = false;
+            } else {
+                vm.showExtraOptions = true;
             }
-            return true;
         }
 
         vm.openBoosters = function()
         {
-            if (!validateEntries()) {
-                return false;
-            }
+            vm.cards = [];
 
-            storeValues();
-            return datacontext.openMixtureOfSortedBoosters(
-                parseInt(vm.boosters_to_open_ths),
-                parseInt(vm.boosters_to_open_bng),
-                parseInt(vm.boosters_to_open_jou),
-                parseInt(vm.boosters_to_open_core),
-                parseInt(vm.boosters_to_open_ktk),
-                parseInt(vm.boosters_to_open_frf),
-                parseInt(vm.boosters_to_open_dtk),
-                parseInt(vm.boosters_to_open_mm2),
-                parseInt(vm.boosters_to_open_ori),
-                parseInt(vm.boosters_to_open_bfz)
-                ).then(function (data) {
-                    vm.cards = [];
-                    log("Opening booster packs...");
-                    vm.cards.push.apply(vm.cards, data.mythicCards);
-                    vm.cards.push.apply(vm.cards, data.rareCards);
-                    vm.cards.push.apply(vm.cards, data.uncommonCards);
-                    vm.cards.push.apply(vm.cards, data.commonCards);
-                    return vm.cards;
-            });
+            var cardsToUse = datacontext.openBoostersForCardSetGroups(vm.setGroups);
+            vm.cards.push.apply(vm.cards, cardsToUse.mythicCards);
+            vm.cards.push.apply(vm.cards, cardsToUse.rareCards);
+            vm.cards.push.apply(vm.cards, cardsToUse.uncommonCards);
+            vm.cards.push.apply(vm.cards, cardsToUse.commonCards);
+
+            return;
         }
 
         activate();
 
         function activate() {
-            common.activateController([], controllerId)
-                .then(function () { });
+            common.activateController([initSetGroups()], controllerId)
+                .then(function () {
+                    trackEvent(controllerId, 'init');
+                });
         }
     }
 })();
