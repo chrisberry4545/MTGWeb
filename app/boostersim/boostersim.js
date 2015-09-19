@@ -14,8 +14,8 @@
         vm.column2Title = "Name";
         vm.column3Title = "Rarity";
 
-
-        vm.boosters_to_open_ori = localStorageService.getBoosterSim_numBoosters_setOne() || 3;
+        vm.boosters_to_open_bfz = localStorageService.getBoosterSim_numBoosters_setTwo() || 3;
+        vm.boosters_to_open_ori = localStorageService.getBoosterSim_numBoosters_setOne() || 0;
         vm.boosters_to_open_mm2 = localStorageService.getBoosterSim_numBoosters_setZero() || 0;
         vm.boosters_to_open_ktk = 0;//localStorageService.getBoosterSim_numBoosters_setOne() || 0;
         vm.boosters_to_open_frf = 0;//localStorageService.getBoosterSim_numBoosters_setTwo() || 0;
@@ -32,7 +32,7 @@
         function storeValues() {
             localStorageService.setBoosterSim_numBoosters_setZero(vm.boosters_to_open_mm2);
             localStorageService.setBoosterSim_numBoosters_setOne(vm.boosters_to_open_ori);
-            //localStorageService.setBoosterSim_numBoosters_setTwo(vm.boosters_to_open_frf);
+            localStorageService.setBoosterSim_numBoosters_setTwo(vm.boosters_to_open_bfz);
             //localStorageService.setBoosterSim_numBoosters_setThree(vm.boosters_to_open_dtk);
         }
 
@@ -45,7 +45,8 @@
                 || vm.boosters_to_open_frf == null
                 || vm.boosters_to_open_dtk == null
                 || vm.boosters_to_open_mm2 == null
-                || vm.boosters_to_open_ori == null) {
+                || vm.boosters_to_open_ori == null
+                || vm.boosters_to_open_bfz == null) {
                 logError("Please use a number for the amount of boosters.");
                 return false;
             }
@@ -68,7 +69,8 @@
                 parseInt(vm.boosters_to_open_frf),
                 parseInt(vm.boosters_to_open_dtk),
                 parseInt(vm.boosters_to_open_mm2),
-                parseInt(vm.boosters_to_open_ori)
+                parseInt(vm.boosters_to_open_ori),
+                parseInt(vm.boosters_to_open_bfz)
                 ).then(function (data) {
                     vm.cards = [];
                     log("Opening booster packs...");

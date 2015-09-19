@@ -115,6 +115,10 @@
     <Content Include="app\browsecards\browsecards.min.js">
       <DependentUpon>browsecards.js</DependentUpon>
     </Content>
+    <Content Include="app\carddata\CardsBFZ.js" />
+    <Content Include="app\carddata\CardsBFZ.min.js">
+      <DependentUpon>CardsBFZ.js</DependentUpon>
+    </Content>
     <Content Include="app\carddata\CardsBNG.min.js">
       <DependentUpon>CardsBNG.js</DependentUpon>
     </Content>
@@ -1095,6 +1099,9 @@
     </Content>
     <Content Include="app\carddata\CardsORI.min.js.map">
       <DependentUpon>CardsORI.min.js</DependentUpon>
+    </Content>
+    <Content Include="app\carddata\CardsBFZ.min.js.map">
+      <DependentUpon>CardsBFZ.min.js</DependentUpon>
     </Content>
     <None Include="manifest.appcache" />
     <Content Include="app\boostersim\boostersim.min.js.map">

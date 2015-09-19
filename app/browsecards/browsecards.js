@@ -17,6 +17,8 @@
 
         vm.showingTHS = false;
         vm.showingBNG = true;
+        vm.BFZCards = [];
+        vm.ORICards = [];
         vm.MM2Cards = [];
         vm.DTKCards = [];
         vm.FRFCards = [];
@@ -27,12 +29,22 @@
         vm.JOUCards = [];
         vm.cards = [];
 
-        vm.selectedSet = "9";
+        vm.selectedSet = "10";
 
         vm.swapCards = function()
         {
+            console.log("selcedted set: " + vm.selectedSet);
             switch(vm.selectedSet)
             {
+                case "10":
+                    if (vm.BFZCards.commonCards != null) {
+                        vm.cards = vm.BFZCards;
+                    } else {
+                        getAllBFZCards().then(function () {
+                            vm.cards = vm.BFZCards;
+                        });
+                    }
+                    break;
                 case "9":
                     if (vm.ORICards.commonCards != null) {
                         vm.cards = vm.ORICards;
@@ -41,6 +53,7 @@
                             vm.cards = vm.ORICards;
                         });
                     }
+                    break;
                 case "8":
                     if (vm.MM2Cards.commonCards != null) {
                         vm.cards = vm.MM2Cards;
@@ -120,10 +133,22 @@
         activate();
 
         function activate() {
-            common.activateController([getAllORICards()], controllerId)
+            common.activateController([getAllBFZCards()], controllerId)
                 .then(function () {
-                    vm.cards = vm.ORICards;
+                    vm.cards = vm.BFZCards;
                 });
+        }
+        
+        function getAllBFZCards() {
+            return datacontext.getAllBFZCardsByRarity().then(function (data) {
+                return vm.BFZCards = data;
+            });
+        }
+
+        function getAllORICards() {
+            return datacontext.getAllORICardsByRarity().then(function (data) {
+                return vm.ORICards = data;
+            });
         }
 
         function getAllMM2Cards() {
@@ -178,11 +203,6 @@
             });
         }
 
-        function getAllORICards() {
-            return datacontext.getAllORICardsByRarity().then(function (data) {
-                return vm.ORICards = data;
-            });
-        }
 
     }
 })();

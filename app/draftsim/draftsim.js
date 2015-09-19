@@ -21,7 +21,8 @@
 
         vm.boosters_to_open = 1;
 
-        vm.boosters_to_open_ori = 3;
+        vm.boosters_to_open_bfz = 3;
+        vm.boosters_to_open_ori = 0;
         vm.boosters_to_open_mm2 = 0;
         vm.boosters_to_open_dtk = 0;
         vm.boosters_to_open_frf = 0;
@@ -41,6 +42,7 @@
         vm.packsOpened = 0;
         vm.totalPacksToOpen = 3;
 
+        vm.fixedBFZpacks = 0;
         vm.fixedORIpacks = 0;
         vm.fixedMM2Packs = 0;
         vm.fixedDTKpacks = 0;
@@ -191,7 +193,8 @@
                 || vm.boosters_to_open_frf == null
                 || vm.boosters_to_open_dtk == null
                 || vm.boosters_to_open_mm2 == null
-                || vm.boosters_to_open_ori == null) {
+                || vm.boosters_to_open_ori == null
+                || vm.boosters_to_open_bfz == null) {
                 logError("Please use a number for the amount of boosters.");
                 return false;
             }
@@ -213,6 +216,7 @@
             vm.selectedCards = [];
             vm.deckCards = [];
             vm.selectedLandCards = [];
+            vm.fixedBFZpacks = parseInt(vm.boosters_to_open_bfz);
             vm.fixedORIpacks = parseInt(vm.boosters_to_open_ori);
             vm.fixedMM2Packs = parseInt(vm.boosters_to_open_mm2);
             vm.fixedDTKpacks = parseInt(vm.boosters_to_open_dtk);
@@ -222,7 +226,7 @@
             vm.fixedBNGpacks = parseInt(vm.boosters_to_open_bng);
             vm.fixedTHSpacks = parseInt(vm.boosters_to_open_ths);
             vm.fixedJOUpacks = parseInt(vm.boosters_to_open_jou);
-            vm.totalPacksToOpen = vm.fixedBNGpacks + vm.fixedTHSpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks + vm.fixedFRFPacks + vm.fixedDTKpacks + vm.fixedMM2Packs + vm.fixedORIpacks;
+            vm.totalPacksToOpen = vm.fixedBNGpacks + vm.fixedTHSpacks + vm.fixedJOUpacks + vm.fixedCorePacks + vm.fixedKTKPacks + vm.fixedFRFPacks + vm.fixedDTKpacks + vm.fixedMM2Packs + vm.fixedORIpacks + vm.fixedBFZpacks;
             vm.packsOpened = 1;
             //Open the first booster pack.
             setUpAIs();
@@ -284,31 +288,37 @@
 
         function openAIBooster(ai)
         {
-            
-            var totalPacksOpened = vm.fixedORIpacks;
+            var totalPacksOpened = vm.fixedBFZpacks;
             if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 0, 1).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 0, 0, 1).then(function (data) {
+                    return addAICards(ai, data);
+                });
+            }
+            
+            totalPacksOpened += vm.fixedORIpacks;
+            if (vm.packsOpened <= totalPacksOpened) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 0, 1, 0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
 
             totalPacksOpened += vm.fixedMM2Packs;
             if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 1, 0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 0, 1, 0, 0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
 
             totalPacksOpened += vm.fixedDTKpacks;
             if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 1, 0, 0).then(function(data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 0, 1, 0, 0, 0).then(function(data) {
                     return addAICards(ai, data);
                 });
             }
 
             totalPacksOpened += vm.fixedFRFPacks;
             if (vm.packsOpened <= totalPacksOpened) {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 1, 0, 0, 0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 0, 1, 0, 0, 0, 0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
@@ -316,7 +326,7 @@
             totalPacksOpened += vm.fixedKTKPacks;
             if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 1, 0, 0, 0, 0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 0, 1, 0, 0, 0, 0, 0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
@@ -324,7 +334,7 @@
             totalPacksOpened += vm.fixedCorePacks;
             if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 1, 0, 0, 0, 0, 0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 0, 0, 1, 0, 0, 0, 0, 0, 0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
@@ -332,7 +342,7 @@
             totalPacksOpened += vm.fixedJOUpacks;
             if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0,0,1,0,0,0,0,0,0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0,0,1,0,0,0,0,0,0,0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
@@ -340,7 +350,7 @@
             totalPacksOpened += vm.fixedBNGpacks;
             if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(0, 1, 0, 0, 0, 0,0,0,0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(0, 1, 0, 0, 0, 0,0,0,0,0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }
@@ -348,7 +358,7 @@
             totalPacksOpened += vm.fixedTHSpacks;
             if (vm.packsOpened <= totalPacksOpened)
             {
-                return datacontext.openMixtureOfSortedBoosters(1, 0, 0, 0, 0, 0,0,0,0).then(function (data) {
+                return datacontext.openMixtureOfSortedBoosters(1, 0, 0, 0, 0, 0,0,0,0,0).then(function (data) {
                     return addAICards(ai, data);
                 });
             }

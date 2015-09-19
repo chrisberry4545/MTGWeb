@@ -31,6 +31,7 @@
             getAllTHSCardsByRarity: getAllTHSCardsByRarity,
             getAllJOUCardsByRarity: getAllJOUCardsByRarity,
             getAllORICardsByRarity: getAllORICardsByRarity,
+            getAllBFZCardsByRarity: getAllBFZCardsByRarity,
             setDisplayCard: setDisplayCard,
             getDisplayCard: getDisplayCard,
             openXCardBoostersForLatestSet: openXCardBoostersForLatestSet,
@@ -76,8 +77,8 @@
             return $q.when(openXBNGBoosters(numBoosters));
         }
 
-        function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, seedColor) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters - 1, 0);
+        function openMixtureOfSeededBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, numBFZBoosters, seedColor) {
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, numBFZBoosters - 1, 0);
             //Replace core set boosters with seeded boosters.
             var boostersToSeed = openXCardBoostersForLatestSet(1, seedColor);
             //boostersToSeed.rareCards.push(KTK[getSeedCardNumber(seedColor)]);
@@ -93,13 +94,13 @@
             return $q.when(boostersToSeed);
         }
 
-        function openMixtureOfSortedBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters) {
-            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters);
+        function openMixtureOfSortedBoosters(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, numBFZBoosters) {
+            var chosenCards = openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, numBFZBoosters);
             return $q.when(chosenCards);
 
         }
 
-        function openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters)
+        function openBoostersNoPromise(numTHSBoosters, numBNGBoosters, numJOUBoosters, numCoreSetBoosters, numKTKBoosters, numFRFBoosters, numDTKBoosters, numMM2Boosters, numORIBoosters, numBFZBoosters)
         {
             var cardsBNG = openXBNGBoosters(numBNGBoosters);
             sortCards(cardsBNG);
@@ -128,6 +129,10 @@
             var cardsORI = openXORIBoosters(numORIBoosters);
             sortCards(cardsORI);
 
+            console.log('num bfz' + numBFZBoosters)
+            var cardsBFZ = openXBFZBoosters(numBFZBoosters);
+            sortCards(cardsBFZ);
+
             combineCardArrays(cardsBNG, cardsTHS);
             combineCardArrays(cardsBNG, cardsJOU);
             combineCardArrays(cardsBNG, cardsCore);
@@ -136,6 +141,7 @@
             combineCardArrays(cardsBNG, cardsDTK);
             combineCardArrays(cardsBNG, cardsMM2);
             combineCardArrays(cardsBNG, cardsORI);
+            combineCardArrays(cardsBNG, cardsBFZ);
 
             return cardsBNG;
         }
@@ -257,6 +263,13 @@
             return selectedCards;
         }
 
+        function openXBFZBoosters(numBoosters) {
+            var cards = getAllBFZCardsSortedByRarity();
+            var selectedCards = openXCardBoosters(numBoosters, cards);
+            selectedCards = addFoilCards(BFZ, selectedCards, numBoosters, true, 1 / 6);
+            return selectedCards;
+        }
+
         function openXORIBoosters(numBoosters) {
             var cards = getAllORICardsSortedByRarity();
             var selectedCards = openXCardBoosters(numBoosters, cards);
@@ -289,7 +302,7 @@
         }
 
         function openXCardBoostersForLatestSet(numBoosters, color) {
-            var cards = getAllORICardsSortedByRarity();
+            var cards = getAllBFZCardsSortedByRarity();
             var boostersToSeed = openXCardBoostersForColor(1, cards, color);
             return boostersToSeed;
         }
@@ -681,6 +694,10 @@
             return sortCardSet(ORI);
         }
 
+        function getAllBFZCardsSortedByRarity() {
+            return sortCardSet(BFZ);
+        }
+
         function sortCardSet(cardSetVar) {
             var cards = new Cards();
             cardSetVar.forEach(function (card) {
@@ -698,6 +715,10 @@
                 }
             });
             return cards;
+        }
+
+        function getAllBFZCardsByRarity() {
+            return $q.when(getAllBFZCardsSortedByRarity())
         }
 
         function getAllORICardsByRarity() {

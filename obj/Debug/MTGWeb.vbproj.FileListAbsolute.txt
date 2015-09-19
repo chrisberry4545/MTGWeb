@@ -20,3 +20,13 @@ C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTG
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.xml
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.pdb
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.vbprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\MTGWeb\bin\MTGWeb.dll.config
+C:\Users\Chris\Source\Repos\MTGWeb\bin\MTGWeb.dll
+C:\Users\Chris\Source\Repos\MTGWeb\bin\MTGWeb.pdb
+C:\Users\Chris\Source\Repos\MTGWeb\bin\MTGWeb.xml
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.vbprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.Resources.resources
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.vbproj.GenerateResource.Cache
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.dll
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.xml
+C:\Users\Chris\Source\Repos\MTGWeb\obj\Debug\MTGWeb.pdb
