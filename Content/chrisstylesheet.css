@@ -98,8 +98,8 @@
 .modal {
   width: 80%;
   left: 10%;
-  height: 80%;
-  top: 10%;
+  height: calc(100% -70px);
+  top: 60px;
   overflow-y: scroll;
   display: block;
   background: #ffffff;
@@ -119,7 +119,6 @@
 .navbar-default {
   background: #333333;
   border: none;
-  /*height:90px;*/
   margin-bottom: 0;
 }
 .navbar-default > .container-fluid {
@@ -224,6 +223,17 @@ a:hover {
     margin-top: 20px;
   }
 }
+
+.rightOnLg {
+    text-align:center;
+}
+@media (min-width: 800px) {
+    .rightOnLg {
+        text-align:right;
+    }
+}
+
+
 @media (max-width: 800px) {
   .modalButton {
     width: 100%;

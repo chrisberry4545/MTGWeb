@@ -13,6 +13,7 @@
         $scope.generateNewHand = function () {
             vm.currentCards = 7;
             $scope.handCards = handsimulator.generateHand(vm.fullDeck, vm.currentCards);
+            trackEvent(controllerId, 'generate-new-hand');
         };
         $scope.handCards = handsimulator.generateHand(vm.fullDeck, vm.currentCards);
 
@@ -22,6 +23,7 @@
                 vm.currentCards--;
             }
             $scope.handCards = handsimulator.generateHand(vm.fullDeck, vm.currentCards);
+            trackEvent(controllerId, 'mulligan');
         };
 
         $scope.cancel = function () {
@@ -38,6 +40,7 @@
                 var logError = common.logger.getLogFn(controllerId, 'error');
                 logError("There are no more cards to draw");
             }
+            trackEvent(controllerId, 'draw-next-card');
         }
 
 

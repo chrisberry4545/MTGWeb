@@ -132,7 +132,7 @@
                 <button class="btn chris-btn chris-btn-mini" ng-click="vm.hideCharts()">
                     Hide Charts <i class="icon-chevron-up"></i>
                 </button>
-                <h3>{{vm.cardStatsTitle}}</h3>
+                <h3>{{vm.cardStatsTitle}} (<span ng-if="!vm.draftFinished">{{vm.selectedCards.length}}</span><span ng-if="vm.draftFinished">{{vm.deckCards.length + vm.selectedLandCards.length}}</span>)</h3>
                 <div class="textcenter">
                     <h4>Number of Color Symbols</h4>
                     <div id="colorPieChartContainer"></div>

@@ -84,7 +84,13 @@
 
 
                     <div class="row textcenter">
-                        <button class="chris-btn" ng-click="vm.openHandSimulator()">Try a test hand</button>
+                        <div class="col-xs-12 col-lg-push-4 col-lg-4 textcenter">
+                            <button class="chris-btn" ng-click="vm.openHandSimulator()">Try a test hand</button>
+                        </div>
+                        <div class="col-xs-6 col-lg-pull-4 col-lg-4"></div>
+                        <div class="col-xs-12 col-lg-4 saveButtons rightOnLg">
+                            <button class="chris-btn chris-btn-mini" ng-click="vm.clearSelection()">Clear Selection <i class="icon-remove"></i></button>
+                        </div>
                     </div>
 
                     <div class="widget wmtg normalPanel">
@@ -116,7 +122,7 @@
                         </button>
                     </div>
                     <div class="chartsColumn textcenter normalPanel">
-                        <h3>Card Pool Stats</h3>
+                        <h3>Card Pool Stats <span>({{vm.boosterCards.length}})</span></h3>
                         <div class="textcenter">
                             <h4>Number of Color Symbols</h4>
                             <div id="colorPieChartContainer-cardPool"></div>
@@ -132,7 +138,7 @@
                     </div>
 
                     <div class="chartsColumn textcenter normalPanel">
-                        <h3>Selected Cards Stats</h3>
+                        <h3>Selected Cards Stats <span>({{vm.selectedCards.length + vm.selectedLandCards.length}})</span></h3>
                         <div class="textcenter">
                             <h4>Number of Color Symbols</h4>
                             <div id="colorPieChartContainer-selectedCards"></div>

@@ -91,6 +91,17 @@
             trackEvent(controllerId, 'remove-from-deck', card.Name);
         }
 
+        vm.clearSelection = function () {
+            var confirmed = confirm("Are you sure you want to clear your selection?");
+            if (confirmed) {
+                for (var i = 0; i < vm.selectedCards.length; i++) {
+                    vm.boosterCards.push(vm.selectedCards[i]);
+                }
+                vm.selectedCards = [];
+                vm.selectedLandCards = [];
+            }
+        }
+
 
         vm.openHandSimulator = function () {
             var allSelectedCards = vm.selectedCards.concat(vm.selectedLandCards);
