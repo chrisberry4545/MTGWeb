@@ -134,6 +134,8 @@
         vm.openBoosters = function()
         {
             vm.boosterCards = [];
+            vm.selectedCards = [];
+            vm.selectedLandCards = [];
 
             var cardsToUse = datacontext.openBoostersForCardSetGroups(vm.setGroups);
             vm.boosterCards.push.apply(vm.boosterCards, cardsToUse.mythicCards);

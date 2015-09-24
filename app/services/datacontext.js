@@ -44,8 +44,7 @@
             } else {
                 cardsToTakeFrom = allCards.rareCards;
             }
-
-            var promoCard = cardsToTakeFrom[Math.floor(Math.random()*cardsToTakeFrom.length)];
+            var promoCard = new copyCard(cardsToTakeFrom[Math.floor(Math.random()*cardsToTakeFrom.length)]);
             promoCard.isFoil = true;
             currentCards.splice(0, 0, promoCard);
         }
@@ -186,6 +185,7 @@
         function addFoilCards(setVar, selectedCards, numBoosters, swapOutCommon, chance) {
             for (var i = 0; i < numBoosters; i++) {
                 if (Math.random() < chance) {
+                    console.log('adding foil card..');
                     if (swapOutCommon) {
                         selectedCards.commonCards.pop();
                     }
