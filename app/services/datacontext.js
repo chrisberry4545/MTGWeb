@@ -34,9 +34,7 @@
         function addPromoForLatestSet(currentCards) {
 
             var latestSet = getLatestSet();
-            console.log(latestSet);
             var allCards = getSortedCardsForSetByShortName(latestSet.shortName);
-            console.log(allCards);
             
             var cardsToTakeFrom;
             if (Math.random() > 7 / 8) {
@@ -185,7 +183,6 @@
         function addFoilCards(setVar, selectedCards, numBoosters, swapOutCommon, chance) {
             for (var i = 0; i < numBoosters; i++) {
                 if (Math.random() < chance) {
-                    console.log('adding foil card..');
                     if (swapOutCommon) {
                         selectedCards.commonCards.pop();
                     }
