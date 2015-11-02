@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-{{12 / setGroups[0].length}} textcenter" ng-repeat="set in setGroups[0]">
+        <div>
+            {{set.fullName}}
+        </div>
+        <input type="number" ng-model="set.boostersToOpen" />
+    </div>
+</div>
+
+<div ng-if="additionalDropdownModel != null" class="row textcenter" style="padding-top:1rem;">
+    <select ng-model="additionalDropdownModel">
+        <option ng-repeat="opt in additionalDropdownOptions" value="{{opt.value}}">
+            {{opt.text}}
+        </option>
+    </select>
+</div>
+
+<div class="optionsButton " ng-click="displayExtraOptions()">
+    More Options
+    <i ng-hide="showExtraOptions" class="icon-chevron-down"></i>
+    <i ng-show="showExtraOptions" class="icon-chevron-up"></i>
+</div>
+
+<div ng-show="showExtraOptions" class="moreOptionsSection">
+    <div class="row" ng-repeat="setGroup in setGroups" ng-if="$index != 0">
+        <div class="col-xs-12 col-md-{{12 / setGroup.length}} textcenter" ng-repeat="set in setGroup">
+            <div>
+                {{set.fullName}}
+            </div>
+            <input type="number" ng-model="set.boostersToOpen" />
+        </div>
+    </div>
+</div>

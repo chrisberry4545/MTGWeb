@@ -17,56 +17,22 @@
                             </select>
                         </div>
 
-                        <div class="widget wmtg normalPanel">
-                            <div data-cc-widget-header title="Mythic Cards ({{vm.cards.mythicCards.length}})"
-                                 allow-collapse="true"></div>
-                            <div class="widget-content text-center text-info">
-                                <ul class="today-datas">
-                                    <li data-ng-repeat="card in vm.cards.mythicCards">
-                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="row">
+                            <card-display title="Mythic Cards ({{vm.cards.mythicCards.length}})"
+                                          cards="vm.cards.mythicCards" />
                         </div>
-
-                        <div class="widget wmtg normalPanel">
-                            <div data-cc-widget-header title="Rare Cards ({{vm.cards.rareCards.length}})"
-                                 allow-collapse="true"></div>
-                            <div class="widget-content text-center text-info">
-                                <ul class="today-datas">
-                                    <li data-ng-repeat="card in vm.cards.rareCards">
-                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="row">
+                            <card-display title="Rare Cards ({{vm.cards.rareCards.length}})"
+                                          cards="vm.cards.rareCards" />
                         </div>
-
-                        <div class="widget wmtg normalPanel">
-                            <div data-cc-widget-header title="Uncommon Cards ({{vm.cards.uncommonCards.length}})"
-                                 subtitle=""
-                                 allow-collapse="true"></div>
-                            <div class="widget-content text-center text-info">
-                                <ul class="today-datas">
-                                    <li data-ng-repeat="card in vm.cards.uncommonCards">
-                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>>
-
-                        <div class="widget wmtg normalPanel">
-                            <div data-cc-widget-header title="Common Cards ({{vm.cards.commonCards.length}})"
-                                 allow-collapse="true"></div>
-                            <div class="widget-content text-center text-info">
-                                <ul class="today-datas">
-                                    <li data-ng-repeat="card in vm.cards.commonCards">
-                                        <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="row">
+                            <card-display title="Uncommon Cards ({{vm.cards.uncommonCards.length}})"
+                                          cards="vm.cards.uncommonCards" />
                         </div>
-                    </div>
-
+                        <div class="row">
+                            <card-display title="Common Cards ({{vm.cards.commonCards.length}})"
+                                          cards="vm.cards.commonCards" />
+                        </div>
                 </div>
 
             </div>

@@ -1,5 +1,43 @@
 ﻿(function () {
     'use strict';
+
+    angular.module("app").directive("handSimulator", ['common', '$modal', function (common, $modal) {
+
+        return {
+            scope: {
+                selectedCards: '=',
+                selectedLandCards: '=',
+                controllerId: '@'
+            },
+            restrict: 'AE',
+            templateUrl: '/app/directives/handSimulator.html',
+            controller: function ($scope, $element) {
+                var log = common.logger.getLogFn($scope.controllerId);
+
+                $scope.openHandSimulator = function () {
+                    var allSelectedCards = $scope.selectedCards.concat($scope.selectedLandCards);
+                    if (allSelectedCards.length > 0) {
+                        var modalInstance = $modal.open({
+                            templateUrl: 'handmodal.html',
+                            controller: 'handmodal',
+                            resolve: {
+                                fullDeck: function () {
+                                    return allSelectedCards;
+                                }
+                            }
+                        });
+                    } else {
+                        log("Please add some cards to your deck (click on them above).");
+                    }
+                    trackEvent($scope.controllerId, 'opened-hand-simulator');
+                };
+
+            }
+        }
+
+    }]);
+
+
     var controllerId = 'handmodal';
     angular.module('app').controller(controllerId, ['common', '$scope', 'handsimulator', '$modalInstance', 'fullDeck', handmodal]);
 
@@ -43,12 +81,6 @@
             trackEvent(controllerId, 'draw-next-card');
         }
 
-
-        activate();
-
-
-        function activate() {
-        }
-
     }
+
 })();

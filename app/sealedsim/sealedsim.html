@@ -1,8 +1,6 @@
 ﻿<section class="mainbar" data-ng-controller="sealedsim as vm">
     <section class="matter">
         <div class="container-fluid">
-            <div ng-include data-src="'/app/handmodal/handmodal.html'"></div>
-
             <div class="row">                
                 <div ng-include data-src="'/app/adverts/amazonadverts.html'"></div>
             </div>
@@ -12,40 +10,9 @@
                 <div id="mainCol" class="col-xs-12 addRowMargins fullView" ng-class="{'col-md-8 col-lg-9': !vm.chartsHidden, 'col-md-12 col-lg-12': vm.chartsHidden }">
 
                     <div class="normalPanel">
-
-                        <div class="row">
-                            <div class="col-xs-12 col-md-{{12 / vm.setGroups[0].length}} textcenter" ng-repeat="set in vm.setGroups[0]">
-                                <div>
-                                    {{set.fullName}}
-                                </div>
-                                <input type="number" ng-model="set.boostersToOpen" />
-                            </div>
-                        </div>
-                        <div class="row textcenter" style="padding-top:1rem;">
-                            <select ng-model="vm.include_promo" ng-change="vm.usePromoChanged()">
-                                <option value="1">Include Promo</option>
-                                <option value="0">Don't include Promo</option>
-                            </select>
-                        </div>
-
-
-                        <div class="optionsButton " ng-click="vm.displayExtraOptions()">
-                            More Options
-                            <i ng-hide="vm.showExtraOptions" class="icon-chevron-down"></i>
-                            <i ng-show="vm.showExtraOptions" class="icon-chevron-up"></i>
-                        </div>
-
-                        <div ng-show="vm.showExtraOptions" class="moreOptionsSection">
-                            <div class="row" ng-repeat="setGroup in vm.setGroups" ng-if="$index != 0">
-                                <div class="col-xs-12 col-md-{{12 / setGroup.length}} textcenter" ng-repeat="set in setGroup">
-                                    <div>
-                                        {{set.fullName}}
-                                    </div>
-                                    <input type="number" ng-model="set.boostersToOpen" />
-                                </div>
-                            </div>
-                        </div>
-
+                        <set-selection set-groups="vm.setGroups" 
+                                       additional-dropdown-model="vm.include_promo"
+                                       additional-dropdown-options="vm.promo_options" />
                     </div>
 
                     <div class="row">
@@ -64,28 +31,20 @@
                         </div>
                     </div>
 
-
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Cards from packs ({{vm.boosterCards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.boosterCards track by $index">
-                                    <img ng-click="vm.addToDeck(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    <span ng-click="vm.addToDeck(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
-                                </li>
-                                <li data-ng-repeat="card in vm.landcards track by $index">
-                                    <img ng-click="vm.addLandCard(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    <span ng-click="vm.addLandCard(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div>
+                        <card-display card-click="vm.addToDeck(card)"
+                                      cards="vm.boosterCards"
+                                      land-cards="vm.landcards"
+                                      land-card-click="vm.addLandCard(card)"
+                                      title="Cards from packs ({{vm.boosterCards.length}})" />
                     </div>
 
 
                     <div class="row textcenter">
                         <div class="col-xs-12 col-lg-push-4 col-lg-4 textcenter">
-                            <button class="chris-btn" ng-click="vm.openHandSimulator()">Try a test hand</button>
+                            <hand-simulator selected-cards="vm.selectedCards"
+                                            selected-land-cards="vm.selectedLandCards"
+                                            controller-id="{{vm.controllerId}}" />
                         </div>
                         <div class="col-xs-6 col-lg-pull-4 col-lg-4"></div>
                         <div class="col-xs-12 col-lg-4 saveButtons rightOnLg">
@@ -93,21 +52,13 @@
                         </div>
                     </div>
 
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Selected Cards ({{vm.selectedCards.length + vm.selectedLandCards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.selectedCards track by $index">
-                                    <img ng-click="vm.removeFromDeck(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    <span ng-click="vm.removeFromDeck(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
-                                </li>
-                                <li data-ng-repeat="card in vm.selectedLandCards track by $index">
-                                    <img ng-click="vm.removeLandCard(card)" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    <span ng-click="vm.removeLandCard(card)" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
-                                </li>
-                            </ul>
-                        </div>
+                    
+                    <div>
+                        <card-display card-click="vm.removeFromDeck(card)"
+                                      cards="vm.selectedCards"
+                                      land-cards="vm.selectedLandCards"
+                                      land-card-click="vm.removeLandCard(card)"
+                                      title="Selected Cards ({{vm.selectedCards.length + vm.selectedLandCards.length}})" />
                     </div>
 
                 </div>

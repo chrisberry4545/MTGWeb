@@ -10,51 +10,15 @@
 
                 <div class="col-xs-12 addRowMargins fullView">
 
-                    <div class="row normalPanel moreOptionsSection">
-
-                        <div class="row">
-                            <div class="col-xs-12 col-md-{{12 / vm.setGroups[0].length}} textcenter" ng-repeat="set in vm.setGroups[0]">
-                                <div>
-                                    {{set.fullName}}
-                                </div>
-                                <input type="number" ng-model="set.boostersToOpen" />
-                            </div>
-                        </div>
-                        <div class="optionsButton " ng-click="vm.displayExtraOptions()">
-                            More Options
-                            <i ng-hide="vm.showExtraOptions" class="icon-chevron-down"></i>
-                            <i ng-show="vm.showExtraOptions" class="icon-chevron-up"></i>
-                        </div>
-
-                        <div ng-show="vm.showExtraOptions" class="moreOptionsSection">
-                            <div class="row" ng-repeat="setGroup in vm.setGroups" ng-if="$index != 0">
-                                <div class="col-xs-12 col-md-{{12 / setGroup.length}} textcenter" ng-repeat="set in setGroup">
-                                    <div>
-                                        {{set.fullName}}
-                                    </div>
-                                    <input type="number" ng-model="set.boostersToOpen" />
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="normalPanel">
+                        <set-selection set-groups="vm.setGroups" />
                     </div>
 
                     <div class="row textcenter">
                         <button ng-click="vm.openBoosters()" class="chris-btn">Open Boosters</button>
                     </div>
 
-                    <div class="widget wmtg normalPanel">
-                        <div data-cc-widget-header title="Opened Cards ({{vm.cards.length}})"
-                             allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <ul class="today-datas">
-                                <li data-ng-repeat="card in vm.cards track by $index">
-                                    <img src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
-                                    <span data-ng-if="card.isFoil == true" class="foil">FOIL</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <card-display cards="vm.cards" title="Opened Cards ({{vm.cards.length}})"/>
 
                 </div>
 

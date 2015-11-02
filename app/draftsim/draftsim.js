@@ -216,25 +216,6 @@
         };
 
 
-
-        vm.openHandSimulator = function () {
-            var allSelectedCards = vm.deckCards.concat(vm.selectedLandCards);
-            if (allSelectedCards.length > 0) {
-                var modalInstance = $modal.open({
-                    templateUrl: 'handmodal.html',
-                    controller: 'handmodal',
-                    resolve: {
-                        fullDeck: function () {
-                            return allSelectedCards;
-                        }
-                    }
-                });
-            } else {
-                log("Please add some cards to your deck (click on them below).");
-            }
-            trackEvent(controllerId, 'opened-hand-simulator');
-        };
-
         function takeTurn()
         {
             for (var i = 1; i < vm.AIs.length; i++)

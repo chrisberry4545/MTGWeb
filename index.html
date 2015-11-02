@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html manifest="manifest.appcache" data-ng-app="app">
+<html data-ng-app="app"> <!--manifest="manifest.appcache"-->
 <head>
     <style>
         /* This helps the ng-show/ng-hide animations start at the right place. */
@@ -124,6 +124,11 @@
     <script src="app/services/deckFunctions.min.js"></script>
     <script src="app/services/handsimulator.min.js"></script>
 
+    <!-- Directives -->
+    <script src="app/directives/cardDisplay.js"></script>
+    <script src="app/directives/setSelection.js"></script>
+    <script src="app/directives/handSimulator.js"></script>
+
     <!-- My modules -->
     <script src="app/services/landcards.min.js"></script>
     <script src="app/boostersim/boostersim.min.js"></script>
@@ -145,7 +150,6 @@
     <script src="app/carddata/CardsDTK.min.js"></script>
     <script src="app/carddata/CardsMM2.min.js"></script>
     <script src="app/carddata/CardsORI.min.js"></script>
-    <script src="app/handmodal/handmodal.min.js"></script>
     <script src="app/highpickreport/highpickreport.js"></script>
 
     <div style="display:none; background-color:darkorange" id="updateAppMessage" class="textcenter">

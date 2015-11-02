@@ -9,11 +9,13 @@
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
         var logError = common.logger.getLogFn(controllerId, 'error');
 
+
         var graphWidth = 200;
         var graphHeight = 200;
 
         var vm = this;
         vm.title = 'Sealed Simulator';
+        vm.controllerId = controllerId;
 
         vm.landcards = [];
         vm.selectedLandCards = [];
@@ -44,6 +46,15 @@
         }
 
         vm.include_promo = "1";
+        vm.promo_options =
+            [
+                {
+                    value: 1, text: "Include Promo"
+                },
+                {
+                    value: 0, text: "Don't include Promo"
+                }
+            ];
 
 
         vm.boosterCards = [];
@@ -101,26 +112,6 @@
                 vm.selectedLandCards = [];
             }
         }
-
-
-        vm.openHandSimulator = function () {
-            var allSelectedCards = vm.selectedCards.concat(vm.selectedLandCards);
-            if (allSelectedCards.length > 0) {
-                var modalInstance = $modal.open({
-                    templateUrl: 'handmodal.html',
-                    controller: 'handmodal',
-                    resolve: {
-                        fullDeck: function () {
-                            return allSelectedCards;
-                        }
-                    }
-                });
-            } else {
-                log("Please add some cards to your deck (click on them above).");
-            }
-            trackEvent(controllerId, 'opened-hand-simulator');
-
-        };
 
         function _removeFromArrayAndAddToArray(arrayToRemoveFrom, arrayToAddTo, card)
         {

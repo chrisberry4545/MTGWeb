@@ -1,0 +1,19 @@
+﻿<div class="widget wmtg normalPanel">
+    <div data-cc-widget-header title="{{title}}"
+         allow-collapse="true"></div>
+    <div class="widget-content text-center text-info">
+        <p ng-if="instructions != null">
+            {{instructions}}
+        </p>
+        <ul class="today-datas">
+            <li data-ng-repeat="card in cards track by $index">
+                <img ng-click="cardClick({card: card})" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                <span ng-click="cardClick({card: card})" ng-if="card.isFoil == true" class="foil">FOIL</span>
+            </li>
+            <li data-ng-repeat="card in landCards track by $index">
+                <img ng-click="landCardClick({card: card})" src="{{card.Image}}" class="mtgCard" alt="{{card.Name}}" />
+                <span ng-click="landCardClick({card: card})" data-ng-if="card.isFoil == true" class="foil">FOIL</span>
+            </li>
+        </ul>
+    </div>
+</div>

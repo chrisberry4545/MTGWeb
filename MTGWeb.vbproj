@@ -195,17 +195,18 @@
     <Content Include="app\dashboard\dashboard.min.js">
       <DependentUpon>dashboard.js</DependentUpon>
     </Content>
+    <Content Include="app\directives\cardDisplay.html" />
+    <Content Include="app\directives\cardDisplay.js" />
+    <Content Include="app\directives\handSimulator.html" />
+    <Content Include="app\directives\handSimulator.js" />
+    <Content Include="app\directives\setSelection.html" />
+    <Content Include="app\directives\setSelection.js" />
     <Content Include="app\draftsim\ai.js" />
     <Content Include="app\draftsim\ai.min.js">
       <DependentUpon>ai.js</DependentUpon>
     </Content>
     <Content Include="app\draftsim\draftsim.min.js">
       <DependentUpon>draftsim.js</DependentUpon>
-    </Content>
-    <Content Include="app\handmodal\handmodal.html" />
-    <Content Include="app\handmodal\handmodal.js" />
-    <Content Include="app\handmodal\handmodal.min.js">
-      <DependentUpon>handmodal.js</DependentUpon>
     </Content>
     <Content Include="app\highpickreport\highpickreport.html" />
     <Content Include="app\highpickreport\highpickreport.js" />
@@ -2533,9 +2534,6 @@
     </Content>
     <Content Include="app\services\landcards.min.js.map">
       <DependentUpon>landcards.min.js</DependentUpon>
-    </Content>
-    <Content Include="app\handmodal\handmodal.min.js.map">
-      <DependentUpon>handmodal.min.js</DependentUpon>
     </Content>
     <Content Include="app\services\handsimulator.min.js.map">
       <DependentUpon>handsimulator.min.js</DependentUpon>
