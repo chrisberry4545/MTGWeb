@@ -16,7 +16,7 @@
                     <span ng-if="!vm.draftStarted">Start Draft</span>
                     <span ng-if="vm.draftStarted">Restart Draft</span>
                 </button>
-                <button class="btn chris-btn" ng-click="vm.hideCharts()" ng-show="vm.chartsHidden">
+                <button class="btn chris-btn" ng-click="vm.showCharts()" ng-show="vm.chartsHidden">
                     Show Charts <i class="icon-chevron-down"></i>
                 </button>
             </div>
@@ -64,28 +64,12 @@
 
         </div>
 
-        <div class="col-md-4 col-lg-3 hidden-xs hidden-sm fullView" ng-show="!vm.chartsHidden">
-            <div class="chartsColumn textcenter normalPanel">
-                <button class="btn chris-btn chris-btn-mini" ng-click="vm.hideCharts()">
-                    Hide Charts <i class="icon-chevron-up"></i>
-                </button>
-                <h3>{{vm.cardStatsTitle}} (<span ng-if="!vm.draftFinished">{{vm.selectedCards.length}}</span><span ng-if="vm.draftFinished">{{vm.deckCards.length + vm.selectedLandCards.length}}</span>)</h3>
-                <div class="textcenter">
-                    <h4>Number of Color Symbols</h4>
-                    <div id="colorPieChartContainer"></div>
-                </div>
-                <div class="textcenter">
-                    <h4>Mana Curve</h4>
-                    <div id="manaCurveBarChartContainer"></div>
-                </div>
-                <div class="textcenter">
-                    <h4>Number of Card Types</h4>
-                    <div id="typePieChartContainer"></div>
-                </div>
-            </div>
+        <div>
+            <pool-summary-charts top-card-stats-title="vm.cardStatsTitle"
+                                top-graph-cards="vm.cardsToGraph"
+                                 controller-id="vm.controllerId"
+                                 charts-hidden="vm.chartsHidden" />
         </div>
-
-
     </div>
 
 

@@ -1,0 +1,40 @@
+﻿
+<div id="chartsDiv" class="col-xs-12 col-md-4 col-lg-3 fullView" 
+     ng-show="!chartsHidden" >
+
+    <div class="chartsColumn textcenter normalPanel">
+        <button class="btn chris-btn chris-btn-mini" ng-click="hideCharts()">
+            Hide Charts <i class="icon-chevron-up"></i>
+        </button>
+        <h3>{{topCardStatsTitle}} <span>({{topGraphCards.length}})</span></h3>
+        <div class="textcenter">
+            <h4>Number of Color Symbols</h4>
+            <div id="colorPieChartContainer"></div>
+        </div>
+        <div class="textcenter">
+            <h4>Mana Curve</h4>
+            <div id="manaCurveBarChartContainer"></div>
+        </div>
+        <div class="textcenter">
+            <h4>Number of Card Types</h4>
+            <div id="typePieChartContainer"></div>
+        </div>
+    </div>
+
+    <div ng-visible="bottomGraphCards != null" class="chartsColumn textcenter normalPanel">
+        <h3>{{bottomCardStatsTitle}} <span>({{bottomGraphCards.length}})</span></h3>
+        <div class="textcenter">
+            <h4>Number of Color Symbols</h4>
+            <div id="colorPieChartContainer-bottom"></div>
+        </div>
+        <div class="textcenter">
+            <h4>Mana Curve</h4>
+            <div id="manaCurveBarChartContainer-bottom"></div>
+        </div>
+        <div class="textcenter">
+            <h4>Number of Card Types</h4>
+            <div id="typePieChartContainer-bottom"></div>
+        </div>
+    </div>
+
+</div>

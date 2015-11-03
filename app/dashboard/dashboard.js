@@ -10,13 +10,6 @@
         var vm = this
         vm.allCards = [];
 
-        vm.isolatedFoo = "";
-        vm.updateFoo = function (newFoo) {
-            console.log(foo);
-            vm.foo = newFoo;
-            console.log(foo);
-        }
-
         vm.cardClicked = function(c)
         {
             datacontext.setDisplayCard(c);

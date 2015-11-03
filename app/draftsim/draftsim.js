@@ -1,15 +1,17 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'draftsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', 'webapicontext', 'ai', draftsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'landcards', '$modal', 'ai', draftsim]);
 
-    function draftsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, webapicontext, ai) {
+    function draftsim(common, datacontext, downloadDataService, landcards, $modal, ai) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
         var logError = common.logger.getLogFn(controllerId, 'error');
 
         var vm = this;
+
+        vm.controllerId = controllerId;
 
         vm.title = 'Sealed Simulator';
         vm.column1Title = "Image";
@@ -30,6 +32,7 @@
 
         vm.landcards = [];
         vm.selectedLandCards = [];
+        vm.cardsToGraph = [];
 
         var startingTopPanelCardsTitle = "Booster Cards";
         vm.topPanelCardsTitle = startingTopPanelCardsTitle;
@@ -49,10 +52,10 @@
 
 
         vm.chartsHidden = false;
-        vm.hideCharts = function () {
-            vm.chartsHidden = !vm.chartsHidden;
-            trackEvent(controllerId, 'toggle-charts');
+        vm.showCharts = function () {
+            vm.chartsHidden = false;
         }
+
 
         vm.showExtraOptions = false;
         vm.displayExtraOptions = function () {
@@ -89,25 +92,29 @@
                     vm.draftFinished = true;
                     vm.topPanelCardsTitle = "Deck Cards";
                     trackEvent(controllerId, 'finished-draft');
+                    vm.cardsToGraph = vm.selectedCards;
                 }
             }
 
-            graphAnalysis.displayChartsForCards(vm.selectedCards);
         };
+
+        vm.updateSelectedGraphCards = function () {
+            vm.cardsToGraph = vm.deckCards.concat(vm.selectedLandCards);
+        }
 
         vm.cardPoolClick = function (card) {
             if (vm.draftFinished) {
                 _removeFromArrayAndAddToArray(vm.selectedCards, vm.deckCards, card);
                 vm.cardStatsTitle = "My Deck Stats";
-                graphAnalysis.displayChartsForCards(vm.deckCards);
                 trackEvent(controllerId, 'removed-card-from-selection', card.Name);
+                vm.updateSelectedGraphCards();
             }
         }
         vm.deckCardClick = function (card) {
             if (vm.draftFinished) {
                 _removeFromArrayAndAddToArray(vm.deckCards, vm.selectedCards, card);
-                graphAnalysis.displayChartsForCards(vm.deckCards);
                 trackEvent(controllerId, 'added-card-to-selection', card.Name);
+                vm.updateSelectedGraphCards();
             }
         }
 
@@ -115,6 +122,7 @@
             if (vm.draftFinished) {
                 vm.selectedLandCards.push(card);
                 trackEvent(controllerId, 'added-land-card', card.Name);
+                vm.updateSelectedGraphCards();
             }
         }
         vm.removeLandCard = function (card) {
@@ -122,6 +130,7 @@
             if (index > -1) {
                 vm.selectedLandCards.splice(index, 1);
                 trackEvent(controllerId, 'removed-land-card', card.Name);
+                vm.updateSelectedGraphCards();
             }
         }
 
@@ -166,12 +175,6 @@
             common.activateController([initSetGroups()], controllerId)
                 .then(function () {
                     vm.landcards = landcards.getLandCards();
-                    var graphWidth = 200;
-                    var graphHeight = 200;
-                    graphAnalysis.setPieChartGraphElement('colorPieChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.setTypeChartHolder('typePieChartContainer', graphWidth, graphHeight);
-                    graphAnalysis.resetAllCanvas();
                 });
         };
 
@@ -187,12 +190,13 @@
             vm.topPanelCardsTitle = startingTopPanelCardsTitle;
             vm.cardStatsTitle = startingCardsStatsTitle;
 
-            graphAnalysis.resetAllCanvas();
+
             //Clear the current boosters and selected cards.
             vm.boosterCards = [];
             vm.selectedCards = [];
             vm.deckCards = [];
             vm.selectedLandCards = [];
+            vm.cardsToGraph = vm.selectedCards;
 
             vm.fixedSetGroups = datacontext.copyCardSetGroup(vm.setGroups);
 

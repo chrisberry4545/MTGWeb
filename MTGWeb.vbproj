@@ -199,6 +199,8 @@
     <Content Include="app\directives\cardDisplay.js" />
     <Content Include="app\directives\handSimulator.html" />
     <Content Include="app\directives\handSimulator.js" />
+    <Content Include="app\directives\poolSummaryCharts.html" />
+    <Content Include="app\directives\poolSummaryCharts.js" />
     <Content Include="app\directives\setSelection.html" />
     <Content Include="app\directives\setSelection.js" />
     <Content Include="app\draftsim\ai.js" />

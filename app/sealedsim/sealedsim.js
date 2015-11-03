@@ -90,7 +90,6 @@
         {
             logSuccess("Added " + card.Name + " to your selection...");
             _removeFromArrayAndAddToArray(vm.boosterCards, vm.selectedCards, card);
-            updateGraphs();
             trackEvent(controllerId, 'add-to-deck', card.Name);
         };
 
@@ -98,7 +97,6 @@
         {
             log("Put " + card.Name + " back into sealed pool...")
             _removeFromArrayAndAddToArray(vm.selectedCards, vm.boosterCards, card);
-            updateGraphs();
             trackEvent(controllerId, 'remove-from-deck', card.Name);
         }
 
@@ -146,24 +144,10 @@
 
         activate();
 
-        function updateGraphs() {
-            graphAnalysis.resetAllCanvas();
-            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-cardPool', graphWidth, graphHeight);
-            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-cardPool', graphWidth, graphHeight);
-            graphAnalysis.setTypeChartHolder('typePieChartContainer-cardPool', graphWidth, graphHeight);
-            graphAnalysis.displayChartsForCards(vm.boosterCards);
-
-            graphAnalysis.setPieChartGraphElement('colorPieChartContainer-selectedCards', graphWidth, graphHeight);
-            graphAnalysis.setBarChartGraphElement('manaCurveBarChartContainer-selectedCards', graphWidth, graphHeight);
-            graphAnalysis.setTypeChartHolder('typePieChartContainer-selectedCards', graphWidth, graphHeight);
-            graphAnalysis.displayChartsForCards(vm.selectedCards);
-        }
-
         function activate() {
             common.activateController([initSetGroups()], controllerId)
                 .then(function () {
                     vm.landcards = landcards.getLandCards();
-                    updateGraphs();
                     trackEvent(controllerId, 'init');
                 });
         };

@@ -63,53 +63,20 @@
 
                 </div>
 
-
-
-                <div id="chartsDiv" class="col-xs-12 col-md-4 col-lg-3 fullView" ng-show="!vm.chartsHidden" ng-class="{ 'fixedPos': vm.fixedCharts }">
-
-                    <div class="chartsColumn textcenter normalPanel">
-                        <button class="btn chris-btn chris-btn-mini" ng-click="vm.hideCharts()">
-                            Hide Charts <i class="icon-chevron-up"></i>
-                        </button>
-                    </div>
-                    <div class="chartsColumn textcenter normalPanel">
-                        <h3>Card Pool Stats <span>({{vm.boosterCards.length}})</span></h3>
-                        <div class="textcenter">
-                            <h4>Number of Color Symbols</h4>
-                            <div id="colorPieChartContainer-cardPool"></div>
-                        </div>
-                        <div class="textcenter">
-                            <h4>Mana Curve</h4>
-                            <div id="manaCurveBarChartContainer-cardPool"></div>
-                        </div>
-                        <div class="textcenter">
-                            <h4>Number of Card Types</h4>
-                            <div id="typePieChartContainer-cardPool"></div>
-                        </div>
-                    </div>
-
-                    <div class="chartsColumn textcenter normalPanel">
-                        <h3>Selected Cards Stats <span>({{vm.selectedCards.length + vm.selectedLandCards.length}})</span></h3>
-                        <div class="textcenter">
-                            <h4>Number of Color Symbols</h4>
-                            <div id="colorPieChartContainer-selectedCards"></div>
-                        </div>
-                        <div class="textcenter">
-                            <h4>Mana Curve</h4>
-                            <div id="manaCurveBarChartContainer-selectedCards"></div>
-                        </div>
-                        <div class="textcenter">
-                            <h4>Number of Card Types</h4>
-                            <div id="typePieChartContainer-selectedCards"></div>
-                        </div>
-                    </div>
-
+                <div>
+                    <pool-summary-charts top-card-stats-title="'Card Pool Stats'"
+                                         top-graph-cards="vm.boosterCards"
+                                         bottom-card-stats-title="'Selected Cards Stats'"
+                                         bottom-graph-cards="vm.selectedCards"
+                                         controller-id="vm.controllerId"
+                                         charts-hidden="vm.chartsHidden" />
                 </div>
+
+
 
             </div>
 
         </div>
 
-        </div>
     </section>
 </section>
