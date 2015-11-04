@@ -13,7 +13,6 @@ C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\bin\MTGWeb.dl
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\bin\MTGWeb.dll
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\bin\MTGWeb.pdb
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\bin\MTGWeb.xml
-C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\bin\AjaxMin.dll
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.Resources.resources
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.vbproj.GenerateResource.Cache
 C:\Users\Chris\Documents\Visual Studio 2013\Projects\MTGWeb\MTGWeb\obj\Debug\MTGWeb.dll

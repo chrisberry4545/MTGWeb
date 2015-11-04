@@ -255,10 +255,6 @@
     <Content Include="app\services\downloadDataService.min.js">
       <DependentUpon>downloadDataService.js</DependentUpon>
     </Content>
-    <Content Include="app\services\graphAnalysis.js" />
-    <Content Include="app\services\graphAnalysis.min.js">
-      <DependentUpon>graphAnalysis.js</DependentUpon>
-    </Content>
     <Content Include="app\services\handsimulator.js" />
     <Content Include="app\services\handsimulator.min.js">
       <DependentUpon>handsimulator.js</DependentUpon>
@@ -2527,9 +2523,6 @@
     </Content>
     <Content Include="app\config.route.min.js.map">
       <DependentUpon>config.route.min.js</DependentUpon>
-    </Content>
-    <Content Include="app\services\graphAnalysis.min.js.map">
-      <DependentUpon>graphAnalysis.min.js</DependentUpon>
     </Content>
     <Content Include="app\carddata\CardsKTK.min.js.map">
       <DependentUpon>CardsKTK.min.js</DependentUpon>

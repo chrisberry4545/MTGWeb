@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var controllerId = 'sealedsim';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'graphAnalysis', 'landcards', '$modal', '$scope', sealedsim]);
+    angular.module('app').controller(controllerId, ['common', 'datacontext', 'downloadDataService', 'landcards', '$modal', '$scope', sealedsim]);
 
-    function sealedsim(common, datacontext, downloadDataService, graphAnalysis, landcards, $modal, $scope) {
+    function sealedsim(common, datacontext, downloadDataService, landcards, $modal, $scope) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
